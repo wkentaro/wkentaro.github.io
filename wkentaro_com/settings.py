@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wkentaro_com',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,6 +68,11 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.load_template_source',
+    'django.template.loaders.app_directories.load_template_source',
+)
 
 WSGI_APPLICATION = 'wkentaro_com.wsgi.application'
 
