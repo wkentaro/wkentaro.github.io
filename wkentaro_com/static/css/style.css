@@ -1,0 +1,201 @@
+.post {
+  font-size: 90%;
+}
+.post blockquote {
+  font-size: 90%;
+}
+.post .MathJax_Display {
+  font-size: 120%;
+}
+
+/* Masthead */
+.masthead {
+  border-bottom: 1px solid #dddddd;
+}
+.masthead-title {
+  color: #3E4349;
+}
+p.masthead-tagline {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+small {
+  font-size: 65%;
+}
+ul.caption {
+  margin-bottom: 3px;
+}
+.caption {
+  margin-top: 3px;
+}
+.indent-1 {
+  margin-left: 1em;
+}
+.indent-2 {
+  margin-left: 2em;
+}
+ul.contact-lists li {
+  padding-right: 10px;
+  padding-left: 0;
+}
+dt {
+  font-weight: 600;
+}
+img.profile-img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
+img.site-img {
+  width: 100%;
+}
+.profile-item {
+  width: 100%;
+  display: inline-block;
+  vertical-align:top;
+  border: solid 1px #999;
+  margin-bottom: 20px;
+}
+.profile-item > h4 {
+  margin-top: -13px;
+  margin-left: 10px;
+  padding-left: 5px;
+  background-color: #fff;
+}
+.profile-item > dl {
+  padding-left: 20px;
+}
+#footer{
+  font-size: 14px;
+  color: #888;
+  text-align:right;
+  white-space:nowrap;
+  padding:10px;
+}
+@font-face {
+  font-family: 'Garamond';
+  font-style: normal;
+  font-weight: 400;
+ local('EB Garamond'), local('EBGaramond'), url(http://themes.googleusercontent.com/static/fonts/ebgaramond/v5/CDR0kuiFK7I1OZ2hSdR7G7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'goudy old style';
+  src: url('../fonts/GOUDOS.TTF');
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.list-inline > li:first-child {
+  padding-left: 0;
+}
+ul.act-ref img {
+  width: 100%;
+}
+ul.act-ref > li:first-child {
+  width: 65%;
+  padding:0;
+  padding-right:4%;
+  vertical-align: top;
+}
+ul.act-ref > li:last-child {
+  width: 30%;
+  padding: 0;
+  vertical-align: top;
+}
+ul.list-unstyled {
+  list-style:none;
+  padding:0;
+}
+a {
+  color: #004B6B;
+  text-decoration:none;
+  border-bottom:1px dotted #004B6B;
+}
+a:hover {
+  color: #6D4100;
+  text-decoration: underline;
+  border-bottom: none;
+}
+body {
+  font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
+  font-size: 17px;
+  background-color: white;
+  color: #000;
+}
+#all {
+  width: 80%;
+  margin: 30px auto 0 auto;
+}
+p.menu-description {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 0;
+}
+p.no-space {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+a.menu-link {
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px dotted #999;
+  text-decoration: none;
+}
+a.menu-link:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+div.content-item,
+div.menu-item {
+  margin: 10px 0 10px 0;
+}
+#menu h3 {
+  font-family: 'Garamond', 'Georgia', serif;
+  color: #444;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+  padding: 0;
+  padding-right: 30px;
+}
+#content {
+  color:#3E4349;
+}
+@media (max-width:767px) and (min-width:480px) {
+  img.site-img {
+    width: 70%;
+    margin: 30px 15% 0 15%;
+  }
+}
+@media (max-width:767px) {
+  .profile-img {
+    max-width: 120px;
+    margin-bottom: 30px;
+  }
+  .profile-item {
+    height:auto;
+    width: 100%;
+  }
+  ul.act-ref > li:first-child {
+    width: 100%;
+    padding:0;
+  }
+  ul.act-ref > li:last-child {
+    width: 100%;
+  }
+  #all {
+    width: 90%;
+  }
+  .menu-item {
+    float: left;
+  }
+}
