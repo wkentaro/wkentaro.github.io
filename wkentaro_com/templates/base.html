@@ -37,10 +37,10 @@
             <a href="http://www.wkentaro.com"><h1 class="masthead-title text-center">KENTARO WADA</h1></a>
             <p class="masthead-tagline text-center">Thank you for visiting, and this is a personal page of Kentaro Wada.</p>
             <ul class="list-inline text-center">
-              <li><a href="#contacts">Contacts</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#research">Research</a></li>
+              <li>{{ name }}</li>
+              <li>{% if page_name == "index" %}Projects{% else %}<a href="/">Projects</a>{% endif %}</li>
+              <li>{% if page_name == "about" %}About{% else %}<a href="/about">About</a>{% endif %}</li>
+              <li>{% if page_name == "research" %}Research{% else %}<a href="/research">Research</a>{% endif %}</li>
             </ul>
           </div>
 

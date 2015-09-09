@@ -2,8 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-# Create your views here.
 def index(request):
-    # return HttpResponse('Hello from Python!')
     template_name = 'index.html'
-    return render(request, template_name)
+    return render(request, template_name, {'page_name': 'index'})
+
+
+def about(request):
+    template_name = 'about.html'
+    return render(request, template_name, {'page_name': 'about'})
+
+
+def research(request):
+    template_name = 'research.html'
+    return render(request, template_name, {'page_name': 'research'})

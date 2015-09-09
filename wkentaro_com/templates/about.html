@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="content-item" id="about">
+  <h2>About</h2>
+  <div class="container-fluid" style="margin-bottom: 40px">
+    <div class="row">
+      <div class="col-xs-5">
+        <img src="{% static "img/profile.jpg" %}" class="img-rounded profile-img" />
+      </div>
+      <div class="col-xs-7">
+        <dl style="margin: 0 0">
+          <dt>Name</dt><dd>Kentaro Wada</dd>
+          <dt>Birth on</dt><dd>1994.01.31</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="profile-item">
+    <h4 id="skills" style="width:53px">Skills</h4>
+    <dl>
+      <dt>Natural Language</dt>
+      <dd>Japanse, English, Chinese</dd>
+    </dl>
+    <dl>
+      <dt>Programming Skills</dt>
+      <dd>
+        <i class="icon-python"></i> Python,
+        C/C++,
+        PHP,
+        HTML/CSS,
+        Bash/Zsh,
+        JavaScript,
+      </dd>
+      <dd><i>(note: Languages listed in order of proficiency)</i></dd>
+    </dl>
+    <dl>
+      <dt>OS / Frameworks / Tools etc.</dt>
+      <dd>
+        <i class="icon-osx"></i> OSX,
+        <i class="icon-ubuntu"></i> Ubuntu,
+        <i class="fa fa-git-square"></i> Git,
+        <i class="fa fa-github-square"></i> GitHub
+        ROS,
+        MySQL,
+        Google API/App Engine,
+        Twitter API,
+        Heroku,
+        AWS,
+    </dl>
+    <dl>
+      <dt>Field</dt>
+      <dd>
+        Machine Learning,
+        Robotics,
+        Web Services
+      </dd>
+    </dl>
+  </div>
+  <div class="profile-item">
+    <h4 id="education" style="width:90px">Education</h4>
+    <dl>
+      <dt><a href="http://www.u-tokyo.ac.jp/en/" target="_blank">The University of Tokyo</a></dt>
+      <dd><a href="http://www.kikaib.t.u-tokyo.ac.jp/" target="_blank">Mechano-Informatics</a> (2013.10 - present)</dd>
+      <dd><a href="" data-toggle="modal" data-target="#univ1">Science Course II</a> (2012.04 - 2013.09)</dd>
+    </dl>
+    <dl>
+      <dt><a href="http://www.zeze-h.shiga-ec.ed.jp/?page_id=6986&lang=en-us" target="_blank">Shiga Zeze High School</a></dt>
+      <dd>Science Course (2009.04 - 2012.03)</dd>
+    </dl>
+  </div>
+  <div class="profile-item">
+    <h4 id="workexperiences" style="width:140px">Work experiences</h4>
+    <dl>
+      <dt><a href="" data-toggle="modal" data-target="#hri">Honda Research Institute Japan Co., Ltd.,</a> - Internship</dt>
+      <dd>Researcher (2014.08.29 - 2014.09.26)</dd>
+    </dl>
+    <dl>
+      <dt><a href="" data-toggle="modal" data-target="#nagase">Nagase Co. Ltd.</a> - Part-time job</dt>
+      <dd>Contents Staff (2012.11 - 2014.03)</dd>
+    </dl>
+    <dl>
+      <dt><a href="" data-toggle="modal" data-target="#donuts">Donuts Co. Ltd.</a> - Internship</dt>
+      <dd>SI (2013.09 - 2014.01)</dd>
+    </dl>
+  </div>
+</div><!-- /#about -->
+
+<div class="content-item" id="contacts">
+  <h2>Contacts</h2>
+  <ul class="list-inline contact-lists indent-1">
+    <li><a href="mailto:www.kentaro.wada@gmail.com" target="_blank"><i class="fa fa-envelope-square"></i> Mail</a></li>
+    <li><a href="https://github.com/wkentaro" target="_blank"><i class="fa fa-github-square"></i> Github</a></li>
+    <li><a href="https://bitbucket.org/wkentaro" target="_blank"><i class="fa fa-bitbucket-square"></i> Bitbucket</a></li>
+    <li><a href="https://www.facebook.com/greeeenkew" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+    <li><a href="https://www.twitter.com/greeeenkew" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+    <li><a href="http://www.linkedin.com/profile/view?id=236099624" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
+  </ul>
+</div><!-- /#contacts -->
+
+{% endblock %}

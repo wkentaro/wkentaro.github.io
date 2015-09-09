@@ -3,18 +3,6 @@
 
 {% block content %}
 
-<div class="content-item" id="contacts">
-  <h2>Contacts</h2>
-  <ul class="list-inline contact-lists indent-1">
-    <li><a href="mailto:www.kentaro.wada@gmail.com" target="_blank"><i class="fa fa-envelope-square"></i> Mail</a></li>
-    <li><a href="https://github.com/wkentaro" target="_blank"><i class="fa fa-github-square"></i> Github</a></li>
-    <li><a href="https://bitbucket.org/wkentaro" target="_blank"><i class="fa fa-bitbucket-square"></i> Bitbucket</a></li>
-    <li><a href="https://www.facebook.com/greeeenkew" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-    <li><a href="https://www.twitter.com/greeeenkew" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-    <li><a href="http://www.linkedin.com/profile/view?id=236099624" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
-  </ul>
-</div><!-- /#contacts -->
-
 <div class="content-item" id="projects">
   <h2>Projects</h2>
   <div id="amazon_picking_challenge">
@@ -83,102 +71,6 @@
   <a href="#" class="" data-toggle="modal" data-target="#other_projects">Others and old projects</a>
   <p class="indent-1 caption">Click here to see the other projects. (small or past ones)</p>
 </div><!-- #projects -->
-
-<div class="content-item" id="research">
-  <h2>Research</h2>
-  <ul class="papers small">
-    <li><a href="http://www.jsk.t.u-tokyo.ac.jp/~wada/2015/rsj/1G1-06.pdf">和田健太郎, 矢野倉伊織, 杉浦誠, 稲垣祐人, 岡田慧, 稲葉雅幸, 視覚検証と吸引グリッパを用いた双腕ロボットによる日用品ピッキングシステム, 第33回日本ロボット学会, 2015</a></li>
-    <li><a href="http://www.jsk.t.u-tokyo.ac.jp/~wada/2014/20141121-sig-kst-23.pdf">和田健太郎, 川上和也, 本田祐輔, 田中謙司, 販売履歴の大規模データ分析による顧客クラスタ分析, 第23回知識・技術・技能の伝承支援研究会, 2014</a></li>
-  </ul>
-</div>
-
-<div class="content-item" id="about">
-  <h2>About</h2>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        <img src="{% static "img/profile.jpg" %}" class="img-rounded profile-img" />
-      </div>
-      <div class="col-sm-8">
-        <div class="profile-item">
-          <h4 id="basics" style="width:53px">Basics</h4>
-          <dl>
-            <dt>Name</dt><dd>Kentaro Wada</dd>
-            <dt>Birth on</dt><dd>1994.01.31</dd>
-          </dl>
-        </div>
-        <div class="profile-item">
-          <h4 id="skills" style="width:53px">Skills</h4>
-          <dl>
-            <dt>Natural Language</dt>
-            <dd>Japanse, English, Chinese</dd>
-          </dl>
-          <dl>
-            <dt>Programming Skills</dt>
-            <dd>
-              <i class="icon-python"></i> Python,
-              C/C++,
-              <i class="icon-php-alt"></i> PHP,
-              <i class="icon-html"></i> HTML/CSS,
-              <i class="icon-script-alt"></i> Bash/Zsh,
-              <i class="icon-javascript"></i> JavaScript,
-            </dd>
-            <dd><i>(note: Languages listed in order of proficiency)</i></dd>
-          </dl>
-          <dl>
-            <dt>OS / Frameworks / Tools etc.</dt>
-            <dd>
-              <i class="icon-osx"></i> OSX,
-              <i class="icon-ubuntu"></i> Ubuntu,
-              ROS,
-              <i class="icon-mysql-alt"></i> MySQL,
-              <i class="fa fa-git-square"></i> Git,
-              <i class="icon-google-developers"></i> Google API/App Engine,
-              <i class="fa fa-twitter-square"></i> Twitter API,
-              <i class="icon-heroku"></i> Heroku,
-              <i class="icon-aws"></i> AWS,
-              <i class="fa fa-github-square"></i> GitHub
-          </dl>
-          <dl>
-            <dt>Field</dt>
-            <dd>
-              Machine Learning,
-              Robotics,
-              Web Services
-            </dd>
-          </dl>
-        </div>
-        <div class="profile-item">
-          <h4 id="education" style="width:90px">Education</h4>
-          <dl>
-            <dt><a href="http://www.u-tokyo.ac.jp/en/" target="_blank">The University of Tokyo</a></dt>
-            <dd><a href="http://www.kikaib.t.u-tokyo.ac.jp/" target="_blank">Mechano-Informatics</a> (2013.10 - present)</dd>
-            <dd><a href="" data-toggle="modal" data-target="#univ1">Science Course II</a> (2012.04 - 2013.09)</dd>
-          </dl>
-          <dl>
-            <dt><a href="http://www.zeze-h.shiga-ec.ed.jp/?page_id=6986&lang=en-us" target="_blank">Shiga Zeze High School</a></dt>
-            <dd>Science Course (2009.04 - 2012.03)</dd>
-          </dl>
-        </div>
-        <div class="profile-item">
-          <h4 id="workexperiences" style="width:140px">Work experiences</h4>
-          <dl>
-            <dt><a href="" data-toggle="modal" data-target="#hri">Honda Research Institute Japan Co., Ltd.,</a> - Internship</dt>
-            <dd>Researcher (2014.08.29 - 2014.09.26)</dd>
-          </dl>
-          <dl>
-            <dt><a href="" data-toggle="modal" data-target="#nagase">Nagase Co. Ltd.</a> - Part-time job</dt>
-            <dd>Contents Staff (2012.11 - 2014.03)</dd>
-          </dl>
-          <dl>
-            <dt><a href="" data-toggle="modal" data-target="#donuts">Donuts Co. Ltd.</a> - Internship</dt>
-            <dd>SI (2013.09 - 2014.01)</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- /#about -->
 
 <!-- modals -->
 <div class="modal fade" id="amazon_picking_challenge_video">
