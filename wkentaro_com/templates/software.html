@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="content-item">
+  <h2>Software</h2>
+  <h3>Projects I contribute to:</h3>
+  <ul class="list-unstyled">
+    {% for stat in repo_stats %}
+      <div class="github-card" data-user="{{ stat.0 }}" data-repo="{{ stat.1 }}"></div>
+    {% endfor %}
+  </ul>
+</div>
+
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+
+{% endblock %}
