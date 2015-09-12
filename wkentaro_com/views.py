@@ -29,13 +29,12 @@ def software(request):
     GITHUB_USERNAME = 'wkentaro'
     GITHUB_PASSWORD = os.environ.get('GITHUB_PASSWORD')
     repo_stats_cache = cache.get('repo_stats')
-    if repo_stats_cache is not None:
-        cached_at, repo_stats = repo_stats_cache
-    if cached_at < datetime.now() - timedelta(days=1):
+    if ((repo_stats_cache is None) or
+            (repo_stats_cache[0] < datetime.now() - timedelta(days=1))):
         repo_stats = get_contributed_repos(GITHUB_USERNAME,
                                            GITHUB_PASSWORD,
                                            skip_owners=['utmi-2014'])
         cache.set('repo_stats', (datetime.now(), repo_stats))
 
     return render(request, template_name, {'page_name': 'software',
-                                           'repo_stats': repo_stats[:8]})
+                                           'repo_stats': repo_stats[:20]})
