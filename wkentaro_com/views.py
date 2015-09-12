@@ -32,7 +32,9 @@ def software(request):
     if repo_stats_cache is not None:
         cached_at, repo_stats = repo_stats_cache
     if cached_at < datetime.now() - timedelta(days=1):
-        repo_stats = get_contributed_repos(GITHUB_USERNAME, GITHUB_PASSWORD)
+        repo_stats = get_contributed_repos(GITHUB_USERNAME,
+                                           GITHUB_PASSWORD,
+                                           skip_owners=['utmi-2014'])
         cache.set('repo_stats', (datetime.now(), repo_stats))
 
     return render(request, template_name, {'page_name': 'software',

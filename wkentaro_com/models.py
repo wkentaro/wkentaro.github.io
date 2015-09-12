@@ -8,7 +8,10 @@ from django.db import models
 from github3 import login
 
 
-def get_contributed_repos(username, password):
+def get_contributed_repos(username, password, skip_owners=None):
+    if skip_owners is None:
+        skip_owners = []
+
     gh = login(username, password)
     repos = gh.iter_user_repos(username, type='public')
 
@@ -22,6 +25,9 @@ def get_contributed_repos(username, password):
 
         owner = repo.owner.login
         repo_name = repo.name
+
+        if owner in skip_owners:
+            continue
 
         for stat in repo.iter_contributor_statistics():
             if stat.author.login == username:
