@@ -7,6 +7,9 @@
 .post .MathJax_Display {
   font-size: 120%;
 }
+div#main {
+  padding-top: 15px;
+}
 /* Masthead */
 .masthead {
   border-bottom: 1px solid #dddddd;
@@ -126,10 +129,6 @@ body {
   background-color: #fcfcfc;
   color: #000;
 }
-#all {
-  width: 80%;
-  margin: 30px auto 0 auto;
-}
 p.menu-description {
   font-size: 15px;
   color: #444;
@@ -191,9 +190,6 @@ div.menu-item {
   }
   ul.act-ref > li:last-child {
     width: 100%;
-  }
-  #all {
-    width: 90%;
   }
   .menu-item {
     float: left;
