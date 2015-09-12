@@ -7,7 +7,6 @@
 .post .MathJax_Display {
   font-size: 120%;
 }
-
 /* Masthead */
 .masthead {
   border-bottom: 1px solid #dddddd;
@@ -19,7 +18,9 @@ p.masthead-tagline {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
+.page-links {
+  font-size: 100%;
+}
 small {
   font-size: 65%;
 }
@@ -180,6 +181,9 @@ div.menu-item {
   .profile-item {
     height:auto;
     width: 100%;
+  }
+  .page-links {
+    font-size: 80%;
   }
   ul.act-ref > li:first-child {
     width: 100%;
