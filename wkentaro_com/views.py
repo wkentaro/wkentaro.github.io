@@ -29,12 +29,23 @@ def software(request):
     repos = [
         'pfnet/chainer',
         'pfnet/cupy',
-        'ros/ros_comm',
         'ros/ros',
+        'ros/ros_comm',
+        'ros-perception/vison_opencv',
+        'ros-perception/image_pipeline',
+        'ros-visualization/rviz',
+        'juanpabloaj/slacker-cli',
+        'PointCloudLibrary/pcl',
+        'dimatura/pypcd',
         'start-jsk/jsk_apc',
         'jsk-ros-pkg/jsk_common',
         'jsk-ros-pkg/jsk_recognition',
         'jsk-ros-pkg/jsk_visualization',
+        'wkentaro/fcn',
+        'wkentaro/vgg16',
+        'wkentaro/pypcd',
+        'wkentaro/gshell',
+        'wkentaro/gdown',
     ]
     repos = [repo.split('/') for repo in repos]
 
