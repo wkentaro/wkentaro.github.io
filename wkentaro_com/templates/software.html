@@ -7,8 +7,8 @@
   <h2>Software</h2>
   <h3>Projects I contribute to:</h3>
   <ul class="list-unstyled">
-    {% for stat in repo_stats %}
-      <div class="github-card" data-user="{{ stat.0 }}" data-repo="{{ stat.1 }}"></div>
+    {% for repo in repos %}
+      <div class="github-card" data-user="{{ repo.0 }}" data-repo="{{ repo.1 }}"></div>
     {% endfor %}
   </ul>
 </div>
