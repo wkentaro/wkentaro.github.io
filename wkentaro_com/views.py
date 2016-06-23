@@ -31,7 +31,7 @@ def software(request):
         'pfnet/cupy',
         'ros/ros',
         'ros/ros_comm',
-        'ros-perception/vison_opencv',
+        'ros-perception/vision_opencv',
         'ros-perception/image_pipeline',
         'ros-visualization/rviz',
         'juanpabloaj/slacker-cli',
@@ -43,7 +43,7 @@ def software(request):
         'jsk-ros-pkg/jsk_visualization',
         'wkentaro/fcn',
         'wkentaro/vgg16',
-        'wkentaro/pypcd',
+        'wkentaro/pycd',
         'wkentaro/gshell',
         'wkentaro/gdown',
     ]
