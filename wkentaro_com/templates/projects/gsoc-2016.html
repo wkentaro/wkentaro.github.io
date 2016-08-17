@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h2>Google Summer of Code 2016: "Reactive and Adaptive Path Planning Using Sensor Feedback and Operator Input"</h2>
+
+<div class="indent-1">
+  <h3>Basic Information</h3>
+  <ul>
+    <li>Student Name: Kentaro Wada (www.kentaro.wada@gmail.com)</li>
+    <li>Project Page: <a href="https://summerofcode.withgoogle.com/organizations/6574802710036480/#5570300158672896">here</a></li>
+    <li>Title: "Reactive and Adaptive Path Planning Using Sensor Feedback and Operator Input"</li>
+    <li>Mentors: shaunedwards@gmail.com, Fred Proctor</li>
+    <li>Organization: Open Source Robotics Foundation</li>
+  </ul>
+</div>
+
+<div class="indent-1">
+  <h3>Project Details</h3>
+  <p class="indent-1">
+    Reactive and adaptive planning is necessary in situations with unknown environment, few sensors and many occlusions.
+    Reactiveness is the mechanism to avoid collision and adaptiveness is one to complete the task.
+    The inputs to achieve these mechanisms are sensor inputs and user operations.
+    Based on these prerequisites, I created a system for reactive and adaptive planning as shown in below:
+    <img class="img-responsive center-block" width="50%" src="{% static "img/projects/gsoc-2016/system_figure.png" %}" />
+    The part of the system consists of a simulator, but the component, Simulator, can be replaced by the real robot.
+    The inputs are provided the simulated sensor and a user in the system.
+    Using these inputs, the two mechanism are achieved with <b>Stop execution</b> and <b>Re-planning</b>:
+    the former is a function for reactiveness and the latter is one for adaptiveness.
+    As a reactiveness, the system needs to stop the joint trajectory execution of the robot to avoid collision in an environment,
+    and as a adaptiveness the system needs to re-plan the joint trajectory to complete the task based on the information at stopping execution.
+  </p>
+  <p class="indent-1">
+    In this project I worked for the two functions, stop execution and re-planning, and also the required components in the above system.
+  </p>
+</div>
+
+<div class="indent-1">
+  <h3>Merged PRs and Fixed Issues</h3>
+  <p class="indent-1">
+    This section provides the completed PRs/Issues in this GSoC project.
+    Some of them are not completed by alone myself, and completed by the cooperation with maintainers of other open source projects.
+  </p>
+  <ul>
+    <li>
+      <div class="indent-1">
+        <h4>Stop execution on motion planning rviz plugin: <a href="https://github.com/ros-planning/moveit_ros/pull/709">ros-planning/moveit_ros#709</a></h4>
+        <p>
+          This function is required to stop trajectory execution by operator inputs.
+          I created a GUI to achieve this function and sent PR to <a href="https://github.com/ros-planning/moveit_ros">one of the repos of MoveIt!</a>.
+          In the end, this PR is closed (not merged) and one of the maintainers provided <a href="https://github.com/ros-planning/moveit_ros/pull/713">another PR</a>
+          with similar changes. The reason my PR is rejected is the missing feature to disable the button until the trajectory execution is completed.
+          The maintainer knew a simpler implementation for this than mine, and he provided the PR and merged.
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="indent-1">
+  <h3>Left PRs and Issues to be Merged and Closed</h3>
+  <p class="indent-1">
+    This section provides the left PRs/Issues in this GSoC project.
+    This means the project is not yet 100% complete. The things left to do are listed below.
+  </p>
+  <ul>
+    <li>
+      <div class="indent-1">
+        <h4>lrmate200id_gazebo: add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
+        <p>
+          This is a PR to simulate the robot fanuc_lrmate200id on one of the most popular simulators on robotics, Gazebo, based on closed PRs/Issues
+          (<a href="https://github.com/ros-industrial/fanuc_experimental/pull/19">ros-industrial/fanuc_experimental#19</a>,
+           <a href="https://github.com/ros-industrial/fanuc_experimental/issues/22">ros-industrial/fanuc_experimental#22</a>).
+          The reason why the robot is chosen is that the real robot is owned by the one of the maintainers, and he can use my code with it.
+          Gazebo is a physics simulator, so in order to spawn the model and use it, it is necessary to set the inertial values.
+          The correct inertial values are not open (as shown in <a href="https://github.com/ros-industrial/fanuc_experimental/issues/22">ros-industrial/fanuc_experimental#22</a>),
+          so I estimated it with the meshes of the links and Meshlab in a way described <a href="http://gazebosim.org/tutorials?tut=inertia&cat=#Computingtheinertialparameters">here</a>.
+        </p>
+      </div>
+    </li>
+    <!-- TODO(wkentaro): List belows as contributions.
+
+Add capability of executing known trajectory with a ROS action
+- https://github.com/ros-planning/moveit_msgs/pull/23
+- https://github.com/ros-planning/moveit_msgs/pull/24
+- https://github.com/ros-planning/moveit_ros/pull/719
+- https://github.com/ros-planning/moveit/pull/60
+
+lrmate200id_moveit_cfg: demo of controlling LRMate200iD with Moveit on Gazebo
+- https://github.com/ros-industrial/fanuc_experimental/pull/21
+
+lrmate200id_gazebo_demo: Gazebo demonstration of reactive planning: Touch the floor
+- https://github.com/ros-industrial/fanuc_experimental/pull/23
+
+Fix namespace of params for trajectory_execution
+- https://github.com/ros-industrial/fanuc_experimental/pull/24
+- https://github.com/ros-planning/moveit/issues/61
+
+Sample of OctomapServerContact does not work: voxel is not updated with contact?
+- https://github.com/jsk-ros-pkg/jsk_recognition/issues/1834
+
+Scene visualization won't work on rviz plugin after some joint trajectory execution
+- https://github.com/ros-planning/moveit_ros/issues/711
+
+
+    <li>
+      <div class="indent-1">
+        <h4></h4>
+      </div>
+    </li>
+    -->
+  </ul>
+</div>
+
+{% endblock %}

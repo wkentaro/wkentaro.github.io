@@ -62,3 +62,6 @@ def software(request):
 
     return render(request, template_name,
                   {'page_name': 'software', 'repos': repos})
+
+def projects(request, project_name):
+    return render(request, os.path.join('projects', project_name + '.html'))
