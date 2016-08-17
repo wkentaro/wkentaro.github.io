@@ -23,7 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = "{{ secret_key }}"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if os.getlogin() == 'wkentaro':
+    DEBUG = True
+else:
+    DEBUG = False
 
 TEMPLATE_DEBUG = False
 
