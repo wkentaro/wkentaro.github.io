@@ -48,7 +48,7 @@
   </p>
   <ul>
     <li>
-      <div class="indent-1">
+      <div class="indent-1" id="stop_execution">
         <h4>Stop execution on motion planning rviz plugin: <a href="https://github.com/ros-planning/moveit_ros/pull/709">ros-planning/moveit_ros#709</a></h4>
         <p>
           This function is required to stop trajectory execution by operator inputs.
@@ -77,7 +77,7 @@
   <ul>
     <li>
       <div class="indent-1">
-        <h4>lrmate200id_gazebo: add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
+        <h4>Add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
         <p>
           This is a PR to simulate the robot fanuc_lrmate200id on one of the most popular simulators on robotics, Gazebo, based on closed PRs/Issues
           (<a href="https://github.com/ros-industrial/fanuc_experimental/pull/19">ros-industrial/fanuc_experimental#19</a>,
@@ -96,13 +96,24 @@
         </p>
       </div>
     </li>
+    <li>
+      <div class="indent-1">
+        <h4>Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/60">ros-planning/moveit#60</a></h4>
+        <p>
+          This depends on
+          <a href="https://github.com/ros-planning/moveit_msgs/pull/24">ros-planning/moveit_msgs#24</a>.
+        </p>
+        <p>
+          This is a PR to execute trajectory with monitoring, based on closed PRs/Issues
+          (<a href="https://github.com/ros-planning/moveit_msgs/pull/23">ros-planning/moveit_msgs#23</a>,
+           <a href="https://github.com/ros-planning/moveit_ros/pull/719">ros-planning/moveit_ros#719</a>).
+          Monitoring trajectory execution is necessary for operator cancel GUI handling as described <a href="#stop_execution">here</a>.
+          Also the function to monitor the execution is necessary for controllers for completely automated system, because
+          the robot controller needs to select canceling execution or waiting for the completion during the execution.
+        </p>
+      </div>
+    </li>
     <!-- TODO(wkentaro): List belows as contributions.
-
-Add capability of executing known trajectory with a ROS action
-- https://github.com/ros-planning/moveit_msgs/pull/23
-- https://github.com/ros-planning/moveit_msgs/pull/24
-- https://github.com/ros-planning/moveit_ros/pull/719
-- https://github.com/ros-planning/moveit/pull/60
 
 lrmate200id_moveit_cfg: demo of controlling LRMate200iD with Moveit on Gazebo
 - https://github.com/ros-industrial/fanuc_experimental/pull/21
