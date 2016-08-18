@@ -14,7 +14,7 @@
     <li>Mentors: Shaun Edwards (shaunedwards@gmail.com), Fred Proctor</li>
     <li>Organization: Open Source Robotics Foundation</li>
   </ul>
-</div>
+</div>  <!-- div.indent-1 -->
 
 <div class="indent-1">
   <h3>Project Details</h3>
@@ -42,7 +42,7 @@
     The sections afterward describes about the complete/incomplete things of this project, and the prefix in the title (eg. [Reactive], [Simulator])
     represents what are the changes for.
   </p>
-</div>
+</div>  <!-- div.indent-1 -->
 
 <div class="indent-1">
   <h3>Complete Things: Merged PRs and Fixed Issues</h3>
@@ -70,7 +70,7 @@
       </div>
     </li>
   </ul>
-</div>
+</div>  <!-- div.indent-1 -->
 
 <div class="indent-1">
   <h3>Left Things: PRs and Issues to be Merged and Closed</h3>
@@ -156,9 +156,9 @@
           (<a href="https://github.com/ros-planning/moveit/issues/61">ros-planning/moveit#61</a>,
           <a href="https://github.com/ros-industrial/fanuc_experimental/pull/24">ros-industrial/fanuc_experimental#24</a>).
           Because of this bug the trajectory execution for the robot is usually canceled, and sometimes it breaks the robot on the simulation.
-          To fix this I proposed PRs below. They are not yet merged but seems to be merged soon.
+          To fix this I proposed PRs below:
           <ul>
-            <li><a href="https://github.com/ros-planning/moveit/pull/72">Set trajectory execution monitor params under correct namespace</a></li>
+            <li><a href="https://github.com/ros-planning/moveit/pull/72">Set trajectory execution monitor params under correct namespace (merged)</a></li>
             <li><a href="https://github.com/ros-planning/moveit/pull/73">Fix missing dynparam setup for TrajectoryExecutionManager (merged)</a></li>
           </ul>
         </p>
@@ -166,12 +166,13 @@
           <h5>Merged commits of mine</h5>
           <ul>
             <li><a href="https://github.com/ros-planning/moveit/commit/c185888e93616c1041f3ff1f0fa86e4f9ea5ab43">Fix missing dynparam setup for TrajectoryExecutionManager (#73)</a></li>
+            <li><a href="https://github.com/ros-planning/moveit/commit/20001602e915746877d56caccce7b46dfd5cac72">Added parameter allowed_goal_duration_margin to DynamicReconfigure</a></li>
           </ul>
         </div>
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="indent-1" id="issue_octomap_contact">
         <h4>[Adaptive] Sample of OctomapServerContact does not work: voxel is not updated with contact?: <a href="https://github.com/jsk-ros-pkg/jsk_recognition/issues/1834">jsk-ros-pkg/jsk_recognition#1834</a></h4>
         <p>
           This is an bug report I proposed, but not yet fixed.
@@ -183,7 +184,7 @@
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="indent-1" id="issue_moveit_scene">
         <h4>[Adaptive] Scene visualization won't work on rviz plugin after some joint trajectory execution: <a href="https://github.com/ros-planning/moveit_ros/issues/711">ros-planning/moveit_ros#711</a></h4>
         <p>
           This is a bug report I proposed, but not yet fixed.
@@ -192,15 +193,89 @@
         </p>
       </div>
     </li>
-    <!-- TODO(wkentaro): List belows as contributions.
-
-lrmate200id_gazebo_demo: Gazebo demonstration of reactive planning: Touch the floor
-- https://github.com/ros-industrial/fanuc_experimental/pull/23
-
-    -->
   </ul>
+</div>  <!-- div.indent-1 -->
+
+<div class="indent1">
+  <h3>Demonstrations of What is Achieved by this Project</h3>
+  <p class="indent-1">
+    This section provides some demonstrations to show what is achieved by this project.
+  </p>
+  <ul>
+    <li>
+      <div class="indent-1">
+        <h4>Gazebo demonstration of reactive planning: Touch the floor: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/23">ros-industrial/fanuc_experimental#23</a></h4>
+        <p>
+          This demo is to show the function of reactiveness of the system. In the demo, a force sensor at the last joint of the robot detects the unexpected force input,
+          and the controller stops the trajectory execution based on that.
+          Without the reactiveness the robot breaks with collision to the floor, but with my system the robot successfully detects the floor.
+          The result is shown in below movies, one is without reactiveness and the other is with it:
+        </p>
+        <ul>
+          <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vLVlsZnNJcWtfSkU"><b>Movie</b> without reactiveness</a></li>
+          <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vSVRqSnVpX19iQmc"><b>Movie</b> with reactiveness</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="indent-1">
+        <h4>
+          Pick and place demonstration with Fanuc LRMate200id in a situation with few sensors with reactive and adaptive planning:
+          <a href="https://github.com/ros-industrial/fanuc_experimental/pull/25">ros-industrial/fanuc_experimental#25</a>
+        </h4>
+        <p>
+          This demo is to show the function of reactiveness and adaptiveness of the system in a situation with few sensors, and many occlusions, with a operator input.
+          The task is to pick object from a red bin and place it in a shelf bin. The shelf bin has many occlusions and robot needs to detect collision and stop trajectory execution if necessary.
+          The operator can stop the trajectory execution with unexpected force input, and successfully complete the task based on the history of the contact beforehand.
+          The result is shown in below movies, one is to show the reactiveness and the other is to show the completion of task afterwards:
+          <ul>
+            <li><a href="https://drive.google.com/file/d/0B9P1L--7Wd2vZ3lWUmxrWUNWb2M/view?usp=sharing"><b>Movie</b> of detecting collision with force sensor input and stop the trajectory execution.</a></li>
+            <li><a href="https://drive.google.com/file/d/0B9P1L--7Wd2vZ0RGOVprZXVLZlU/view?usp=sharing"><b>Movie</b> of completing the stow task based on the previous collision detection and trajectory execution canceling.</a></li>
+          </ul>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>  <!-- div.indent-1 -->
+
+
+<div class="indent-1">
+  <h3>Conclusions</h3>
+  <p class="indent-1">
+    For reactive and adaptive planning, functions for stopping trajectory execution and re-planning are necessary.
+    I completed most of the features for reactiveness but there are still some open issues for re-planning:
+    <a href="#issue_moveit_scene">#issue_moveit_scene</a>, <a href="#issue_octomap_contact">#issue_octomap_contact</a>.
+    The demonstrations above shows the system is effective in a situation with few sensors and occlusions, but the completely automated planning
+    using only sensor inputs not operator inputs is not yet tackled. It is one of the future works.
+  </p>
 </div>
 
-<!-- TODO(wkentaro): List ROS-I meeting pptx files -->
+
+<div class="indent-1">
+  <h3>Other Resources Created in the Project</h3>
+  <div class="indent-1">
+    <h4>ROS workspace for code which is not yet merged</h4>
+    <ul>
+      <li>Setup ROS following <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">this link</a></li>
+      <li>Setup ROS workspace with commands below:
+    <pre>
+mkdir -p ~/ros/gsoc_ws/src
+cd ~/ros/gsoc_ws/src
+wget https://raw.githubusercontent.com/wkentaro/gsoc-2016/master/rosinstall -O .rosinstall
+wstool up
+cd ..
+catkin build</pre>
+      </li>
+  </div>
+  <div class="indent-1">
+    <h4>Presentation Documents for <a href="http://rosindustrial.org/">ROS Industrial</a> Monthly Meeting</h4>
+    <ul>
+      <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vMFVMNzBSSWxQZWM">2016-05-10</a></li>
+      <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vem1KQ24tOFpuakU">2016-06-01</a></li>
+      <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vaDFlT1loUTU4MlU">2016-07-11</a></li>
+      <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vbkRocEJTb0ZUOVU">2016-08-09</a></li>
+    </ul>
+  </div>
+</div>  <!-- div.indent-1 -->
 
 {% endblock %}

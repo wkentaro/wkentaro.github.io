@@ -129,6 +129,9 @@ body {
   background-color: #fcfcfc;
   color: #000;
 }
+pre {
+  font-size: 15px;
+}
 p.menu-description {
   font-size: 15px;
   color: #444;
