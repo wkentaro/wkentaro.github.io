@@ -9,6 +9,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
+import getpass
 import os
 import dj_database_url
 
@@ -23,12 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = "{{ secret_key }}"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-try:
-    if os.getlogin() == 'wkentaro':
-        DEBUG = True
-    else:
-        DEBUG = False
-except OSError:
+if getpass.getuser() == 'wkentaro':
+    DEBUG = True
+else:
     DEBUG = False
 
 TEMPLATE_DEBUG = False
