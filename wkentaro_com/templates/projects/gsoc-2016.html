@@ -23,11 +23,13 @@
     Reactiveness is the mechanism to avoid collision and adaptiveness is one to complete the task.
     The inputs to achieve these mechanisms are sensor inputs and user operations.
     Based on these prerequisites, I created a system for reactive and adaptive planning as shown in below:
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
-        <img class="img-responsive center-block" src="{% static "img/projects/gsoc-2016/system_figure.png" %}" />
-      </div>
+  </p>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+      <img class="img-responsive center-block" src="{% static "img/projects/gsoc-2016/system_figure.png" %}" />
     </div>
+  </div>
+  <p class="indent-1">
     The part of the system consists of a simulator, but the component, Simulator, can be replaced by the real robot.
     The inputs are provided the simulated sensor and a user in the system.
     Using these inputs, the two mechanism are achieved with <b>Stop execution</b> and <b>Re-planning</b>:
@@ -37,6 +39,8 @@
   </p>
   <p class="indent-1">
     In this project I worked for the two functions, stop execution and re-planning, and also the required components in the above system.
+    The sections afterward describes about the complete/incomplete things of this project, and the prefix in the title (eg. [Reactive], [Simulator])
+    represents what are the changes for.
   </p>
 </div>
 
@@ -49,9 +53,9 @@
   <ul>
     <li>
       <div class="indent-1" id="stop_execution">
-        <h4>Stop execution on motion planning rviz plugin: <a href="https://github.com/ros-planning/moveit_ros/pull/709">ros-planning/moveit_ros#709</a></h4>
+        <h4>[Reactive] Stop execution on motion planning rviz plugin: <a href="https://github.com/ros-planning/moveit_ros/pull/709">ros-planning/moveit_ros#709</a></h4>
         <p>
-          This function is required to stop trajectory execution by operator inputs.
+          This function is required to stop trajectory execution by operator inputs, and for the reactiveness in the system.
           I created a GUI to achieve this function and sent PR to <a href="https://github.com/ros-planning/moveit_ros">one of the repos of MoveIt!</a>.
           In the end, this PR is closed (not merged) and one of the maintainers provided <a href="https://github.com/ros-planning/moveit_ros/pull/713">another PR</a>
           with similar changes. The reason my PR is rejected is the missing feature to disable the button until the trajectory execution is completed.
@@ -77,12 +81,12 @@
   <ul>
     <li>
       <div class="indent-1">
-        <h4>Add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
+        <h4>[Simulator] Add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
         <p>
           This is a PR to simulate the robot fanuc_lrmate200id on one of the most popular simulators on robotics, Gazebo, based on closed PRs/Issues
           (<a href="https://github.com/ros-industrial/fanuc_experimental/pull/19">ros-industrial/fanuc_experimental#19</a>,
           <a href="https://github.com/ros-industrial/fanuc_experimental/issues/22">ros-industrial/fanuc_experimental#22</a>,
-          <a href="https://github.com/ros-industrial/fanuc/issues/145">ros-industrial/fanuc#145</a>).
+          <a href="https://github.com/ros-industrial/fanuc/issues/145">ros-industrial/fanuc#145</a>), for creating the whole system.
           The reason why the robot is chosen is that the real robot is owned by the one of the maintainers, and he can use my code with it.
           Gazebo is a physics simulator, so in order to spawn the model and use it, it is necessary to set the inertial values.
           The correct inertial values are not open (as shown in <a href="https://github.com/ros-industrial/fanuc_experimental/issues/22">ros-industrial/fanuc_experimental#22</a>),
@@ -98,7 +102,32 @@
     </li>
     <li>
       <div class="indent-1">
-        <h4>Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/60">ros-planning/moveit#60</a></h4>
+        <h4>[Simulator] Fix vacuum gripper plugin to work in stable: <a href="https://github.com/ros-simulation/gazebo_ros_pkgs/pull/48://github.com/ros-simulation/gazebo_ros_pkgs/pull/482">ros-simulation/gazebo_ros_pkgs#482</a></h4>
+        <p>
+          This is a PR to simulate the vacuum gripper in order to run manipulation tasks on the simulator.
+          Without this PR, the vacuum gripper plugin does not work as expected because of the too fast angular velocity of the manipulating object.
+          This PR is under reviews.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Planner] Controlling Fanuc LRMate200iD with Moveit on Gazebo: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/21">ros-industrial/fanuc_experimental#21</a></h4>
+        <p>
+          This is a PR to control Fanuc LRMate200iD robot on Gazebo with Moveit!, for creatign the whole system.
+          MoveIt! is one of the most popular project for robotic planning, and I decided to use it on this project.
+          The result is shown in below:
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+              <img class="img-responsive center-block" src="{% static "img/projects/gsoc-2016/moveit_fanuc_gazebo.gif" %}" />
+            </div>
+          </div>
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Reactive] Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/60">ros-planning/moveit#60</a></h4>
         <p>
           This depends on
           <a href="https://github.com/ros-planning/moveit_msgs/pull/24">ros-planning/moveit_msgs#24 (merged)</a>.
@@ -106,7 +135,7 @@
         <p>
           This is a PR to execute trajectory with monitoring, based on closed PRs/Issues
           (<a href="https://github.com/ros-planning/moveit_msgs/pull/23">ros-planning/moveit_msgs#23 (closed)</a>,
-           <a href="https://github.com/ros-planning/moveit_ros/pull/719">ros-planning/moveit_ros#719 (closed)</a>).
+           <a href="https://github.com/ros-planning/moveit_ros/pull/719">ros-planning/moveit_ros#719 (closed)</a>), for the reactiveness in the system.
           Monitoring trajectory execution is necessary for operator cancel GUI handling as described <a href="#stop_execution">here</a>.
           Also the function to monitor the execution is necessary for controllers for completely automated system, because
           the robot controller needs to select canceling execution or waiting for the completion during the execution.
@@ -119,30 +148,55 @@
         </div>
       </div>
     </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Planner] Fix namespace of params for trajectory_execution</h4>
+        <p>
+          This is a bugfix of MoveIt!, with related issues
+          (<a href="https://github.com/ros-planning/moveit/issues/61">ros-planning/moveit#61</a>,
+          <a href="https://github.com/ros-industrial/fanuc_experimental/pull/24">ros-industrial/fanuc_experimental#24</a>).
+          Because of this bug the trajectory execution for the robot is usually canceled, and sometimes it breaks the robot on the simulation.
+          To fix this I proposed PRs below. They are not yet merged but seems to be merged soon.
+          <ul>
+            <li><a href="https://github.com/ros-planning/moveit/pull/72">Set trajectory execution monitor params under correct namespace</a></li>
+            <li><a href="https://github.com/ros-planning/moveit/pull/73">Fix missing dynparam setup for TrajectoryExecutionManager (merged)</a></li>
+          </ul>
+        </p>
+        <div>
+          <h5>Merged commits of mine</h5>
+          <ul>
+            <li><a href="https://github.com/ros-planning/moveit/commit/c185888e93616c1041f3ff1f0fa86e4f9ea5ab43">Fix missing dynparam setup for TrajectoryExecutionManager (#73)</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Adaptive] Sample of OctomapServerContact does not work: voxel is not updated with contact?: <a href="https://github.com/jsk-ros-pkg/jsk_recognition/issues/1834">jsk-ros-pkg/jsk_recognition#1834</a></h4>
+        <p>
+          This is an bug report I proposed, but not yet fixed.
+          The OctomapServerContact is a voxel collision object map generation method using robot contact aside from the point cloud sensed with RGB-D cameras,
+          and this kind of mapping is necessary for re-planning after the detecting contact and stopping execution.
+          So this is a feature for adaptiveness in the system.
+          Currently the voxel map is not updated with the robot contact that is detected with force sensors, and it needs to be fixed.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Adaptive] Scene visualization won't work on rviz plugin after some joint trajectory execution: <a href="https://github.com/ros-planning/moveit_ros/issues/711">ros-planning/moveit_ros#711</a></h4>
+        <p>
+          This is a bug report I proposed, but not yet fixed.
+          Updating planning scene is necessary for adaptiveness on this project, to store the contact detected with the force sensors.
+          This is included feature in MoveIt!, but not worked in some situations.
+        </p>
+      </div>
+    </li>
     <!-- TODO(wkentaro): List belows as contributions.
-
-lrmate200id_moveit_cfg: demo of controlling LRMate200iD with Moveit on Gazebo
-- https://github.com/ros-industrial/fanuc_experimental/pull/21
 
 lrmate200id_gazebo_demo: Gazebo demonstration of reactive planning: Touch the floor
 - https://github.com/ros-industrial/fanuc_experimental/pull/23
 
-Fix namespace of params for trajectory_execution
-- https://github.com/ros-industrial/fanuc_experimental/pull/24
-- https://github.com/ros-planning/moveit/issues/61
-
-Sample of OctomapServerContact does not work: voxel is not updated with contact?
-- https://github.com/jsk-ros-pkg/jsk_recognition/issues/1834
-
-Scene visualization won't work on rviz plugin after some joint trajectory execution
-- https://github.com/ros-planning/moveit_ros/issues/711
-
-
-    <li>
-      <div class="indent-1">
-        <h4></h4>
-      </div>
-    </li>
     -->
   </ul>
 </div>
