@@ -71,6 +71,30 @@
         </p>
       </div>
     </li>
+    <li>
+      <div class="indent-1">
+        <h4>[Reactive] Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/60">ros-planning/moveit#60</a></h4>
+        <p>
+          This depends on
+          <a href="https://github.com/ros-planning/moveit_msgs/pull/24">ros-planning/moveit_msgs#24 (merged)</a>.
+        </p>
+        <p>
+          This is a PR to execute trajectory with monitoring, based on closed PRs/Issues
+          (<a href="https://github.com/ros-planning/moveit_msgs/pull/23">ros-planning/moveit_msgs#23 (closed)</a>,
+           <a href="https://github.com/ros-planning/moveit_ros/pull/719">ros-planning/moveit_ros#719 (closed)</a>), for the reactiveness in the system.
+          Monitoring trajectory execution is necessary for operator cancel GUI handling as described <a href="#stop_execution">here</a>.
+          Also the function to monitor the execution is necessary for controllers for completely automated system, because
+          the robot controller needs to select canceling execution or waiting for the completion during the execution.
+        </p>
+        <div>
+          <h5>Merged commits of mine</h5>
+          <ul>
+            <li><a href="https://github.com/ros-planning/moveit_msgs/commit/cd1971bade31010c4f1b21dcc8596762330ea2f2">Add .action file for execution trajectory in a ROS action (#24)</a></li>
+            <li><a href="https://github.com/ros-planning/moveit/commit/faaf0fc32ab02584169b4afef727cdb02dd497c9">Add capability of execute known trajectory with a ROS action (#60)</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>  <!-- div.indent-1 -->
 
@@ -125,29 +149,6 @@
             </div>
           </div>
         </p>
-      </div>
-    </li>
-    <li>
-      <div class="indent-1">
-        <h4>[Reactive] Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/60">ros-planning/moveit#60</a></h4>
-        <p>
-          This depends on
-          <a href="https://github.com/ros-planning/moveit_msgs/pull/24">ros-planning/moveit_msgs#24 (merged)</a>.
-        </p>
-        <p>
-          This is a PR to execute trajectory with monitoring, based on closed PRs/Issues
-          (<a href="https://github.com/ros-planning/moveit_msgs/pull/23">ros-planning/moveit_msgs#23 (closed)</a>,
-           <a href="https://github.com/ros-planning/moveit_ros/pull/719">ros-planning/moveit_ros#719 (closed)</a>), for the reactiveness in the system.
-          Monitoring trajectory execution is necessary for operator cancel GUI handling as described <a href="#stop_execution">here</a>.
-          Also the function to monitor the execution is necessary for controllers for completely automated system, because
-          the robot controller needs to select canceling execution or waiting for the completion during the execution.
-        </p>
-        <div>
-          <h5>Merged commits of mine</h5>
-          <ul>
-            <li><a href="https://github.com/ros-planning/moveit_msgs/commit/cd1971bade31010c4f1b21dcc8596762330ea2f2">Add .action file for execution trajectory in a ROS action (#24)</a></li>
-          </ul>
-        </div>
       </div>
     </li>
     <li>
