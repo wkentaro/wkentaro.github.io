@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load staticfiles %}
 
 {% block content %}
 
@@ -8,7 +7,7 @@
   <div class="container-fluid" style="margin-bottom: 40px">
     <div class="row">
       <div class="col-xs-5">
-        <img src="{% static "img/profile.jpg" %}" class="img-rounded profile-img" />
+        <img src="{{ url_for('static', filename="img/profile.jpg") }}" class="img-rounded profile-img" />
       </div>
       <div class="col-xs-7">
         <dl style="margin: 0 0">
@@ -130,7 +129,7 @@
           <dl>
             <dt>Certificate</dt>
             <dd class="indent-1">
-              <img src="{% static "img/hri-intern-certificate.png" %}" class="img-responsive" />
+              <img src="{{ url_for('static', filename="img/hri-intern-certificate.png") }}" class="img-responsive" />
             </dd>
             <dt>Links</dt>
             <dd class="indent-1">

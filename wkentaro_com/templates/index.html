@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load staticfiles %}
 
 {% block content %}
 
@@ -16,7 +15,7 @@
     <ul class="list-inline act-ref indent-1">
       <li>
         <a href="http://amazonpickingchallenge.org" target="_blank" style="border-bottom: none;">
-          <img src="{% static "img/amazon_picking_challenge_banner.png" %}" />
+          <img src="{{ url_for('static', filename="img/amazon_picking_challenge_banner.png") }}" />
         </a>
       </li>
       <li>
@@ -41,7 +40,11 @@
   <div id="amazon_ar">
     <h4>Amazon - AR (2014.12)</h4>
     <ul class="list-inline act-ref indent-1">
-      <li><a href="http://amazon-ar.herokuapp.com" target="_blank" style="border-bottom: none;"><img src="{% static "img/landing_amazon_ar.png" %}" /></a></li>
+      <li>
+        <a href="http://amazon-ar.herokuapp.com" target="_blank" style="border-bottom: none;">
+          <img src="{{ url_for('static', filename="img/landing_amazon_ar.png") }}" />
+        </a>
+      </li>
       <li>
         <p><a href="http://amazon-ar.herokuapp.com" target="_blank">Amazon - AR</a> is a website in which you can experience 3D item view of item you want to buy. </p>
         <p><a href="#" data-toggle="modal" data-target="#screenshots_amazon_ar">Screenshots</a></p>
@@ -51,7 +54,11 @@
   <div id="ut_komaba">
     <h4>UT Komaba (2013.8 - present)</h4>
     <ul class="list-inline act-ref indent-1">
-      <li><a href="http://ut-komaba.appspot.com" target="_blank" style="border-bottom: none;"><img src="{% static "img/utkomaba.png" %}" /></a></li>
+      <li>
+        <a href="http://ut-komaba.appspot.com" target="_blank" style="border-bottom: none;">
+          <img src="{{ url_for('static', filename="img/utkomaba.png") }}" />
+        </a>
+      </li>
       <li>
         <p><a href="http://ut-komaba.appspot.com" target="_blank">UT Komaba</a> is distributing information about The University of Tokyo, forcusing on in Komaba Campus.</p>
         <p>
@@ -68,7 +75,7 @@
   <div id="utgym">
     <h4>UT Startup Gym (2012.9 - 2014.2)</h4>
     <ul class="list-inline act-ref indent-1">
-      <li><a href="http://ut-gym.jp/" target="_blank" style="border-bottom: none;"><img src="{% static "img/utgym.png" %}" /></a></li>
+      <li><a href="http://ut-gym.jp/" target="_blank" style="border-bottom: none;"><img src="{{ url_for('static', filename="img/utgym.png") }}" /></a></li>
       <li>
         <p>In workshops held by <a href="http://ut-gym.jp" target="_blank">UT Startup Gym</a>, participants learn programming from the basics. Then they will do some projects which creates web services.</p>
       </li>
@@ -88,8 +95,8 @@
         </div>
         <div class="modal-body">
           <ul class="list-unstyled">
-            <li><img src="{% static "img/screenshots_amazon_ar_0.png" %}" class="img-responsive" /></li>
-            <li><img src="{% static "img/screenshots_amazon_ar_1.png" %}" class="img-responsive" /></li>
+            <li><img src="{{ url_for('static', filename="img/screenshots_amazon_ar_0.png") }}" class="img-responsive" /></li>
+            <li><img src="{{ url_for('static', filename="img/screenshots_amazon_ar_1.png") }}" class="img-responsive" /></li>
           </ul>
         </div>
       </div>
@@ -120,7 +127,7 @@
             <dt>LogCal (2013.09 - present.)</dt></dl>
             <dd>
               <ul class="list-inline act-ref">
-                <li><a href="http://www.logcal.info/" target="_blank"><img src="{% static "img/logcal.png" %}" class="img-responsive" /></a></li>
+                <li><a href="http://www.logcal.info/" target="_blank"><img src="{{ url_for('static', filename="img/logcal.png") }}" class="img-responsive" /></a></li>
                 <li><p><a href="http://www.logcal.info/" target="_blank">LogCal</a> calcurates the sum of your events time. You can find out how long you spent time on each events.</p></li>
               </ul>
             </dd>

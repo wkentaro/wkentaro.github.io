@@ -1,31 +1,37 @@
-import os
-from datetime import datetime, timedelta
+import os.path as osp
 
-from utils.github import get_contributed_repos
-
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.cache import cache
+import flask
 
 
-def index(request):
-    template_name = 'index.html'
-    return render(request, template_name, {'page_name': 'index'})
+app = flask.Flask(__name__)
 
 
-def about(request):
-    template_name = 'about.html'
-    return render(request, template_name, {'page_name': 'about'})
+@app.route('/')
+def index():
+    return flask.render_template(
+        'index.html',
+        page_name='index',
+    )
 
 
-def research(request):
-    template_name = 'research.html'
-    return render(request, template_name, {'page_name': 'research'})
+@app.route('/about')
+def about():
+    return flask.render_template(
+        'about.html',
+        page_name='about',
+    )
 
 
-def software(request):
-    template_name = 'software.html'
+@app.route('/research')
+def research():
+    return flask.render_template(
+        'research.html',
+        page_name='research',
+    )
 
+
+@app.route('/software')
+def software():
     repos = [
         'pfnet/chainer',
         'pfnet/cupy',
@@ -49,19 +55,15 @@ def software(request):
     ]
     repos = [repo.split('/') for repo in repos]
 
-    # GITHUB_USERNAME = 'wkentaro'
-    # GITHUB_PASSWORD = os.environ.get('GITHUB_PASSWORD')
-    # repo_stats_cache = cache.get('repo_stats') or (datetime(1970, 1, 1, 0, 0, 0), None)
-    # if repo_stats_cache[0] < datetime.now() - timedelta(days=1):
-    #     repo_stats = get_contributed_repos(GITHUB_USERNAME,
-    #                                        GITHUB_PASSWORD,
-    #                                        skip_owners=['utmi-2014'])
-    #     cache.set('repo_stats', (datetime.now(), repo_stats))
-    # else:
-    #     repo_stats = repo_stats_cache[1]
+    return flask.render_template(
+        'software.html',
+        page_name='software',
+        repos=repos,
+    )
 
-    return render(request, template_name,
-                  {'page_name': 'software', 'repos': repos})
 
-def projects(request, project_name):
-    return render(request, os.path.join('projects', project_name + '.html'))
+@app.route('/projects/<project_name>')
+def projects(project_name):
+    return flask.render_template(
+        osp.join('projects', project_name + '.html'),
+    )

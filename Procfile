@@ -1,1 +1,1 @@
-web: python manage.py clear_cache && gunicorn wkentaro_com.wsgi --log-file -
+web: gunicorn wkentaro_com.views:app --log-file -
