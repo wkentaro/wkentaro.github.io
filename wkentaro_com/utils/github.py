@@ -34,5 +34,5 @@ def get_contributed_repos(username, password, skip_owners=None):
 
         repo_stats.append((owner, repo_name, n_commits))
 
-    repo_stats = sorted(repo_stats, key=lambda x:x[2], reverse=True)
+    repo_stats = sorted(repo_stats, key=lambda x: x[2], reverse=True)
     return repo_stats
