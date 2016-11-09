@@ -20,7 +20,7 @@
           Our team Team-K got 5th in pick task, 8th in stow task.
         </p>
         <ul class="list-inline indent-1">
-          <li><a href="http://github.com/start-jsk/jsk_apc" target="_blank" />code</a></li>
+          <li><a href="http://github.com/start-jsk/jsk_apc" target="_blank" />Code</a></li>
         </ul>
       </div>
     </div>
@@ -51,8 +51,8 @@
           Our team Team-K got 8th grade.
         </p>
         <ul class="list-inline indent-1">
-          <li><a href="http://github.com/start-jsk/2014-semi" target="_blank" />code</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#apc2015_video">video</a></li>
+          <li><a href="http://github.com/start-jsk/2014-semi" target="_blank" />Code</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#apc2015_video">Video</a></li>
         </ul>
       </div>
     </div>
@@ -65,73 +65,77 @@
       </p>
     </div>
 
-  </div>  <!-- .row -->
-
-  <div id="amazon_ar">
-    <h4>Amazon - AR (2014.12)</h4>
-    <ul class="list-inline act-ref indent-1">
-      <li>
-        <a href="http://amazon-ar.herokuapp.com" target="_blank" style="border-bottom: none;">
+    <div id="amazon_ar" class="col-xs-12">
+      <h4>Amazon - AR (2014.12)</h4>
+      <div class="col-xs-6">
+        <a href="http://amazon-ar.herokuapp.com" target="_blank" class="thumbnail">
           <img src="{{ url_for('static', filename="img/landing_amazon_ar.png") }}" />
         </a>
-      </li>
-      <li>
-        <p><a href="http://amazon-ar.herokuapp.com" target="_blank">Amazon - AR</a> is a website in which you can experience 3D item view of item you want to buy. </p>
-        <p><a href="#" data-toggle="modal" data-target="#screenshots_amazon_ar">Screenshots</a></p>
-      </li>
-    </ul>
-  </div><!-- #amazon_ar -->
-  <div id="ut_komaba">
-    <h4>UT Komaba (2013.08 - present)</h4>
-    <ul class="list-inline act-ref indent-1">
-      <li>
-        <a href="http://ut-komaba.appspot.com" target="_blank" style="border-bottom: none;">
-          <img src="{{ url_for('static', filename="img/utkomaba.png") }}" />
-        </a>
-      </li>
-      <li>
-        <p><a href="http://ut-komaba.appspot.com" target="_blank">UT Komaba</a> is distributing information about The University of Tokyo, forcusing on in Komaba Campus.</p>
+      </div>
+      <div clss="col-xs-6">
         <p>
-          Following is twitter account which reports information from UTokyo (Komaba).
-          <ul>
-            <li><a href="https://twitter.com/ut_kyomu" target="_blank">@ut_kyomu</a></li>
-            <li><a href="https://twitter.com/ut_kyuko" target="_blank">@ut_kyuko</a></li>
-            <li><a href="https://twitter.com/ut_kyoshitsu" target="_blank">@ut_kyoshitsu</a></li>
-          </ul>
+          <a href="http://amazon-ar.herokuapp.com" target="_blank">Amazon - AR</a>
+          is a website in which you can experience 3D item view of item you want to buy.
         </p>
-      </li>
-    </ul>
-  </div><!-- #ut_komaba -->
-  <div id="utgym">
-    <h4>UT Startup Gym (2012.09 - 2014.02)</h4>
-    <ul class="list-inline act-ref indent-1">
-      <li><a href="http://ut-gym.jp/" target="_blank" style="border-bottom: none;"><img src="{{ url_for('static', filename="img/utgym.png") }}" /></a></li>
-      <li>
-        <p>In workshops held by <a href="http://ut-gym.jp" target="_blank">UT Startup Gym</a>, participants learn programming from the basics. Then they will do some projects which creates web services.</p>
-      </li>
-    </ul>
-  </div><!-- #utgym -->
+        <ul class="list-inline indent-1">
+          <li><a href="https://github.com/wk-jphacks/amazon-ar" target="_blank">Code</a></li>
+        </ul>
+        <ul class="list-inline indent-1">
+          <li>
+            <a href="{{ url_for('static', filename='projects/amazon_ar/screenshot_1.jpg') }}">
+              Screenshot 1
+            </a>
+          </li>
+          <li>
+            <a href="{{ url_for('static', filename='projects/amazon_ar/screenshot_2.jpg') }}">
+              Screenshot 2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="ut_komaba" class="col-xs-12">
+      <h4>UT Komaba (2013.08)</h4>
+      <div class="col-xs-4">
+        <a href="http://ut-komaba.appspot.com" target="_blank" class="thumbnail">
+          <img src="{{ url_for('static', filename='img/utkomaba.png') }}" />
+        </a>
+      </div>
+      <div class="col-xs-8">
+        <p><a href="http://ut-komaba.appspot.com" target="_blank">UT Komaba</a> is distributing information about The University of Tokyo on Komaba Campus.</p>
+        <ul>
+          <li><a href="https://twitter.com/ut_kyomu" target="_blank">@ut_kyomu</a></li>
+          <li><a href="https://twitter.com/ut_kyuko" target="_blank">@ut_kyuko</a></li>
+          <li><a href="https://twitter.com/ut_kyoshitsu" target="_blank">@ut_kyoshitsu</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="utgym" class="col-xs-12">
+      <h4>UT Startup Gym (2012.09 - 2014.02)</h4>
+      <div class="col-xs-4">
+        <a href="http://ut-gym.jp/" target="_blank" class="thumbnail">
+          <img src="{{ url_for('static', filename='img/utgym.png') }}" />
+        </a>
+      </div>
+      <div class="col-xs-8">
+        <p>
+          In workshops held by <a href="http://ut-gym.jp" target="_blank">UT Startup Gym</a>,
+          participants learn programming from the basics.
+          Then they will do some projects which creates web services.
+        </p>
+      </div>
+    </div>
+
+  </div>  <!-- .row -->
+
   <a href="#" class="" data-toggle="modal" data-target="#other_projects">Others and old projects</a>
   <p class="indent-1 caption">Click here to see the other projects. (small or past ones)</p>
+
 </div><!-- #projects -->
 
 <!-- modals -->
-  <div class="modal fade" id="screenshots_amazon_ar">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Screenshots of Amazon - AR</h4>
-        </div>
-        <div class="modal-body">
-          <ul class="list-unstyled">
-            <li><img src="{{ url_for('static', filename="img/screenshots_amazon_ar_0.png") }}" class="img-responsive" /></li>
-            <li><img src="{{ url_for('static', filename="img/screenshots_amazon_ar_1.png") }}" class="img-responsive" /></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div><!-- /#screenshots_amazon_ar -->
   <div class="modal fade" id="apc2015_video">
     <div class="modal-dialog">
       <div class="modal-content">
