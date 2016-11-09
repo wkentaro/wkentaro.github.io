@@ -9,3 +9,4 @@ install:
 
 script:
   - flake8
+  - python app.wsgi
