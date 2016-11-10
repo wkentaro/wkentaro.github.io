@@ -23,14 +23,6 @@ def about():
     )
 
 
-@app.route('/research')
-def research():
-    return flask.render_template(
-        'research.html',
-        page_name='research',
-    )
-
-
 @app.route('/software')
 def software():
     repos = [
