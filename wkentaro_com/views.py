@@ -1,6 +1,7 @@
 import os.path as osp
 
 import flask
+import jinja2
 
 
 app = flask.Flask(__name__)
@@ -59,6 +60,19 @@ def software():
 
 @app.route('/projects/<project_name>')
 def projects(project_name):
-    return flask.render_template(
-        osp.join('projects', project_name + '.html'),
-    )
+    try:
+        return flask.render_template(
+            osp.join('projects', project_name + '.html'),
+        )
+    except jinja2.exceptions.TemplateNotFound:
+        return flask.redirect('/')
+
+
+# -----------------------------------------------------------------------------
+# Redirects
+# -----------------------------------------------------------------------------
+
+
+@app.route('/projects/gsoc-2016')
+def projects_gsoc_2016():
+    return flask.redirect('/projects/gsoc2016')
