@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="text-center">
+  Transformable Semantic Map Based Navigation using Autonomous Deep Learning Object Segmentation
+  <br/>
+  <small>
+    Yuki Furuta and Kentaro Wada and Masaki Murooka <br/>
+    and Shunichi Nozawa and Yohei Kakiuchi and Kei Okada and Masayuki Inaba
+  </small>
+</h2>
+
+<div class="indent-1">
+  <ul class="list-inline text-center">
+    <li><a href="https://github.com/furushchev/jsk_semantics_201607">code</a></li>
+    <li><a href="{{ url_for('static', filename="projects/jsk_semantics_201607/bib.txt") }}">bibtex</a></li>
+  </ul>
+</div>
+
+<div class="text-center">
+  <iframe src="https://drive.google.com/file/d/0B9P1L--7Wd2vbjcwaWVUZk9oTXM/preview?autoplay=1" width="640" height="350" frameborder="0"></iframe>
+</div>
+
+<div class="indent-1">
+  <h3>Abstract</h3>
+  <p class="indent-1">
+    For daily assistive robots working in home envi- ronment, it is important to use geometry-free representation for navigation which can deal with dynamic environmental changes. In this paper we propose semantic map based navigation which consists of 1) generating deep learning enabled semantic map from annotated world and 2) object based navigation using learned semantic map representation. One point of our proposed framework is to let robots autonomously generate a dataset for deep learning method and transfer existing geometric map based task execution system to semantic map based one which is invariant to changes of object location. Since deep learning for object segmentation technique enables end- to-end learning of object features, it is not necessary to design segmentation and labeling methods for each objects manually. We confirmed the effectiveness of our approach by performing task in dynamic environment and adaptability for two type of robots with experiments.
+  </p>
+</div>  <!-- div.indent-1 -->
+
+{% endblock %}

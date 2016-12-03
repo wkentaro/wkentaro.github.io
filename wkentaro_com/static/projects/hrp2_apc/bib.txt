@@ -3,7 +3,6 @@
   booktitle={Proceedings of the 2016 IEEE-RAS International Conference on Humanoid Robots (Humanoids2016)}
   title={3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map},
   year={2016},
-  yeard={2016},
   month={November},
   eposition={Cancun, Mexico},
   abstract={Picking objects in a narrow space such as shelf bins is an important task for humanoid to extract target object from environment. In those situations, however, there are many occlusions between the camera and objects, and this makes it difficult to segment the target object three dimensionally because of the lack of three dimentional sensor inputs. We address this problem with accumulating segmentation result with multiple camera angles, and generating voxel model of the target object. Our approach consists of two components: first is object probability prediction for input image with convolutional networks, and second is generating voxel grid map which is designed for object segmentation. We evaluated the method with the picking task experiment for target objects in narrow shelf bins. Our method generates dense 3D object segments even with occlusions, and the real robot successfully picked target objects from the narrow space.}
