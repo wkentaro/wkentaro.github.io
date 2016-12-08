@@ -1,4 +1,4 @@
 wkentaro.com
 ============
 
-My personal page. http://wkentaro.com
+My personal page at http://wkentaro.com.
