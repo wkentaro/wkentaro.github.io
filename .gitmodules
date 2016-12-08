@@ -1,0 +1,3 @@
+[submodule "wkentaro_com/static/resource/bootstrap"]
+	path = wkentaro_com/static/resource/bootstrap
+	url = https://github.com/twbs/bootstrap.git
