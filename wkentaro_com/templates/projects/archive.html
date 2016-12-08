@@ -2,23 +2,24 @@
 
 {% block content %}
 
-<h2>Archived Projects</h2>
+<h2>Previous Projects</h2>
 
 <div class="row">
 
-  <div class="col-xs-12">
+  <div class="col-sm-12">
 
     <h3>2015</h3>
 
-    <div id="rsj2015" class="col-xs-12">
-      <h4>RSJ2015: 視覚検証と吸引グリッパを用いた双腕ロボットによる日用品ピッキングシステム (2015.07 - 2015.09)</h4>
-      <div class="col-xs-3">
+    <div id="rsj2015" class="col-sm-12">
+      <h4><a href="http://rsj2015.rsj-web.org">RSJ2015</a>: 視覚検証と吸引グリッパを用いた双腕ロボットによる日用品ピッキングシステム (2015.07 - 2015.09)</h4>
+      <div class="col-sm-5">
         <a href="#" class="thumbnail">
           <img src="{{ url_for('static', filename='projects/rsj2015/thumbnail.jpg') }}">
         </a>
       </div>
-      <div class="col-xs-9">
-        <ul class="list-unstyled indent-1">
+      <div class="col-sm-7">
+        <ul>
+          <li><u>Kentaro Wada</u>, Iori Yanokura, Makoto Sugiura, Yuto Inagaki, Kei Okada and Masayuki Inaba</li>
           <li><a href="http://github.com/start-jsk/jsk_apc" target="_blank" />Code</a></li>
           <li><a href="https://drive.google.com/file/d/0B9P1L--7Wd2vVUdsNGdpUmcwc2c/view">Paper (in Japanese)</a></li>
           <li><a href="https://drive.google.com/file/d/0B9P1L--7Wd2vUm5tMlVVd25QaDA/view">Slides (in Japanese)</a></li>
@@ -26,119 +27,114 @@
       </div>
     </div>
 
-    <div id="apc2015" class="col-xs-12">
-      <h4>Amazon Picking Challenge 2015 at ICRA2015 in Seattle, US. (2014.10 - 2015.05)</h4>
-      <div class="col-xs-4">
+    <div id="apc2015" class="col-sm-12">
+      <h4><a href="http://icra2015.org">ICRA2015</a>: Amazon Picking Challenge 2015 Final at ICRA2015 in Seattle, US (2014.10 - 2015.05)</h4>
+      <div class="col-sm-5">
         <a href="http://amazonpickingchallenge.org" target="_blank" class="thumbnail">
           <img src="{{ url_for('static', filename="projects/apc2015/thumbnail.jpg") }}" />
         </a>
       </div>
-      <div class="col-xs-8">
-        <p>
-          Our team Team-K got 8th grade.
-        </p>
-        <ul class="list-unstyled indent-1">
+      <div class="col-sm-7">
+        <ul>
+          <li><u>Kentaro Wada</u>, Iori Yanokura, Makoto Sugiura, Yuto Inagaki, Kei Okada and Masayuki Inaba (Team-K)</li>
+          <li>8th place in 28 teams</li>
           <li><a href="http://github.com/start-jsk/jsk_apc" target="_blank" />Code</a></li>
-          <li><a href="https://www.youtube.com/watch?v=VvnHMvnQsCM" target="_blank">Video for Description</a></li>
-          <li><a href="https://www.youtube.com/watch?v=OYjK5J__uDI" target="_blank">Video of Team Highlights (See 3:30 - 4:20)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VvnHMvnQsCM" target="_blank">Video (challenge description)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=OYjK5J__uDI" target="_blank">Video (team highlights, 3:30 - 4:20 for us)</a></li>
         </ul>
       </div>
     </div>
 
-    <div id="tanaka_lab2014" class="col-xs-12">
+    <div id="tanaka_lab2014" class="col-sm-12">
       <h4><a href="http://www.sigkst.org/index.php?site_id=&page=%C2%E823%B2%F3%B8%A6%B5%E6%B2%F1">SIG-KST23</a>: 販売履歴の大規模データ分析による顧客クラスタ分析 (2014.05 - 2015.03)</h4>
-      <div class="col-xs-4">
+      <div class="col-sm-5">
         <a href="#" class="thumbnail">
           <img src="{{ url_for('static', filename='projects/tanaka_lab2014/thumbnail.jpg') }}">
         </a>
       </div>
-      <div class="col-xs-8">
-        <p>
-          I worked as a data scientist for an e-commerce site in Japan.
-          By analyzing customers' purchase history and trend, suppose some marketing strategies and new function of the web site.
-        </p>
-        <ul class="list-unstyled indent-1">
-          <li>
-            <a href="https://drive.google.com/file/d/0B9P1L--7Wd2vcjZrbmd1YzMzVjQ/view">Paper</a>
-          </li>
+      <div class="col-sm-7">
+        <ul>
+          <li><u>Kentaro Wada</u>, Kazuya Kawakami, Yusuke Honda and Kenji Tanaka</li>
+          <li><a href="https://drive.google.com/file/d/0B9P1L--7Wd2vcjZrbmd1YzMzVjQ/view">Paper (in Japanese)</a></li>
         </ul>
       </div>
     </div>
 
     <h3>2014</h3>
 
-    <div id="amazon_ar" class="col-xs-12">
-      <h4>Amazon - AR (2014.12)</h4>
-      <div class="col-xs-6">
+    <div id="amazon_ar" class="col-sm-12">
+      <h4><a href="http://jphacks.com">JPHACKS2014</a>: Amazon - AR at JPHACKS in UTokyo (2014.12)</h4>
+      <div class="col-sm-5">
         <a href="http://amazon-ar.herokuapp.com" target="_blank" class="thumbnail">
-          <img src="{{ url_for('static', filename="img/landing_amazon_ar.png") }}" />
+          <img src="{{ url_for('static', filename="projects/amazon_ar/thumbnail.jpg") }}" />
         </a>
       </div>
-      <div clss="col-xs-6">
+      <div class="col-sm-7">
         <p>
           <a href="http://amazon-ar.herokuapp.com" target="_blank">Amazon - AR</a>
-          is a website in which you can experience 3D item view of item you want to buy.
+          is a web service where you can experience 3D item view of item you want to buy.
         </p>
-        <ul class="list-unstyled indent-1">
+        <ul>
+          <li><u>Kentaro Wada</u> and Ken Tominaga</li>
           <li><a href="https://github.com/wk-jphacks/amazon-ar" target="_blank">Code</a></li>
-          <li><a href="{{ url_for('static', filename='projects/amazon_ar/screenshot_1.jpg') }}">Screenshot 1</a></li>
-          <li><a href="{{ url_for('static', filename='projects/amazon_ar/screenshot_2.jpg') }}">Screenshot 2</a></li>
         </ul>
       </div>
     </div>
 
-    <div id="logcal" class="col-xs-12">
-      <h4>LogCal (2013.09 - 2014.03)</h4>
-      <div class="col-xs-4">
+    <div id="logcal" class="col-sm-12">
+      <h4>Personal Project: LogCal (2013.09 - 2014.03)</h4>
+      <div class="col-sm-5">
         <a href="#" class="thumbnail">
           <img src="{{ url_for('static', filename='img/logcal.png') }}" />
         </a>
       </div>
-      <div class="col-xs-8">
+      <div class="col-sm-7">
         <p>
           LogCal calcurates the sum of your events time.
           You can find out how long you spent time on each events.
         </p>
-        <ul class="list-inline indent-1">
+        <ul>
+          <li><u>Kentaro Wada</u></li>
           <li><a href="https://github.com/wkentaro/logcal" target="_blank">Code</a></li>
         </ul>
       </div>
     </div>
 
-    <div id="ut_komaba" class="col-xs-12">
-      <h4>UT Komaba (2013.08 - 2014.03)</h4>
-      <div class="col-xs-4">
+    <div id="ut_komaba" class="col-sm-12">
+      <h4>Personal Project: UT Komaba (2013.08 - 2014.03)</h4>
+      <div class="col-sm-5">
         <a href="http://ut-komaba.appspot.com" target="_blank" class="thumbnail">
           <img src="{{ url_for('static', filename='img/utkomaba.png') }}" />
         </a>
       </div>
-      <div class="col-xs-8">
-        <p><a href="http://ut-komaba.appspot.com" target="_blank">UT Komaba</a> is distributing information about The University of Tokyo on Komaba Campus.</p>
-        <ul class="list-unstyled indent-1">
-          <li><a href="https://twitter.com/ut_kyomu" target="_blank">@ut_kyomu</a></li>
-          <li><a href="https://twitter.com/ut_kyuko" target="_blank">@ut_kyuko</a></li>
-          <li><a href="https://twitter.com/ut_kyoshitsu" target="_blank">@ut_kyoshitsu</a></li>
+      <div class="col-sm-7">
+        <p>
+          <a href="http://ut-komaba.appspot.com" target="_blank">UT Komaba</a>
+          is distributing information about The University of Tokyo on Komaba Campus.
+        </p>
+        <ul>
+          <li><u>Kentaro Wada</u></li>
         </ul>
       </div>
     </div>
 
     <h3>2013</h3>
 
-    <div id="gcp4" class="col-xs-12">
-      <h4>GCP4 (2013.02)</h4>
+    <div id="gcp4" class="col-sm-12">
+      <h4>Global Challenge Program 4th (2013.02)</h4>
       <p class="indent-1">
-        GCP4 means "Global Challenge Program 4th", and the destination was Bangalore, India. In this program I learned about global bussiness from speakers, visited companies in Bangalore, did internship, and proceed a project. The content of the project was marketing a Japanese Fashion magazine in India, and looking for some business partner in India. Our team researched the market (especially interviewed local people), and visited lots of publishing companies. Finally, we listed up some candidates and submitted reports to the publisher who publishes the fashion magazine.
+        In this program named GCP4, the destination was Bangalore, India. In this program I learned about global bussiness from speakers, visited companies in Bangalore, did internship, and proceed a project. The content of the project was marketing a Japanese Fashion magazine in India, and looking for some business partner in India. Our team researched the market (especially interviewed local people), and visited lots of publishing companies. Finally, we listed up some candidates and submitted reports to the publisher who publishes the fashion magazine.
       </p>
     </div>
 
-    <div id="utgym" class="col-xs-12">
-      <h4>UT Startup Gym (2012.09 - 2013.01)</h4>
-      <div class="col-xs-4">
-        <a href="http://ut-gym.jp/" target="_blank" class="thumbnail">
-          <img src="{{ url_for('static', filename='img/utgym.png') }}" />
+    <div id="utgym2013" class="col-sm-12">
+      <h4>UT Startup Gym in UTokyo (2012.09 - 2013.01)</h4>
+      <div class="col-sm-5">
+        <a href="http://ut-gym.jp" target="_blank" class="thumbnail">
+          <img src="{{ url_for('static', filename='projects/utgym2013/thumbnail.png') }}" />
         </a>
       </div>
-      <div class="col-xs-8">
+      <div class="col-sm-7">
         <p>
           In workshops held by <a href="http://ut-gym.jp" target="_blank">UT Startup Gym</a>,
           participants learn programming from the basics.
