@@ -27,11 +27,12 @@ def about():
 def software():
     repos = [
         'pfnet/chainer',
-        'pfnet/cupy',
+        'cupy/cupy',
         'ros/ros',
         'ros/ros_comm',
         'ros-perception/vision_opencv',
         'ros-perception/image_pipeline',
+        'PointCloudLibrary/pcl',
         'start-jsk/jsk_apc',
         'jsk-ros-pkg/jsk_common',
         'jsk-ros-pkg/jsk_recognition',
@@ -40,6 +41,7 @@ def software():
         'wkentaro/pycd',
         'wkentaro/gshell',
         'wkentaro/gdown',
+        'wk-jphacks/amazon-ar',
     ]
     repos = [repo.split('/') for repo in repos]
 
