@@ -4,6 +4,7 @@ import datetime
 import flask
 import gotenshita
 import jinja2
+import pytz
 
 
 app = flask.Flask(__name__)
@@ -66,7 +67,7 @@ def projects(project_name):
 
 @app.route('/projects/gotenshita')
 def projects_gotenshita():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
     if gotenshita.is_gotenshita_open(now, verbose=False):
         info = gotenshita.get_open_info_monthly(now)
         daily_info = []
