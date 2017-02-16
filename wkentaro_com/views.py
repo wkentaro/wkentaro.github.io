@@ -1,6 +1,8 @@
 import os.path as osp
+import datetime
 
 import flask
+import gotenshita
 import jinja2
 
 
@@ -60,6 +62,21 @@ def projects(project_name):
         )
     except jinja2.exceptions.TemplateNotFound:
         return flask.redirect('/')
+
+
+@app.route('/projects/gotenshita')
+def projects_gotenshita():
+    now = datetime.datetime.now()
+    if gotenshita.is_gotenshita_open(now, verbose=False):
+        info = gotenshita.get_open_info_monthly(now)
+        daily_info = []
+        for period, open_status in sorted(info[now.day].items()):
+            if datetime.datetime.strptime(period[0], '%H:%M').hour >= now.hour:
+                daily_info.append((period, open_status))
+    else:
+        daily_info = []
+    return flask.render_template('projects/gotenshita.html',
+                                 now=now, info=daily_info)
 
 
 # -----------------------------------------------------------------------------
