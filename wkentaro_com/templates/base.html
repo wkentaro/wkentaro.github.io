@@ -35,6 +35,7 @@
           <p class="masthead-tagline text-center">Thank you for visiting. This is my personal page.</p>
           <ul class="list-inline text-center page-links">
             <li>{% if page_name == "index" %}Projects{% else %}<a href="/">Projects</a>{% endif %}</li>
+            <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />Publications</a></li>
             <li>{% if page_name == "about" %}About{% else %}<a href="/about">About</a>{% endif %}</li>
             <li>{% if page_name == "software" %}Software{% else %}<a href="/software">Software</a>{% endif %}</li>
             <li><a href="{{ url_for('static', filename='resource/CV/CV.pdf') }}">CV</a></li>
