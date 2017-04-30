@@ -10,6 +10,7 @@ def get_contributed_repos(username, password, skip_owners=None):
         if not repo.fork:
             continue
 
+        # FIXME: multiprocessing does not work with repo.refresh
         repo.refresh()
         repo = repo.parent
 
