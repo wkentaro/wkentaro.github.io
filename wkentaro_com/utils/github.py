@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from github3 import login
 
 
 def get_contributed_repos(username, password, skip_owners=None):
-    if skip_owners is None:
-        skip_owners = []
-
     gh = login(username, password)
     repos = gh.iter_user_repos(username, type='public')
 
@@ -22,7 +16,7 @@ def get_contributed_repos(username, password, skip_owners=None):
         owner = repo.owner.login
         repo_name = repo.name
 
-        if owner in skip_owners:
+        if skip_owners and owner in skip_owners:
             continue
 
         for stat in repo.iter_contributor_statistics():
@@ -32,7 +26,4 @@ def get_contributed_repos(username, password, skip_owners=None):
         else:
             n_commits = 0
 
-        repo_stats.append((owner, repo_name, n_commits))
-
-    repo_stats = sorted(repo_stats, key=lambda x: x[2], reverse=True)
-    return repo_stats
+        yield owner, repo_name, n_commits, repo.stargazers
