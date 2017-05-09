@@ -5,7 +5,6 @@ def get_contributed_repos(username, password, skip_owners=None):
     gh = login(username, password)
     repos = gh.iter_user_repos(username, type='public')
 
-    repo_stats = []
     for repo in repos:
         if not repo.fork:
             continue
