@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="text-center">
+  <small>IROS2017</small>
+  <br/>
+  Probabilistic 3D Multilabel Real-time Mapping for Multi-object Manipulation
+  <br/>
+  <small><u>Kentaro Wada</u>, Masaki Murooka, Kei Okada and Masayuki Inaba</small>
+</h2>
+
+<ul class="list-inline text-center">
+  <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vSjFDcjV4OXBFVzg">Paper</a></li>
+  <li><a href="{{ url_for('static', filename="projects/label_octomap/bib.txt") }}">Bibtex</a></li>
+  <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vUldBZ2Vwdy1zUWM">Slides</a></li>
+  <li><a href="https://github.com/wkentaro/label_octomap">Code</a></li>
+</ul>
+
+<div class="text-center">
+  <iframe src="https://drive.google.com/file/d/0B9P1L--7Wd2vdTh2YjM0SUpWVXM/preview?autoplay=1" width="640" height="350" frameborder="0"></iframe>
+</div>
+
+<div class="indent-1">
+  <h3>Abstract</h3>
+  <p class="indent-1">
+    Probabilistic 3D map has been applied to object segmentation with multiple camera viewpoints,
+    however, conventional methods lack of real-time efficiency and
+    functionality of multilabel object mapping.
+    In this paper, we propose a method to generate three-dimensional map
+    with multilabel occupancy in real-time.
+    Extending our previous work \cite{wada20163d} in which only target label occupancy is mapped,
+    we achieve multilabel object segmentation in a single looking around action.
+    We evaluate our method by testing segmentation accuracy with 39 different objects,
+    and applying it to a manipulation task of multiple objects in the experiments.
+    Our mapping-based method outperforms the conventional projection-based method by
+    40 - 96% relative (12.6 mean IU_3d),
+    and robot successfuly recognizes (86.9%) and
+    manipulates multiple objects (60.7%) in an environment with heavy occlusions.
+  </p>
+</div>  <!-- div.indent-1 -->
+
+{% endblock %}
