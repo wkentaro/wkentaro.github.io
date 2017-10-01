@@ -29,22 +29,19 @@ def about():
 @app.route('/software')
 def software():
     repos = [
-        'pfnet/chainer',
+        'chainer/chainer',
         'cupy/cupy',
         'ros/ros',
         'ros/ros_comm',
+        'vcstools/wstool',
         'ros-perception/vision_opencv',
         'ros-perception/image_pipeline',
+        'ros-perception/perception_pcl',
         'PointCloudLibrary/pcl',
         'start-jsk/jsk_apc',
         'jsk-ros-pkg/jsk_common',
         'jsk-ros-pkg/jsk_recognition',
         'jsk-ros-pkg/jsk_visualization',
-        'wkentaro/fcn',
-        'wkentaro/pycd',
-        'wkentaro/gshell',
-        'wkentaro/gdown',
-        'wk-jphacks/amazon-ar',
     ]
     repos = [repo.split('/') for repo in repos]
 
