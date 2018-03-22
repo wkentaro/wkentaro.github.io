@@ -1,7 +1,11 @@
+import collections
 import datetime
+import json
+import os
 import os.path as osp
 
 import flask
+import github3
 import gotenshita
 import jinja2
 import pytz
@@ -28,27 +32,67 @@ def about():
 
 @app.route('/software')
 def software():
-    repos = [
-        'chainer/chainer',
-        'cupy/cupy',
-        'ros/ros',
-        'ros/ros_comm',
-        'vcstools/wstool',
-        'ros-perception/vision_opencv',
-        'ros-perception/image_pipeline',
-        'ros-perception/perception_pcl',
-        'PointCloudLibrary/pcl',
-        'start-jsk/jsk_apc',
-        'jsk-ros-pkg/jsk_common',
-        'jsk-ros-pkg/jsk_recognition',
-        'jsk-ros-pkg/jsk_visualization',
-    ]
-    repos = [repo.split('/') for repo in repos]
+    repos = collections.OrderedDict([
+        ('Deep Learning + Computer Vision', [
+            'wkentaro/labelme',
+            'wkentaro/pytorch-fcn',
+            'wkentaro/fcn',
+            # 'wkentaro/pascal3d',
+        ]),
+        ('Deep Learning + Computer Graphics', [
+            'wkentaro/chainer-bicyclegan',
+            'wkentaro/chainer-cyclegan',
+            'wkentaro/real-harem',
+        ]),
+        ('Deep Learning Library', [
+            'wkentaro/pytorch-for-numpy-users',
+            'chainer/chainer',
+            'cupy/cupy',
+            # 'pytorch/pytorch',
+        ]),
+        ('Computer Vision + Robotics', [
+            # 'wkentaro/label_octomap',
+            # 'wkentaro/hrp2_apc',
+            'wkentaro/label-fusion',
+            'start-jsk/jsk_apc',
+            'jsk-ros-pkg/jsk_recognition',
+            'jsk-ros-pkg/jsk_visualization',
+            # 'jsk-ros-pkg/jsk_common',
+            'ros-perception/vision_opencv',
+            'ros-perception/image_pipeline',
+            'ros-perception/perception_pcl',
+            # 'PointCloudLibrary/pcl',
+            'ros/ros_comm',
+            'ros/nodelet_core',
+        ]),
+        ('Utility', [
+            'wkentaro/gshell',
+            'wkentaro/gdown',
+            'wkentaro/dotfiles',
+            # 'wkentaro/wkentaro.zsh-theme',
+            # 'wkentaro/pycd',
+            # 'wkentaro/wstool_cd',
+        ]),
+    ])
+    token = os.environ.get('GITHUB_TOKEN')
+    if token is None:
+        return redirect('https://github.com/wkentaro')
+    gh = github3.login(token=token)
+    for desc, slugs in repos.items():
+        for i, slug in enumerate(slugs):
+            owner, name = slug.split('/')
+            repo = gh.repository(owner, name)
+            slugs[i] = repo
+
+    colors_json = osp.join(
+        app.static_folder, 'resource/github-colors/colors.json')
+    colors = json.load(open(colors_json))
 
     return flask.render_template(
         'software.html',
         page_name='software',
-        repos=repos,
+        repositories=repos,
+        colors=colors,
     )
 
 

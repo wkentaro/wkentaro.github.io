@@ -201,3 +201,37 @@ div.menu-item {
     font-size: 120%;
   }
 }
+
+.text-small {
+  font-size: 15px !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gh-repo {
+  padding-bottom: 15px;
+}
+.gh-repo .panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.gh-repo .panel-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.gh-repo .panel-body .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

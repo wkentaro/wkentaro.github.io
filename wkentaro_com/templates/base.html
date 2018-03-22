@@ -38,7 +38,7 @@
             <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />Publications</a></li>
             <li>{% if page_name == "about" %}About{% else %}<a href="/about">About</a>{% endif %}</li>
             <li><a href="{{ url_for('static', filename='resource/CV/CV.pdf') }}">CV</a></li>
-            <li><a href="https://github.com/wkentaro" target="_blank">Software</a></li>
+            <li><a href="{{ url_for('software') }}">Software</a></li>
             <li><a href="https://www.flickr.com/photos/142119520@N02/" target="_blank">Photos</a></li>
           </ul>
         </div>
