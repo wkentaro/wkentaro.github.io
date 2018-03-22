@@ -11,24 +11,26 @@
 <div class="col-md-4 gh-repo">
   <div class="panel panel-default">
     <div class="panel-body">
-      <span>  {# to avoid long underline for link #}
+      <div>
         <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}" target="_blank" class="text-bold">
           {{ repo.owner }}/{{ repo.name }}
         </a>
-      </span>
-      <p class="text-small">
-        {{ repo.description }}
-      </p>
-      <div class="text-small">
-        <div class="col-xs-3" style="padding: 0; margin-right: 10px;">
-          <span style="color: {{ colors[repo.language]['color'] }};">●</span>
-          {{ repo.language }}
-        </div>
-        <div class="col-xs-3" style="padding: 0;">
-          <i class="fa fa-star"></i>{{ repo.stargazers }}
-        </div>
-        <div class="col-xs-3" style="padding: 0;">
-          <i class="fa fa-code-fork"></i>{{ repo.forks }}
+      </div>
+      <div class="caption">
+        <p class="text-small">
+          {{ repo.description }}
+        </p>
+        <div class="text-small">
+          <div class="col-xs-3" style="padding: 0; margin-right: 10px;">
+            <span style="color: {{ colors[repo.language]['color'] }};">●</span>
+            {{ repo.language }}
+          </div>
+          <div class="col-xs-3" style="padding: 0;">
+            <i class="fa fa-star"></i>{{ repo.stargazers }}
+          </div>
+          <div class="col-xs-3" style="padding: 0;">
+            <i class="fa fa-code-fork"></i>{{ repo.forks }}
+          </div>
         </div>
       </div>
     </div>
