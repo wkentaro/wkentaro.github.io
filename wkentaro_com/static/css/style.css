@@ -218,20 +218,27 @@ div.menu-item {
 .gh-repo {
   padding-bottom: 15px;
 }
-.gh-repo .panel {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
+@media (max-width:991px) {
+  .gh-repo {
+    width: 100%;
+  }
 }
-.gh-repo .panel-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.gh-repo .panel-body .caption {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+@media (min-width:768px) {
+  .gh-repo .panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .gh-repo .panel-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .gh-repo .panel-body .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 }
