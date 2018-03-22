@@ -11,9 +11,11 @@
 <div class="col-md-4 gh-repo">
   <div class="panel panel-default">
     <div class="panel-body">
-      <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}" target="_blank" class="text-bold">
-        {{ repo.owner }}/{{ repo.name }}
-      </a>
+      <span>  {# to avoid long underline for link #}
+        <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}" target="_blank" class="text-bold">
+          {{ repo.owner }}/{{ repo.name }}
+        </a>
+      </span>
       <p class="text-small">
         {{ repo.description }}
       </p>
