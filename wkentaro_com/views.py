@@ -76,7 +76,7 @@ def software():
     ])
     token = os.environ.get('GITHUB_TOKEN')
     if token is None:
-        return redirect('https://github.com/wkentaro')
+        return flask.redirect('https://github.com/wkentaro')
     gh = github3.login(token=token)
     for desc, slugs in repos.items():
         for i, slug in enumerate(slugs):
