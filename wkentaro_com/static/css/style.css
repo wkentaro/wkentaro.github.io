@@ -221,6 +221,7 @@ div.menu-item {
 @media (max-width:991px) {
   .gh-repo {
     width: 100%;
+    padding-bottom: 5px;
   }
 }
 @media (min-width:768px) {
