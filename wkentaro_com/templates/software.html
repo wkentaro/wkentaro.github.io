@@ -26,10 +26,14 @@
             {{ repo.language }}
           </div>
           <div class="col-xs-3" style="padding: 0;">
-            <i class="fa fa-star"></i>{{ repo.stargazers }}
+            <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/stargazers" target="_blank">
+              <i class="fa fa-star"></i>{{ repo.stargazers }}
+            </a>
           </div>
           <div class="col-xs-3" style="padding: 0;">
-            <i class="fa fa-code-fork"></i>{{ repo.forks }}
+            <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/network" target="_blank">
+              <i class="fa fa-code-fork"></i>{{ repo.forks }}
+            </a>
           </div>
         </div>
       </div>
