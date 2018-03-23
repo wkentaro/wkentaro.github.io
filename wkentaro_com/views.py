@@ -78,9 +78,10 @@ def software():
                 'wkentaro/gdown',
                 'wkentaro/gshell',
                 'wkentaro/dotfiles',
-                # 'wkentaro/wkentaro.zsh-theme',
-                # 'wkentaro/pycd',
-                # 'wkentaro/wstool_cd',
+                'wkentaro/wkentaro.zsh-theme',
+                'wkentaro/pycd',
+                'wkentaro/wstool_cd',
+                'wkentaro/gotenshita',
             ]),
         ])
         gh = github3.login(token=token)
