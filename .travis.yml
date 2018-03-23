@@ -11,3 +11,6 @@ install:
 script:
   - flake8
   - python app.wsgi
+
+notifications:
+  email: false
