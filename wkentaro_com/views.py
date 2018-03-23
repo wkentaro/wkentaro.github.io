@@ -46,7 +46,8 @@ def software():
                 'wkentaro/labelme',
                 'wkentaro/pytorch-fcn',
                 'wkentaro/fcn',
-                # 'wkentaro/pascal3d',
+                'wkentaro/pascal3d',
+                'wkentaro/imgaug',
             ]),
             ('Deep Learning + Computer Graphics', [
                 'wkentaro/chainer-bicyclegan',
