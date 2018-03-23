@@ -9,9 +9,11 @@ import github3
 import gotenshita
 import jinja2
 import pytz
+from werkzeug.contrib.cache import SimpleCache
 
 
 app = flask.Flask(__name__)
+cache = SimpleCache()
 
 
 @app.route('/')
@@ -32,57 +34,62 @@ def about():
 
 @app.route('/software')
 def software():
-    repos = collections.OrderedDict([
-        ('Deep Learning + Computer Vision', [
-            'wkentaro/labelme',
-            'wkentaro/pytorch-fcn',
-            'wkentaro/fcn',
-            # 'wkentaro/pascal3d',
-        ]),
-        ('Deep Learning + Computer Graphics', [
-            'wkentaro/chainer-bicyclegan',
-            'wkentaro/chainer-cyclegan',
-            'wkentaro/real-harem',
-        ]),
-        ('Deep Learning Library', [
-            'wkentaro/pytorch-for-numpy-users',
-            'chainer/chainer',
-            'cupy/cupy',
-            # 'pytorch/pytorch',
-        ]),
-        ('Computer Vision + Robotics', [
-            # 'wkentaro/label_octomap',
-            # 'wkentaro/hrp2_apc',
-            'wkentaro/label-fusion',
-            'start-jsk/jsk_apc',
-            'jsk-ros-pkg/jsk_recognition',
-            'jsk-ros-pkg/jsk_visualization',
-            # 'jsk-ros-pkg/jsk_common',
-            'ros-perception/vision_opencv',
-            'ros-perception/image_pipeline',
-            'ros-perception/perception_pcl',
-            # 'PointCloudLibrary/pcl',
-            'ros/ros_comm',
-            'ros/nodelet_core',
-        ]),
-        ('Utility', [
-            'wkentaro/gshell',
-            'wkentaro/gdown',
-            'wkentaro/dotfiles',
-            # 'wkentaro/wkentaro.zsh-theme',
-            # 'wkentaro/pycd',
-            # 'wkentaro/wstool_cd',
-        ]),
-    ])
     token = os.environ.get('GITHUB_TOKEN')
     if token is None:
         return flask.redirect('https://github.com/wkentaro')
-    gh = github3.login(token=token)
-    for desc, slugs in repos.items():
-        for i, slug in enumerate(slugs):
-            owner, name = slug.split('/')
-            repo = gh.repository(owner, name)
-            slugs[i] = repo
+
+    # get repos from github api
+    repos = cache.get('repos')
+    if repos is None:
+        repos = collections.OrderedDict([
+            ('Deep Learning + Computer Vision', [
+                'wkentaro/labelme',
+                'wkentaro/pytorch-fcn',
+                'wkentaro/fcn',
+                # 'wkentaro/pascal3d',
+            ]),
+            ('Deep Learning + Computer Graphics', [
+                'wkentaro/chainer-bicyclegan',
+                'wkentaro/chainer-cyclegan',
+                'wkentaro/real-harem',
+            ]),
+            ('Deep Learning Library', [
+                'chainer/chainer',
+                'cupy/cupy',
+                'wkentaro/pytorch-for-numpy-users',
+                # 'pytorch/pytorch',
+            ]),
+            ('Computer Vision + Robotics', [
+                # 'wkentaro/label_octomap',
+                # 'wkentaro/hrp2_apc',
+                'wkentaro/label-fusion',
+                'start-jsk/jsk_apc',
+                'jsk-ros-pkg/jsk_recognition',
+                'jsk-ros-pkg/jsk_visualization',
+                # 'jsk-ros-pkg/jsk_common',
+                'ros-perception/vision_opencv',
+                'ros-perception/image_pipeline',
+                'ros-perception/perception_pcl',
+                # 'PointCloudLibrary/pcl',
+                'ros/ros_comm',
+                'ros/nodelet_core',
+            ]),
+            ('Utility', [
+                'wkentaro/gdown',
+                'wkentaro/gshell',
+                'wkentaro/dotfiles',
+                # 'wkentaro/wkentaro.zsh-theme',
+                # 'wkentaro/pycd',
+                # 'wkentaro/wstool_cd',
+            ]),
+        ])
+        gh = github3.login(token=token)
+        for desc, slugs in repos.items():
+            for i, slug in enumerate(slugs):
+                owner, name = slug.split('/')
+                repo = gh.repository(owner, name)
+                slugs[i] = repo
+        cache.set('repos', repos, timeout=15 * 60)  # 15min
 
     colors_json = osp.join(
         app.static_folder, 'resource/github-colors/colors.json')
