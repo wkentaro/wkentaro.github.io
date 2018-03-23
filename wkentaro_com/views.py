@@ -78,7 +78,7 @@ def software():
                 'wkentaro/gdown',
                 'wkentaro/gshell',
                 'wkentaro/dotfiles',
-                'wkentaro/wkentaro.zsh-theme',
+                # 'wkentaro/wkentaro.zsh-theme',
                 'wkentaro/pycd',
                 'wkentaro/wstool_cd',
                 'wkentaro/gotenshita',
