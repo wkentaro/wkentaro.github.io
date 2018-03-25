@@ -21,7 +21,9 @@
       </div>
       <div class="caption">
         <p class="text-small">
+          {% if repo.description %}
           {{ repo.description }}
+          {% endif %}
         </p>
         <div class="text-small">
           <div class="col-xs-3" style="padding: 0; margin-right: 10px;">
