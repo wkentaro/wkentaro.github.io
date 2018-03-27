@@ -34,11 +34,11 @@
           <a href="/"><h1 class="masthead-title text-center">KENTARO WADA</h1></a>
           <p class="masthead-tagline text-center">Thank you for visiting. This is my personal page.</p>
           <ul class="list-inline text-center page-links">
-            <li>{% if page_name == "index" %}Projects{% else %}<a href="/">Projects</a>{% endif %}</li>
+            <li>{% if request.path == '/' %}Projects{% else %}<a href="/">Projects</a>{% endif %}</li>
             <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />Publications</a></li>
-            <li>{% if page_name == "about" %}About{% else %}<a href="/about">About</a>{% endif %}</li>
-            <li><a href="{{ url_for('static', filename='resource/CV/CV.pdf') }}">CV</a></li>
-            <li><a href="{{ url_for('software') }}">Software</a></li>
+            <li>{% if request.path == '/about' %}About{% else %}<a href="/about">About</a>{% endif %}</li>
+            <li><a href="{{ url_for('static', filename='resource/CV/CV.pdf') }}" target="_blank">CV</a></li>
+            <li>{% if request.path == '/software' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
             <!-- <li><a href="https://www.flickr.com/photos/142119520@N02/" target="_blank">Photos</a></li> -->
           </ul>
         </div>
