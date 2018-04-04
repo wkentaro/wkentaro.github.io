@@ -46,6 +46,7 @@ def software():
                 'wkentaro/labelme',
                 'wkentaro/pytorch-fcn',
                 'wkentaro/fcn',
+                'wkentaro/chainer-mask-rcnn',
                 'wkentaro/pascal3d',
                 'aleju/imgaug',
             ]),
