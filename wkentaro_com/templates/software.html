@@ -26,20 +26,27 @@
           {% endif %}
         </p>
         <div class="text-small">
-          <div class="col-xs-3" style="padding: 0; margin-right: 10px;">
-            <i class="fa fa-circle" style="color: {{ colors[repo.language]['color'] }};"></i>
-            {{ repo.language }}
-          </div>
-          <div class="col-xs-3" style="padding: 0;">
-            <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/stargazers" target="_blank">
-              <i class="fa fa-star"></i>{{ repo.stargazers }}
-            </a>
-          </div>
-          <div class="col-xs-3" style="padding: 0;">
-            <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/network" target="_blank">
-              <i class="fa fa-code-fork"></i>{{ repo.forks }}
-            </a>
-          </div>
+          <ul class="list-inline" style="margin: 0;">
+            <li>
+              <i class="fa fa-circle" style="color: {{ colors[repo.language]['color'] }};"></i>
+              {{ repo.language }}
+            </li>
+            <li>
+              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/stargazers" target="_blank">
+                <i class="fa fa-star"></i>{{ repo.stargazers }}
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/network" target="_blank">
+                <i class="fa fa-code-fork"></i>{{ repo.forks }}
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/commits?author=wkentaro" target="_blank">
+                <i class="fa fa-code"></i>{{ repo._my_contributions }}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

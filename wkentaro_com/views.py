@@ -90,8 +90,12 @@ def software():
             for i, slug in enumerate(slugs):
                 owner, name = slug.split('/')
                 repo = gh.repository(owner, name)
+                repo._my_contributions = None
+                for c in repo.iter_contributor_statistics():
+                    if c.author.login == 'wkentaro':
+                        repo._my_contributions = c.total
                 slugs[i] = repo
-        cache.set('repos', repos, timeout=15 * 60)  # 15min
+        cache.set('repos', repos, timeout=60 * 60)  # 1h
 
     colors_json = osp.join(
         app.static_folder, 'resource/github-colors/colors.json')
