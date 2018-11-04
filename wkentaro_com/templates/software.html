@@ -6,44 +6,102 @@
 
 <p class="indent-1">Open source projects which I developed or contributed to.</p>
 
-{% for desc, repos in repositories.items() %}
+<script>
+  function getLanguageColor(language) {
+    var colors = {};
+    {% for language, color in colors.items() %}
+    colors['{{ language }}'] = "{{ color['color'] }}";
+    {% endfor %}
+    return colors[language];
+  }
+  function getMyContributions(owner, repo) {
+    var url = 'https://api.github.com/repos/' + owner + '/' + repo + '/stats/contributors' +
+      '?client_id=f9a6e6d514263c01e822&client_secret=4d62465ac90ced4b7976109e0db38ffbdaf4080a';
+    $.ajax({
+      url : url,
+      type : 'GET',
+      dataType : 'json',
+      success : function(data) {
+        var elem = $('#' + owner + '-' + repo);
+        for (let datum of data) {
+          if (datum['author']['login'] == 'wkentaro') {
+            elem.find('.caption .my-contributions span.number').text(datum['total']);
+            break;
+          }
+        }
+      }
+    });
+  }
+  function getRepositoryData(owner, repo) {
+    var url = 'https://api.github.com/repos/' + owner + '/' + repo +
+      '?client_id=f9a6e6d514263c01e822&client_secret=4d62465ac90ced4b7976109e0db38ffbdaf4080a';
+    $.ajax({
+      url : url,
+      type : 'GET',
+      dataType : 'json',
+      success : function(data) {
+        var elem = $('#' + owner + '-' + repo);
+        if (data.description) {
+          elem.find('.caption p:first').text(data.description);
+        }
+        elem.find('.caption .language span.name').text(data.language);
+        elem.find('.caption .language i:first').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
+        elem.find('.caption .stargazers span.number').text(data.stargazers_count);
+        elem.find('.caption .forks span.number').text(data.forks);
+      }
+    });
+  }
+  function getAllRepositoryData() {
+    {% for desc, slugs in repositories.items() %}
+    {% for slug in slugs %}
+    {% set owner_repo = slug.split('/') %}
+    getRepositoryData('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
+    getMyContributions('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
+    {% endfor %}
+    {% endfor %}
+  }
+  {# to wait for loading Ajax. #}
+  setTimeout(getAllRepositoryData, 100);
+</script>
+
+{% for desc, slugs in repositories.items() %}
 <hr/>
 <h3>{{ desc }}</h3>
 <div class="row display-flex">
-{% for repo in repos %}
+{% for slug in slugs %}
+{% set owner, repo = slug.split('/') %}
 <div class="col-md-4 gh-repo">
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="{{ owner + '-' + repo }}">
     <div class="panel-body">
       <div>
-        <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}" target="_blank" class="text-bold">
-          {{ repo.owner }}/{{ repo.name }}
+        <a href="https://github.com/{{ repo }}" target="_blank" class="text-bold">
+          {{ repo }}
         </a>
       </div>
       <div class="caption">
-        <p class="text-small">
-          {% if repo.description %}
-          {{ repo.description }}
-          {% endif %}
-        </p>
+        <p class="text-small"></p>
         <div class="text-small">
           <ul class="list-inline" style="margin: 0;">
-            <li>
-              <i class="fa fa-circle" style="color: {{ colors[repo.language]['color'] }};"></i>
-              {{ repo.language }}
+            <li class="language">
+              <i class="fa fa-circle"></i>
+              <span class="name"></span>
             </li>
-            <li>
-              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/stargazers" target="_blank">
-                <i class="fa fa-star"></i>{{ repo.stargazers }}
+            <li class="stargazers">
+              <a href="https://github.com/{{ repo }}/stargazers" target="_blank">
+                <i class="fa fa-star"></i>
+                <span class="number"></span>
               </a>
             </li>
-            <li>
-              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/network" target="_blank">
-                <i class="fa fa-code-fork"></i>{{ repo.forks }}
+            <li class="forks">
+              <a href="https://github.com/{{ repo }}/network" target="_blank">
+                <i class="fa fa-code-fork"></i>
+                <span class="number"></span>
               </a>
             </li>
-            <li>
-              <a href="https://github.com/{{ repo.owner }}/{{ repo.name }}/commits?author=wkentaro" target="_blank">
-                <i class="fa fa-code"></i>{{ repo._my_contributions }}
+            <li class="my-contributions">
+              <a href="https://github.com/{{ repo }}/commits?author=wkentaro" target="_blank">
+                <i class="fa fa-code"></i>
+                <span class="number"></span>
               </a>
             </li>
           </ul>

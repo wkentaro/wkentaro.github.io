@@ -1,5 +1,2 @@
 flask
-github3.py==0.9.3
-gotenshita
-gunicorn
 pytz
