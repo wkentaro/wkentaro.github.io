@@ -1,17 +1,12 @@
 import collections
-import datetime
 import json
-import os
 import os.path as osp
 
 import flask
 import jinja2
-import pytz
-from werkzeug.contrib.cache import SimpleCache
 
 
 app = flask.Flask(__name__)
-cache = SimpleCache()
 
 
 @app.route('/')
@@ -32,54 +27,51 @@ def about():
 
 @app.route('/software')
 def software():
-    # get repos from github api
-    repos = cache.get('repos')
-    if repos is None:
-        repos = collections.OrderedDict([
-            ('Deep Learning + Computer Vision', [
-                'wkentaro/labelme',
-                'wkentaro/pytorch-fcn',
-                'wkentaro/fcn',
-                'wkentaro/chainer-mask-rcnn',
-                'wkentaro/pascal3d',
-                'aleju/imgaug',
-            ]),
-            ('Deep Learning + Computer Graphics', [
-                'wkentaro/chainer-bicyclegan',
-                'wkentaro/chainer-cyclegan',
-                'wkentaro/real-harem',
-            ]),
-            ('Deep Learning Library', [
-                'chainer/chainer',
-                'cupy/cupy',
-                'wkentaro/pytorch-for-numpy-users',
-                # 'pytorch/pytorch',
-            ]),
-            ('Computer Vision + Robotics', [
-                # 'wkentaro/label_octomap',
-                # 'wkentaro/hrp2_apc',
-                'wkentaro/label-fusion',
-                'start-jsk/jsk_apc',
-                'jsk-ros-pkg/jsk_recognition',
-                'jsk-ros-pkg/jsk_visualization',
-                # 'jsk-ros-pkg/jsk_common',
-                'ros-perception/vision_opencv',
-                'ros-perception/image_pipeline',
-                'ros-perception/perception_pcl',
-                # 'PointCloudLibrary/pcl',
-                'ros/ros_comm',
-                'ros/nodelet_core',
-            ]),
-            ('Utility', [
-                'wkentaro/gdown',
-                'wkentaro/gshell',
-                'wkentaro/dotfiles',
-                # 'wkentaro/wkentaro.zsh-theme',
-                'wkentaro/pycd',
-                'wkentaro/wstool_cd',
-                'wkentaro/gotenshita',
-            ]),
-        ])
+    repos = collections.OrderedDict([
+        ('Deep Learning + Computer Vision', [
+            'wkentaro/labelme',
+            'wkentaro/pytorch-fcn',
+            'wkentaro/fcn',
+            'wkentaro/chainer-mask-rcnn',
+            'wkentaro/pascal3d',
+            'aleju/imgaug',
+        ]),
+        ('Deep Learning + Computer Graphics', [
+            'wkentaro/chainer-bicyclegan',
+            'wkentaro/chainer-cyclegan',
+            'wkentaro/real-harem',
+        ]),
+        ('Deep Learning Library', [
+            'chainer/chainer',
+            'cupy/cupy',
+            'wkentaro/pytorch-for-numpy-users',
+            # 'pytorch/pytorch',
+        ]),
+        ('Computer Vision + Robotics', [
+            # 'wkentaro/label_octomap',
+            # 'wkentaro/hrp2_apc',
+            'wkentaro/label-fusion',
+            'start-jsk/jsk_apc',
+            'jsk-ros-pkg/jsk_recognition',
+            'jsk-ros-pkg/jsk_visualization',
+            # 'jsk-ros-pkg/jsk_common',
+            'ros-perception/vision_opencv',
+            'ros-perception/image_pipeline',
+            'ros-perception/perception_pcl',
+            # 'PointCloudLibrary/pcl',
+            'ros/ros_comm',
+            'ros/nodelet_core',
+        ]),
+        ('Utility', [
+            'wkentaro/gdown',
+            'wkentaro/gshell',
+            'wkentaro/dotfiles',
+            # 'wkentaro/wkentaro.zsh-theme',
+            'wkentaro/pycd',
+            'wkentaro/wstool_cd',
+            'wkentaro/gotenshita',
+        ]),
+    ])
 
     colors_json = osp.join(
         app.static_folder, 'resource/github-colors/colors.json')
