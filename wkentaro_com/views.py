@@ -1,6 +1,7 @@
 import collections
 import json
 import os.path as osp
+import urllib
 
 import flask
 import jinja2
@@ -73,9 +74,12 @@ def software():
         ]),
     ])
 
-    colors_json = osp.join(
-        app.static_folder, 'resource/github-colors/colors.json')
-    colors = json.load(open(colors_json))
+    colors_url = 'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json'  # NOQA
+    try:
+        response = urllib.request.urlopen(colors_url)
+        colors = json.loads(response.read().decode('utf-8'))
+    except Exception:
+        colors = collections.defaultdict(lambda: {'color': '#000', 'url': ''})
 
     return flask.render_template(
         'software.html',
