@@ -34,12 +34,11 @@
           <a href="/"><h1 class="masthead-title text-center">KENTARO WADA</h1></a>
           <p class="masthead-tagline text-center">Thank you for visiting. This is my personal page.</p>
           <ul class="list-inline text-center page-links">
-            <li>{% if request.path == '/' %}Projects{% else %}<a href="/">Projects</a>{% endif %}</li>
-            <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />Publications</a></li>
-            <li>{% if request.path == '/about' %}About{% else %}<a href="/about">About</a>{% endif %}</li>
-            <li><a href="https://docs.google.com/viewer?url=https://github.com/wkentaro/CV/raw/master/CV.pdf" target="_blank">CV</a></li>
+            <li>{% if request.path == '/' %}Projects{% else %}<a href="{{ url_for('index') }}">Projects</a>{% endif %}</li>
+            <li>{% if request.path == '/about' %}About{% else %}<a href="{{ url_for('about') }}">About</a>{% endif %}</li>
             <li>{% if request.path == '/software' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
-            <!-- <li><a href="https://www.flickr.com/photos/142119520@N02/" target="_blank">Photos</a></li> -->
+            <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />Google Scholar</a></li>
+            <li><a href="https://docs.google.com/viewer?url=https://github.com/wkentaro/CV/raw/master/CV.pdf" target="_blank">CV</a></li>
           </ul>
         </div>
 
