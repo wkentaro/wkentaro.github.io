@@ -1,7 +1,10 @@
 import collections
 import json
 import os.path as osp
-import urllib
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib import urlopen
 
 import flask
 import jinja2
@@ -76,7 +79,7 @@ def software():
 
     colors_url = 'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json'  # NOQA
     try:
-        response = urllib.request.urlopen(colors_url)
+        response = urlopen(colors_url)
         colors = json.loads(response.read().decode('utf-8'))
     except Exception:
         colors = collections.defaultdict(lambda: {'color': '#000', 'url': ''})
