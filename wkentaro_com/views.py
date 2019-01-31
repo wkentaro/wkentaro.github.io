@@ -32,29 +32,28 @@ def about():
 @app.route('/software')
 def software():
     repos = collections.OrderedDict([
-        ('Deep Learning + Computer Vision', [
+        ('Computer Vision', [
             'wkentaro/labelme',
+            'wkentaro/imgviz',
+            'wkentaro/label-fusion',
+            'wkentaro/pascal3d',
+            'mikedh/trimesh',
+            'aleju/imgaug',
+        ]),
+        ('Deep Learning', [
             'wkentaro/pytorch-fcn',
             'wkentaro/fcn',
             'wkentaro/chainer-mask-rcnn',
-            'wkentaro/pascal3d',
-            'aleju/imgaug',
-        ]),
-        ('Deep Learning + Computer Graphics', [
+            'wkentaro/pytorch-for-numpy-users',
             'wkentaro/chainer-bicyclegan',
             'wkentaro/chainer-cyclegan',
             'wkentaro/real-harem',
-        ]),
-        ('Deep Learning Library', [
             'chainer/chainer',
             'cupy/cupy',
-            'wkentaro/pytorch-for-numpy-users',
-            # 'pytorch/pytorch',
         ]),
-        ('Computer Vision + Robotics', [
+        ('Robotics', [
             # 'wkentaro/label_octomap',
             # 'wkentaro/hrp2_apc',
-            'wkentaro/label-fusion',
             'start-jsk/jsk_apc',
             'jsk-ros-pkg/jsk_recognition',
             'jsk-ros-pkg/jsk_visualization',
@@ -70,9 +69,10 @@ def software():
             'wkentaro/gdown',
             'wkentaro/gshell',
             'wkentaro/dotfiles',
-            # 'wkentaro/wkentaro.zsh-theme',
             'wkentaro/pycd',
             'wkentaro/wstool_cd',
+            # 'wkentaro/wkentaro.zsh-theme',
+            'wkentaro/screenshot-manager',
             'wkentaro/gotenshita',
         ]),
     ])
