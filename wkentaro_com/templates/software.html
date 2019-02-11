@@ -25,7 +25,7 @@
         var elem = $('#' + owner + '-' + repo);
         for (let datum of data) {
           if (datum['author']['login'] == 'wkentaro') {
-            elem.find('.caption .my-contributions span.number').text(datum['total']);
+            elem.find('.card-footer .my-contributions span.number').text(datum['total']);
             break;
           }
         }
@@ -42,12 +42,12 @@
       success : function(data) {
         var elem = $('#' + owner + '-' + repo);
         if (data.description) {
-          elem.find('.caption p:first').text(data.description);
+          elem.find('.description p:first').text(data.description);
         }
-        elem.find('.caption .language span.name').text(data.language);
-        elem.find('.caption .language i:first').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
-        elem.find('.caption .stargazers span.number').text(data.stargazers_count);
-        elem.find('.caption .forks span.number').text(data.forks);
+        elem.find('.card-footer .language span.name').text(data.language);
+        elem.find('.card-footer .language i:first').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
+        elem.find('.card-footer .stargazers span.number').text(data.stargazers_count);
+        elem.find('.card-footer .forks span.number').text(data.forks);
       }
     });
   }
@@ -60,8 +60,7 @@
     {% endfor %}
     {% endfor %}
   }
-  {# to wait for loading Ajax. #}
-  setTimeout(getAllRepositoryData, 100);
+  getAllRepositoryData();
 </script>
 
 {% for desc, slugs in repositories.items() %}
@@ -70,43 +69,41 @@
 <div class="row display-flex">
 {% for slug in slugs %}
 {% set owner, repo = slug.split('/') %}
-<div class="col-md-4 gh-repo">
-  <div class="panel panel-default" id="{{ owner + '-' + repo }}">
-    <div class="panel-body">
-      <div>
-        <a href="https://github.com/{{ slug }}" target="_blank" class="text-bold">
-          {{ slug }}
-        </a>
-      </div>
-      <div class="caption">
+<div class="col-md-4 gh-repo card-deck">
+  <div class="card card-default" id="{{ owner + '-' + repo }}">
+    <div class="card-body pb-0">
+      <a href="https://github.com/{{ slug }}" target="_blank" class="text-bold">
+        {{ slug }}
+      </a>
+      <div class="description">
         <p class="text-small"></p>
-        <div class="text-small">
-          <ul class="list-inline" style="margin: 0;">
-            <li class="language">
-              <i class="fa fa-circle"></i>
-              <span class="name"></span>
-            </li>
-            <li class="stargazers">
-              <a href="https://github.com/{{ slug }}/stargazers" target="_blank">
-                <i class="fa fa-star"></i>
-                <span class="number"></span>
-              </a>
-            </li>
-            <li class="forks">
-              <a href="https://github.com/{{ slug }}/network" target="_blank">
-                <i class="fa fa-code-fork"></i>
-                <span class="number"></span>
-              </a>
-            </li>
-            <li class="my-contributions">
-              <a href="https://github.com/{{ slug }}/commits?author=wkentaro" target="_blank">
-                <i class="fa fa-code"></i>
-                <span class="number"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
+    </div>
+    <div class="card-footer text-small bg-white">
+      <ul class="list-inline" style="margin: 0;">
+        <li class="language">
+          <i class="fa fa-circle"></i>
+          <span class="name"></span>
+        </li>
+        <li class="stargazers">
+          <a href="https://github.com/{{ slug }}/stargazers" target="_blank">
+            <i class="fa fa-star"></i>
+            <span class="number"></span>
+          </a>
+        </li>
+        <li class="forks">
+          <a href="https://github.com/{{ slug }}/network" target="_blank">
+            <i class="fa fa-code-fork"></i>
+            <span class="number"></span>
+          </a>
+        </li>
+        <li class="my-contributions">
+          <a href="https://github.com/{{ slug }}/commits?author=wkentaro" target="_blank">
+            <i class="fa fa-code"></i>
+            <span class="number"></span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
