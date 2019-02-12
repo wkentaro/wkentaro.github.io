@@ -13,12 +13,12 @@
 </h2>
 
 <ul class="list-inline text-center">
-  <li><a href="https://github.com/wkentaro/gsoc2016">code</a></li>
+  <li><a href="https://github.com/wkentaro/gsoc2016">Code</a></li>
 </ul>
 
 <p class="text-right">Last Edit: 2016-08-22 14:07:51</p>
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="basic_info"><a href="#basic_info">Basic Information</a></h3>
   <ul>
     <li>Student Name: Kentaro Wada (www.kentaro.wada@gmail.com)</li>
@@ -27,22 +27,22 @@
     <li>Mentors: Shaun Edwards (shaunedwards@gmail.com), Fred Proctor</li>
     <li>Organization: Open Source Robotics Foundation</li>
   </ul>
-</div>  <!-- div.indent-1 -->
+</div>
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="project_details"><a href="#project_details">Project Details</a></h3>
-  <p class="indent-1">
+  <p class="pl-1">
     Reactive and adaptive planning is necessary in situations with unknown environment, few sensors and many occlusions.
     Reactiveness is the mechanism to avoid collision and adaptiveness is one to complete the task.
     The inputs to achieve these mechanisms are sensor inputs and user operations.
     Based on these prerequisites, I created a system for reactive and adaptive planning as shown in below:
   </p>
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
-      <img class="img-responsive center-block" src="{{ url_for('static', filename="projects/gsoc2016/system_figure.png") }}" />
+    <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-3">
+      <img class="img-fluid" src="{{ url_for('static', filename="projects/gsoc2016/system_figure.png") }}" />
     </div>
   </div>
-  <p class="indent-1">
+  <p class="pl-1">
     The part of the system consists of a simulator, but the component, Simulator, can be replaced by the real robot.
     The inputs are provided the simulated sensor and a user in the system.
     Using these inputs, the two mechanism are achieved with <b>Stop execution</b> and <b>Re-planning</b>:
@@ -50,22 +50,22 @@
     As a reactiveness, the system needs to stop the joint trajectory execution of the robot to avoid collision in an environment,
     and as a adaptiveness the system needs to re-plan the joint trajectory to complete the task based on the information at stopping execution.
   </p>
-  <p class="indent-1">
+  <p class="pl-1">
     In this project I worked for the two functions, stop execution and re-planning, and also the required components in the above system.
     The sections afterward describes about the complete/incomplete things of this project, and the prefix in the title (eg. [Reactive], [Simulator])
     represents what are the changes for.
   </p>
-</div>  <!-- div.indent-1 -->
+</div>
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="complete_things"><a href="#complete_things">Complete Things: Merged PRs and Fixed Issues</a></h3>
-  <p class="indent-1">
+  <p class="pl-1">
     This section provides the completed PRs/Issues in this GSoC project.
     Some of them are not completed by alone myself, and completed by the cooperation with maintainers of other open source projects.
   </p>
   <ul>
     <li>
-      <div class="indent-1" id="stop_execution">
+      <div class="pl-1" id="stop_execution">
         <h4>[Reactive] Stop execution on motion planning rviz plugin: <a href="https://github.com/ros-planning/moveit_ros/pull/709">ros-planning/moveit_ros#709</a></h4>
         <p>
           This function is required to stop trajectory execution by operator inputs, and for the reactiveness in the system.
@@ -75,25 +75,25 @@
           The maintainer knew a simpler implementation for this than mine, and he provided the PR and merged.
           The result is shown in below movie:
           <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-              <img class="img-responsive center-block" src="{{ url_for('static', filename="projects/gsoc2016/stop_execution_rviz_plugin.gif") }}" />
+            <div class="col-xs-10 offset-xs-1 col-md-8 offset-md-2">
+              <img class="img-fluid" src="{{ url_for('static', filename="projects/gsoc2016/stop_execution_rviz_plugin.gif") }}" />
             </div>
           </div>
         </p>
       </div>
     </li>
   </ul>
-</div>  <!-- div.indent-1 -->
+</div>
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="left_things"><a href="#left_things">Left Things: PRs and Issues to be Merged and Closed</a></h3>
-  <p class="indent-1">
+  <p class="pl-1">
     This section provides the left PRs/Issues in this GSoC project.
     This means the project is not yet 100% complete. The things left to do are listed below.
   </p>
   <ul>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>[Simulator] Add package to spawn model and position control on Gazebo simulator: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/20">ros-industrial/fanuc_experimentall#20</a></h4>
         <p>
           This is a PR to simulate the robot fanuc_lrmate200id on one of the most popular simulators on robotics, Gazebo, based on closed PRs/Issues
@@ -106,15 +106,15 @@
           so I estimated it with the meshes of the links and Meshlab in a way described <a href="http://gazebosim.org/tutorials?tut=inertia&cat=#Computingtheinertialparameters">here</a>.
           The result is shown in below figure:
           <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-              <img class="img-responsive center-block" src="{{ url_for('static', filename="projects/gsoc2016/setup_gazebo.png") }}" />
+            <div class="col-xs-10 offset-xs-1 col-md-8 offset-md-2">
+              <img class="img-fluid" src="{{ url_for('static', filename="projects/gsoc2016/setup_gazebo.png") }}" />
             </div>
           </div>
         </p>
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>[Simulator] Fix vacuum gripper plugin to work in stable: <a href="https://github.com/ros-simulation/gazebo_ros_pkgs/pull/48://github.com/ros-simulation/gazebo_ros_pkgs/pull/482">ros-simulation/gazebo_ros_pkgs#482</a></h4>
         <p>
           This is a PR to simulate the vacuum gripper in order to run manipulation tasks on the simulator.
@@ -124,22 +124,22 @@
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>[Planner] Controlling Fanuc LRMate200iD with Moveit on Gazebo: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/21">ros-industrial/fanuc_experimental#21</a></h4>
         <p>
           This is a PR to control Fanuc LRMate200iD robot on Gazebo with Moveit!, for creatign the whole system.
           MoveIt! is one of the most popular project for robotic planning, and I decided to use it on this project.
           The result is shown in below:
           <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-              <img class="img-responsive center-block" src="{{ url_for('static', filename="projects/gsoc2016/moveit_fanuc_gazebo.gif") }}" />
+            <div class="col-xs-10 offset-xs-1 col-md-8 offset-md-2">
+              <img class="img-fluid" src="{{ url_for('static', filename="projects/gsoc2016/moveit_fanuc_gazebo.gif") }}" />
             </div>
           </div>
         </p>
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>[Planner] Fix namespace of params for trajectory_execution</h4>
         <p>
           This is a bugfix of MoveIt!, with related issues
@@ -162,7 +162,7 @@
       </div>
     </li>
     <li>
-      <div class="indent-1" id="issue_octomap_contact">
+      <div class="pl-1" id="issue_octomap_contact">
         <h4>[Adaptive] Sample of OctomapServerContact does not work: voxel is not updated with contact?: <a href="https://github.com/jsk-ros-pkg/jsk_recognition/issues/1834">jsk-ros-pkg/jsk_recognition#1834</a></h4>
         <p>
           This is an bug report I proposed, but not yet fixed.
@@ -174,7 +174,7 @@
       </div>
     </li>
     <li>
-      <div class="indent-1" id="issue_moveit_scene">
+      <div class="pl-1" id="issue_moveit_scene">
         <h4>[Adaptive] Scene visualization won't work on rviz plugin after some joint trajectory execution: <a href="https://github.com/ros-planning/moveit_ros/issues/711">ros-planning/moveit_ros#711</a></h4>
         <p>
           This is a bug report I proposed, but not yet fixed.
@@ -184,7 +184,7 @@
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>[Reactive] Add capability of executing known trajectory with a ROS action: <a href="https://github.com/ros-planning/moveit/pull/94">ros-planing/moveit#94</a></h4>
         <p>
           This is a PR to execute trajectory with monitoring, based on PRs/Issues (
@@ -209,16 +209,16 @@
       </div>
     </li>
   </ul>
-</div>  <!-- div.indent-1 -->
+</div>
 
-<div class="indent1">
+<div class="pl-1">
   <h3 id="demonstration"><a href="#demonstration">Demonstrations of What is Achieved by this Project</a></h3>
-  <p class="indent-1">
+  <p class="pl-1">
     This section provides some demonstrations to show what is achieved by this project.
   </p>
   <ul>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>Gazebo demonstration of reactive planning: Touch the floor: <a href="https://github.com/ros-industrial/fanuc_experimental/pull/23">ros-industrial/fanuc_experimental#23</a></h4>
         <p>
           This demo is to show the function of reactiveness of the system. In the demo, a force sensor at the last joint of the robot detects the unexpected force input,
@@ -233,7 +233,7 @@
       </div>
     </li>
     <li>
-      <div class="indent-1">
+      <div class="pl-1">
         <h4>
           Pick and place demonstration with Fanuc LRMate200id in a situation with few sensors with reactive and adaptive planning:
           <a href="https://github.com/ros-industrial/fanuc_experimental/pull/25">ros-industrial/fanuc_experimental#25</a>
@@ -251,12 +251,12 @@
       </div>
     </li>
   </ul>
-</div>  <!-- div.indent-1 -->
+</div>
 
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="conclusions"><a href="#conclusions">Conclusions</a></h3>
-  <p class="indent-1">
+  <p class="pl-1">
     For reactive and adaptive planning, functions for stopping trajectory execution and re-planning are necessary.
     I completed most of the features for reactiveness but there are still some open issues for re-planning:
     <a href="#issue_moveit_scene">#issue_moveit_scene</a>, <a href="#issue_octomap_contact">#issue_octomap_contact</a>.
@@ -266,9 +266,9 @@
 </div>
 
 
-<div class="indent-1">
+<div class="pl-1">
   <h3 id="other_resources"><a href="#other_resources">Other Resources Created in the Project</a></h3>
-  <div class="indent-1">
+  <div class="pl-1">
     <h4>ROS workspace for code which is not yet merged</h4>
     <ul>
       <li>Setup ROS following <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">this link</a></li>
@@ -282,7 +282,7 @@ cd ..
 catkin build</pre>
       </li>
   </div>
-  <div class="indent-1">
+  <div class="pl-1">
     <h4>Presentation Documents for <a href="http://rosindustrial.org/">ROS Industrial</a> Monthly Meeting</h4>
     <ul>
       <li><a href="https://drive.google.com/open?id=0B9P1L--7Wd2vMFVMNzBSSWxQZWM">2016-05-10</a></li>
