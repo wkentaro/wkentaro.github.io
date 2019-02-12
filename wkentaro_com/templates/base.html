@@ -10,7 +10,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cssnormalize-min.css') }}">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-mfizz/font-mfizz.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/syntax.css') }}">
@@ -36,15 +37,12 @@
 
         <div class="masthead clearfix">
           <a href="/"><h1 class="masthead-title text-center">KENTARO WADA</h1></a>
-          <p class="masthead-tagline text-center">Thank you for visiting. This is my personal page.</p>
-          <ul class="list-inline text-center page-links">
-            <li>{% if request.path == '/' %}Home{% else %}<a href="{{ url_for('index') }}">Home</a>{% endif %}</li>
-            <li>{% if request.path == '/research' %}Research{% else %}<a href="#">Research</a>{% endif %}</li>
-            <li>{% if request.path == '/software' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
-            <li><a href="https://docs.google.com/viewer?url=https://github.com/wkentaro/CV/raw/master/CV.pdf" target="_blank">CV</a></li>
-            <li>|</li>
-            <li><a href="https://scholar.google.co.uk/citations?user=JoeSwcoAAAAJ" target="_blank" />G. Scholar</a></li>
-            <li><a href="https://github.com/wkentaro" target="_blank">GitHub</a></li>
+          <p class="text-center">Thank you for visiting. This is my personal page.</p>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="list-inline-item"><a href="{{ url_for('index') }}#research">Research</a></li>
+            {# <li class="list-inline-item"><a href="{{ url_for('index') }}#software">Software</a></li> #}
+            <li class="list-inline-item"><a href="https://docs.google.com/viewer?url=https://github.com/wkentaro/CV/raw/master/CV.pdf" target="_blank">CV</a></li>
           </ul>
         </div>
 

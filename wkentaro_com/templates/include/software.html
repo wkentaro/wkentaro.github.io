@@ -1,11 +1,3 @@
-{% extends "base.html" %}
-
-{% block content %}
-
-<h2>Software</h2>
-
-<p class="indent-1">Open source projects which I developed and/or contributed to.</p>
-
 <script>
   function getLanguageColor(language) {
     var colors = {};
@@ -64,12 +56,11 @@
 </script>
 
 {% for desc, slugs in repositories.items() %}
-<hr/>
 <h3>{{ desc }}</h3>
-<div class="row display-flex">
+<div class="row">
 {% for slug in slugs %}
 {% set owner, repo = slug.split('/') %}
-<div class="col-md-4 gh-repo card-deck">
+<div class="col-md-4 card-deck mb-2">
   <div class="card card-default" id="{{ owner + '-' + repo }}">
     <div class="card-body pb-0">
       <a href="https://github.com/{{ slug }}" target="_blank" class="text-bold">
@@ -81,23 +72,23 @@
     </div>
     <div class="card-footer text-small bg-white">
       <ul class="list-inline" style="margin: 0;">
-        <li class="language">
+        <li class="list-inline-item language">
           <i class="fa fa-circle"></i>
           <span class="name"></span>
         </li>
-        <li class="stargazers">
+        <li class="list-inline-item stargazers">
           <a href="https://github.com/{{ slug }}/stargazers" target="_blank">
             <i class="fa fa-star"></i>
             <span class="number"></span>
           </a>
         </li>
-        <li class="forks">
+        <li class="list-inline-item forks">
           <a href="https://github.com/{{ slug }}/network" target="_blank">
             <i class="fa fa-code-fork"></i>
             <span class="number"></span>
           </a>
         </li>
-        <li class="my-contributions">
+        <li class="list-inline-item my-contributions">
           <a href="https://github.com/{{ slug }}/commits?author=wkentaro" target="_blank">
             <i class="fa fa-code"></i>
             <span class="number"></span>
@@ -110,5 +101,3 @@
 {% endfor %}
 </div>
 {% endfor %}
-
-{% endblock %}
