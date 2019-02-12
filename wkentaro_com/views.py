@@ -15,6 +15,16 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
+    return flask.render_template('index.html', name='index')
+
+
+@app.route('/research')
+def research():
+    return flask.render_template('research.html', name='research')
+
+
+@app.route('/software')
+def software():
     repos = collections.OrderedDict([
         ('Computer Vision', [
             'wkentaro/labelme',
@@ -69,7 +79,8 @@ def index():
         colors = collections.defaultdict(lambda: {'color': '#000', 'url': ''})
 
     return flask.render_template(
-        'index.html',
+        'software.html',
+        name='software',
         repositories=repos,
         colors=colors,
     )

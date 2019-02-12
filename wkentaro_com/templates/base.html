@@ -31,7 +31,7 @@
   </script>
 </head>
 <body>
-  <div class="container-fluid pt-3">
+  <div class="container-fluid mt-3 mb-3">
     <div class="row">
       <div id="content" class="offset-md-2 col-sm-8 clearfix">
 
@@ -39,10 +39,10 @@
           <a href="/"><h1 class="masthead-title text-center">KENTARO WADA</h1></a>
           <p class="text-center">Thank you for visiting. This is my personal page.</p>
           <ul class="list-inline text-center">
-            <li class="list-inline-item"><a href="{{ url_for('index') }}">Home</a></li>
-            <li class="list-inline-item"><a href="{{ url_for('index') }}#research">Research</a></li>
-            {# <li class="list-inline-item"><a href="{{ url_for('index') }}#software">Software</a></li> #}
-            <li class="list-inline-item"><a href="https://docs.google.com/viewer?url=https://github.com/wkentaro/CV/raw/master/CV.pdf" target="_blank">CV</a></li>
+            <li class="list-inline-item">{% if request.path == '/' %}Home{% else %}<a href="{{ url_for('index') }}">Home</a>{% endif %}</li>
+            <li class="list-inline-item">{% if request.path == '/research' %}Research{% else %}<a href="{{ url_for('research') }}">Research</a>{% endif %}</li>
+            <li class="list-inline-item">{% if request.path == '/software' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
+            <li class="list-inline-item"><a href="{{ url_for('static', filename='CV/CV.pdf') }}" target="_blank">CV</a></li>
           </ul>
         </div>
 
