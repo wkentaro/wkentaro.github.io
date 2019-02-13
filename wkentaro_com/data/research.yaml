@@ -161,8 +161,6 @@ other_projects:
     authors: [Kentaro Wada, Shaun Edwards, Fred Proctor]
     publisher: Google Summer of Code (GSoC) 2016
     year: 2016
-    extra:
-      - (Got 5th place at pick task and 8th place at stow task among 16 teams)
     entries:
       - text: Detail
         url: /projects/gsoc2016
