@@ -39,13 +39,13 @@
 
 <h2>Updates</h2>
 <div class="card card-body">
-  {% if updated_at is not none %}
-  {% endif %}
   <ul class="m-0 pl-3">
     {% include "include/updates.html" %}
   </ul>
 </div>
+{% if updated_at is not none %}
 <p class="text-right m-0">Last Update: {{ updated_at.strftime('%Y-%m-%d') }}</p>
+{% endif %}
 
 <hr/>
 <h2 id="research">Papers</h2>
