@@ -1,6 +1,0 @@
-@INPROCEEDINGS{wada2018instance,
-  author={Kentaro Wada and Shingo Kitagawa and Kei Okada and Masayuki Inaba},
-  title={Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects},
-  booktitle={Proceedings of the International Conference on Robotics and Systems},
-  year={2018},
-}

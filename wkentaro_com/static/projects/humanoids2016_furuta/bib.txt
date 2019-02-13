@@ -1,9 +1,0 @@
-@INPROCEEDINGS{TransformableSemanticMap:Furuta:Humanoids2016,
-  author={Yuki Furuta and Kentaro Wada and Masaki Murooka and Shunichi Nozawa and Yohei Kakiuchi and Kei Okada and Masayuki Inaba},
-  booktitle={Proceedings of the 2016 IEEE-RAS International Conference on Humanoid Robots (Humanoids2016)}
-  title={Transformable Semantic Map Based Navigation using Autonomous Deep Learning Object Segmentation},
-  year={2016},
-  month={November},
-  eposition={Cancun, Mexico},
-  abstract={For daily assistive robots working in home environment, it is important to use geometry-free representation for navigation which can deal with dynamic environmental changes. In this paper we propose semantic map based navigation which consists of 1) generating deep learning enabled semantic map from annotated world and 2) object based navigation based on learned semantic map representation. One point of our proposed framework is to let robots autonomously generate a dataset for deep learning method and transfer existing geometric map based task execution system to semantic map based one which is invariant to changes of object position. Since deep learning for object segmentation technique enables end-to-end learning of object features, we are free to design segmentation and labeling methods for each objects manually. We also showed the effectiveness of our approach in performing task in dynamic environment and adaptability for two types of robots with experiments.},
-}
