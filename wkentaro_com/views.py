@@ -20,9 +20,10 @@ app = flask.Flask(__name__)
 @app.route('/')
 def index():
     try:
-        filename = osp.join(here, 'templates/include/updates.html')
         timestamp = subprocess.check_output(
-            'git log -1 --format="%at" {}'.format(filename), shell=True
+            'git log -1 --format="%at" templates/include/updates.html',
+            shell=True,
+            cwd=here,
         )
         timestamp = int(timestamp.strip())
         updated_at = datetime.datetime.fromtimestamp(timestamp)
