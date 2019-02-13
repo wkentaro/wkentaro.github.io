@@ -41,10 +41,15 @@ def index():
 def research():
     filename = osp.join(here, 'data/research.yaml')
     with open(filename) as f:
-        papers = yaml.load(f)['papers']
+        data = yaml.load(f)
+        papers = data['papers']
+        other_projects = data['other_projects']
 
     return flask.render_template(
-        'research.html', name='research', papers=papers
+        'research.html',
+        name='research',
+        papers=papers,
+        other_projects=other_projects,
     )
 
 

@@ -132,3 +132,53 @@ papers:
       - text: Video
         url: https://drive.google.com/open?id=1ljJQ4SUjkNT1S1GWb4h7h__zbStz3oOo
     selected: false
+
+other_projects:
+  - id: arc2017
+    title: Team-K at International Amazon Robotics Challenge 2017
+    authors: [Shun Hasegawa*, Shingo Kitagawa*, Kentaro Wada*, Yuto Uchimi, Naoya Yamaguchi, Kei Okada]
+    publisher: Robocup
+    year: 2017
+    extra:
+      - (12th/13th place among 16 teams in pick/stow tasks. Actually, we had a hardware problem while pick task.)
+    entries:
+      - text: Code
+        url: https://github.com/start-jsk/jsk_apc
+  - id: apc2016
+    title: Team-K at International Amazon Picking Challenge 2016
+    authors: [Kentaro Wada, Shun Hasegawa, Shingo Kitagawa, Yusuke Niitani, Masahiro Bando, Kei Okada]
+    publisher: Robocup
+    year: 2016
+    extra:
+      - (Got 5th place at pick task and 8th place at stow task among 16 teams)
+    entries:
+      - text: Slides
+        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWkRaeE9lSzhUNlU
+      - text: Code
+        url: https://github.com/start-jsk/jsk_apc
+  - id: gsoc2016
+    title: Reactive and Adaptive Path Planning Using Sensor Feedback and Operator Input
+    authors: [Kentaro Wada, Shaun Edwards, Fred Proctor]
+    publisher: Google Summer of Code (GSoC) 2016
+    year: 2016
+    extra:
+      - (Got 5th place at pick task and 8th place at stow task among 16 teams)
+    entries:
+      - text: Detail
+        url: /projects/gsoc2016
+      - text: Code
+        url: https://github.com/wkentaro/gsoc2016
+  - id: apc2015
+    title: Team-K at International Amazon Picking Challenge 2015
+    authors: [Kentaro Wada*, Iori Yanokura*, Yuto Inagaki*, Makoto Sugiura, Kei Okada]
+    publisher: International Conference on Robotics and Automation (ICRA) Competition
+    year: 2015
+    extra:
+      - (Got 5th place at pick task and 8th place at stow task among 16 teams)
+    entries:
+      - text: Video (challenge description)
+        url: https://www.youtube.com/watch?v=VvnHMvnQsCM
+      - text: Video (team description)
+        url: https://www.youtube.com/watch?v=OYjK5J__uDI&t=208
+      - text: Code
+        url: https://github.com/start-jsk/jsk_apc
