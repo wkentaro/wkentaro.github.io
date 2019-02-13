@@ -1,7 +1,4 @@
 /* Masthead */
-.masthead {
-  border-bottom: 1px solid #dddddd;
-}
 .masthead-title {
   color: #3E4349;
 }
@@ -11,7 +8,7 @@
   font-family: 'Garamond';
   font-style: normal;
   font-weight: 400;
- local('EB Garamond'), local('EBGaramond'), url(http://themes.googleusercontent.com/static/fonts/ebgaramond/v5/CDR0kuiFK7I1OZ2hSdR7G7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  local('EB Garamond'), local('EBGaramond'), url(http://themes.googleusercontent.com/static/fonts/ebgaramond/v5/CDR0kuiFK7I1OZ2hSdR7G7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 @font-face {
   font-family: 'goudy old style';
