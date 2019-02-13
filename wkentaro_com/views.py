@@ -3,13 +3,10 @@ import datetime
 import json
 import os.path as osp
 import subprocess
-try:
-    from urllib.request import urlopen
-except ImportError:
-    from urllib import urlopen
 
 import flask
 import jinja2
+import yaml
 
 
 here = osp.dirname(osp.abspath(__file__))
@@ -42,58 +39,13 @@ def research():
 
 @app.route('/software')
 def software():
-    repos = collections.OrderedDict([
-        ('Computer Vision', [
-            'wkentaro/labelme',
-            'wkentaro/imgviz',
-            'wkentaro/label-fusion',
-            'wkentaro/pascal3d',
-            'mikedh/trimesh',
-            'aleju/imgaug',
-        ]),
-        ('Deep Learning', [
-            'wkentaro/pytorch-fcn',
-            'wkentaro/fcn',
-            'wkentaro/chainer-mask-rcnn',
-            'wkentaro/pytorch-for-numpy-users',
-            'wkentaro/chainer-bicyclegan',
-            'wkentaro/chainer-cyclegan',
-            'wkentaro/real-harem',
-            'chainer/chainer',
-            'cupy/cupy',
-        ]),
-        ('Robotics', [
-            # 'wkentaro/label_octomap',
-            # 'wkentaro/hrp2_apc',
-            'start-jsk/jsk_apc',
-            'jsk-ros-pkg/jsk_recognition',
-            'jsk-ros-pkg/jsk_visualization',
-            # 'jsk-ros-pkg/jsk_common',
-            'ros-perception/vision_opencv',
-            'ros-perception/image_pipeline',
-            'ros-perception/perception_pcl',
-            # 'PointCloudLibrary/pcl',
-            'ros/ros_comm',
-            'ros/nodelet_core',
-        ]),
-        ('Utility', [
-            'wkentaro/gdown',
-            'wkentaro/gshell',
-            'wkentaro/dotfiles',
-            'wkentaro/pycd',
-            'wkentaro/wstool_cd',
-            # 'wkentaro/wkentaro.zsh-theme',
-            'wkentaro/screenshot-manager',
-            'wkentaro/gotenshita',
-        ]),
-    ])
+    filename = osp.join(here, 'data/software.yaml')
+    with open(filename) as f:
+        repos = yaml.load(f)['repositories']
 
-    colors_url = 'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json'  # NOQA
-    try:
-        response = urlopen(colors_url)
-        colors = json.loads(response.read().decode('utf-8'))
-    except Exception:
-        colors = collections.defaultdict(lambda: {'color': '#000', 'url': ''})
+    filename = osp.join(here, 'data/github-colors.json')
+    with open(filename) as f:
+        colors = json.load(f)
 
     return flask.render_template(
         'software.html',

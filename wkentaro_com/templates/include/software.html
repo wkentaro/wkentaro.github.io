@@ -44,8 +44,8 @@
     });
   }
   function getAllRepositoryData() {
-    {% for desc, slugs in repositories.items() %}
-    {% for slug in slugs %}
+    {% for group in repositories %}
+    {% for slug in group['repos'] %}
     {% set owner_repo = slug.split('/') %}
     getRepositoryData('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
     getMyContributions('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
@@ -55,10 +55,10 @@
   getAllRepositoryData();
 </script>
 
-{% for desc, slugs in repositories.items() %}
-<h3>{{ desc }}</h3>
+{% for group in repositories %}
+<h3>{{ group['title'] }}</h3>
 <div class="row">
-{% for slug in slugs %}
+{% for slug in group['repos'] %}
 {% set owner, repo = slug.split('/') %}
 <div class="col-md-4 card-deck mb-2">
   <div class="card card-default" id="{{ owner + '-' + repo }}">
