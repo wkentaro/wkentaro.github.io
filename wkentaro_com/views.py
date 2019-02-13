@@ -1,6 +1,8 @@
 import collections
+import datetime
 import json
 import os.path as osp
+import subprocess
 try:
     from urllib.request import urlopen
 except ImportError:
@@ -10,12 +12,26 @@ import flask
 import jinja2
 
 
+here = osp.dirname(osp.abspath(__file__))
+
 app = flask.Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return flask.render_template('index.html', name='index')
+    try:
+        filename = osp.join(here, 'templates/include/updates.html')
+        timestamp = subprocess.check_output(
+            'git log -1 --format="%at" {}'.format(filename), shell=True
+        )
+        timestamp = int(timestamp.strip())
+        updated_at = datetime.datetime.fromtimestamp(timestamp)
+    except Exception as e:
+        updated_at = None
+
+    return flask.render_template(
+        'index.html', name='index', updated_at=updated_at
+    )
 
 
 @app.route('/research')
