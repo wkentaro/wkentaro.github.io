@@ -1,0 +1,132 @@
+papers:
+  - id: icra2019
+    title: Joint Learning of Instance and Semantic Segmentation for Robotic Pick-and-Place with Heavy Occlusions in Clutter
+    authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Automation (ICRA)
+    year: 2019
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1P1zxUc6asrhhhQ8e-gCZsRh_cRd3dt9E
+      - text: Video
+        url: https://drive.google.com/open?id=1P1D4TBseSxIgES53_idr7lF6Uh3yijVe
+    selected: true
+  - id: icra2019_hasegawa
+    title: 'Collaborative Grasp: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
+    authors: [Shun Hasegawa*, Kentaro Wada*, Shingo Kitagawa, Yuto Uchimi, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Automation (ICRA)
+    year: 2019
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1P3i0Yo6XFZ_Q97Vy_yjoXsrqZW497-f6
+      - text: Video
+        url: https://drive.google.com/open?id=198Frz6e92ek5n7yt1EqrR_aoMjf_gIpT
+    selected: true
+  - id: iros2018
+    title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
+    authors: [Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    year: 2018
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR
+      - text: Video
+        url: https://drive.google.com/open?id=1dXdvWw5mMjpGGuNVTQ9_RRoyIsdmcZrL
+      - text: Slides
+        url: https://drive.google.com/open?id=16M2gwKRVdCEt4T5m3qZIFLc55N8L4PfE
+    selected: true
+  - id: iros2018_hasegawa
+    title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
+    authors: [Shun Hasegawa, Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    year: 2018
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=197v2odJUntW5DuZXGejp9A3Xr44nMcI5
+      - text: Video
+        url: https://drive.google.com/open?id=198Frz6e92ek5n7yt1EqrR_aoMjf_gIpT
+    selected: false
+  - id: iros2018_kitagawa
+    title: Multi-stage Learning of Selective Dual-arm Grasping Based on Obtaining and Pruning Grasping Points Through the Robot Experience in the Real World
+    authors: [Shingo Kitagawa, Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    year: 2018
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=19DpnDg6DjBXUzazwpWZ1ZpQ_zdxiKhO4
+      - text: Video
+        url: https://drive.google.com/open?id=19badNc9krmmVlmsmsfHI2M3eob2QHq_Q
+    selected: false
+  - id: ias2018_kitagawa
+    title: Learning-Based Task Failure Prediction for Selective Dual-Arm Manipulation in Warehouse Stowing
+    authors: [Shingo Kitagawa, Kentaro Wada, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Intelligent Autonomous Systems (IAS)
+    year: 2018
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1VNTYn9gXwI0LZzURvZVGYuubeuRkGfG0
+    selected: false
+  - id: iros2017
+    title: Probabilistic 3D Multilabel Real-time Mapping for Multi-object Manipulation
+    authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Inteligent Systems (IROS)
+    year: 2017
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1frqieyHiQBqpr1e9mWPrzfaX8FbpLcuX
+      - text: Video
+        url: https://drive.google.com/open?id=1nUFB1_jHLomxAEhlWsgaMRkdGycB5Dhk
+      - text: Slides
+        url: https://drive.google.com/open?id=1c5W-nUooUo_9hMT0ei-34t3_lOhA3lZs
+      - text: Code
+        url: https://github.com/wkentaro/label_octomap
+    selected: true
+  - id: iros2017_hasegawa
+    title: A Three-Fingered Hand with a Suction Gripping System for Picking Various Objects in Cluttered Narrow Space
+    authors: [Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Inteligent Systems (IROS)
+    year: 2017
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1JK_o178iRMlQUQQgIlBLlltsj7cwMDeE
+      - text: Video
+        url: https://drive.google.com/open?id=1JPzAq4B47cjH35bhAjGRFMXyUN7voO4o
+    selected: false
+  - id: advanced_robotics2016
+    title: 'Pick-and-Verify: Verification-based Highly Reliable Picking System for Various Target Objects in Clutter'
+    authors: [Kentaro Wada, Makoto Sugiura, Iori Yanokura, Yuto Inagaki, Kei Okada, Masayuki Inaba]
+    publisher: Journal of Advanced Robotics
+    year: 2016
+    entries:
+      - text: Paper
+        url: https://www.tandfonline.com/doi/abs/10.1080/01691864.2016.1269672?journalCode=tadr20
+      - text: Video
+        url: https://www.tandfonline.com/doi/suppl/10.1080/01691864.2016.1269672?scroll=top
+    selected: true
+  - id: humanoids2016
+    title: 3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map
+    authors: [Kentaro Wada, Masaki Murooka, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Humanoid Robotics (Humanoids)
+    year: 2016
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=0B9P1L--7Wd2vX2o0bkFSaUw1ODA
+      - text: Video
+        url: https://drive.google.com/open?id=19YwO1LXAcRCfS8rAM5paxc2SEzGE3odA
+      - text: Slides
+        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWDNEVm5hZF9CUDA
+      - text: Poster
+        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWDlzMDRNbVpfelE
+      - text: Code
+        url: https://github.com/wkentaro/hrp2_apc
+    selected: false
+  - id: humanoids2016_furuta
+    title: Transformable Semantic Map Based Navigation using Autonomous Deep Learning Object Segmentation
+    authors: [Yuki Furuta, Kentaro Wada, Masaki Murooka, Shunichi Nozawa, Yohei Kakiuchi, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Humanoid Robotics (Humanoids)
+    year: 2016
+    entries:
+      - text: Paper
+        url: https://drive.google.com/open?id=1Ne9mifgAvy53YH2D5oU4AMDp_rLtbP90
+      - text: Video
+        url: https://drive.google.com/open?id=1ljJQ4SUjkNT1S1GWb4h7h__zbStz3oOo
+    selected: false
