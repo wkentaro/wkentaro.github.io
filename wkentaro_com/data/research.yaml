@@ -26,6 +26,8 @@ papers:
     authors: [Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
     publisher: International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
+    extra:
+      - (Got <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2018.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
     entries:
       - text: Paper
         url: https://drive.google.com/open?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR

@@ -15,6 +15,9 @@
           </i>
         </li>
         <li>{{ paper['publisher'] }}, {{ paper['year'] }}</li>
+        {% for elm in paper['extra'] %}
+        <li>{{ elm | safe }}</li>
+        {% endfor %}
         <li>
           <ul class="list-inline mt-2">
             {% for entry in paper['entries'] %}
