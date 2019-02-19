@@ -62,6 +62,7 @@ papers:
     title: Learning to Segment Generic Handheld Objects Using Class–Agnostic Deep Comparison and Segmentation Network
     authors: [Krishneel Chaudhary, Kentaro Wada, Xiangyu Chen, Kohei Kimura, Kei Okada, Masayuki Inaba]
     publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    year: 2018
     entries:
       - text: Paper
         url: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8412598
