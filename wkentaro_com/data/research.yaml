@@ -58,6 +58,16 @@ papers:
       - text: Video
         url: https://drive.google.com/open?id=19badNc9krmmVlmsmsfHI2M3eob2QHq_Q
     selected: false
+  - id: iros2018_krishneel
+    title: Learning to Segment Generic Handheld Objects Using Class–Agnostic Deep Comparison and Segmentation Network
+    authors: [Krishneel Chaudhary, Kentaro Wada, Xiangyu Chen, Kohei Kimura, Kei Okada, Masayuki Inaba]
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    entries:
+      - text: Paper
+        url: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8412598
+      - text: Video
+        url: https://ieeexplore.ieee.org/ielx7/7083369/8386768/8412598/180253_04_VI.mp4?tp=&arnumber=8412598
+    selected: false
   - id: ias2018_kitagawa
     title: Learning-Based Task Failure Prediction for Selective Dual-Arm Manipulation in Warehouse Stowing
     authors: [Shingo Kitagawa, Kentaro Wada, Kei Okada, Masayuki Inaba]
