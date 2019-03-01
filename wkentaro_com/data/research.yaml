@@ -6,20 +6,20 @@ papers:
     year: 2019
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1P1zxUc6asrhhhQ8e-gCZsRh_cRd3dt9E
+        url: https://drive.google.com/open?id=1ynlSG7ccmPWkV1mXvtMsY7EB9hIe_83-
       - text: Video
         url: https://drive.google.com/open?id=1P1D4TBseSxIgES53_idr7lF6Uh3yijVe
     selected: true
   - id: icra2019_hasegawa
-    title: 'Collaborative Grasp: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
+    title: 'GraspFusion: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
     authors: [Shun Hasegawa*, Kentaro Wada*, Shingo Kitagawa, Yuto Uchimi, Kei Okada, Masayuki Inaba]
     publisher: International Conference on Robotics and Automation (ICRA)
     year: 2019
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1P3i0Yo6XFZ_Q97Vy_yjoXsrqZW497-f6
+        url: https://drive.google.com/open?id=16FVgGONJbvuSdvevHbZ0Ac7Wa8w82UzC
       - text: Video
-        url: https://drive.google.com/open?id=198Frz6e92ek5n7yt1EqrR_aoMjf_gIpT
+        url: https://drive.google.com/open?id=1J40NPD-WDmMKbZps-JYTmVQuptCLRA4C
     selected: true
   - id: iros2018
     title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
