@@ -8,7 +8,7 @@ papers:
       - text: Paper
         url: https://drive.google.com/open?id=1ynlSG7ccmPWkV1mXvtMsY7EB9hIe_83-
       - text: Video
-        url: https://drive.google.com/open?id=1P1D4TBseSxIgES53_idr7lF6Uh3yijVe
+        url: https://www.youtube.com/watch?v=bRTI0whWkq8
     selected: true
   - id: icra2019_hasegawa
     title: 'GraspFusion: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
@@ -32,7 +32,7 @@ papers:
       - text: Paper
         url: https://drive.google.com/open?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR
       - text: Video
-        url: https://drive.google.com/open?id=1dXdvWw5mMjpGGuNVTQ9_RRoyIsdmcZrL
+        url: https://www.youtube.com/watch?v=tNLtXb04i3w
       - text: Slides
         url: https://drive.google.com/open?id=16M2gwKRVdCEt4T5m3qZIFLc55N8L4PfE
     selected: true
@@ -113,7 +113,7 @@ papers:
       - text: Paper
         url: https://www.tandfonline.com/doi/abs/10.1080/01691864.2016.1269672?journalCode=tadr20
       - text: Video
-        url: https://www.tandfonline.com/doi/suppl/10.1080/01691864.2016.1269672?scroll=top
+        url: https://www.youtube.com/watch?v=R3M8GCw38_M&t=3s
     selected: true
   - id: humanoids2016
     title: 3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map
