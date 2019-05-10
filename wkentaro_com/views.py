@@ -1,4 +1,3 @@
-import collections
 import datetime
 import json
 import os.path as osp
@@ -29,7 +28,7 @@ def index():
         )
         timestamp = int(timestamp.strip())
         updated_at = datetime.datetime.fromtimestamp(timestamp)
-    except Exception as e:
+    except Exception:
         updated_at = None
 
     return flask.render_template(
