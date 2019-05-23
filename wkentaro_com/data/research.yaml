@@ -17,11 +17,15 @@ papers:
     authors: [Shun Hasegawa*, Kentaro Wada*, Shingo Kitagawa, Yuto Uchimi, Kei Okada, Masayuki Inaba]
     publisher: International Conference on Robotics and Automation (ICRA)
     year: 2019
+    extra:
+      - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2019.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
     entries:
       - text: Paper
         url: https://drive.google.com/open?id=16FVgGONJbvuSdvevHbZ0Ac7Wa8w82UzC
       - text: Video
         url: https://drive.google.com/open?id=1J40NPD-WDmMKbZps-JYTmVQuptCLRA4C
+      - text: Poster
+        url: https://drive.google.com/open?id=1Vx4Oa-aNOjrK37CM5dbHdDITRVj_766z
     selected: true
   - id: iros2018
     title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
@@ -29,7 +33,7 @@ papers:
     publisher: International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
     extra:
-      - (Got <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2018.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
+      - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2018.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
     entries:
       - text: Paper
         url: https://drive.google.com/open?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR
