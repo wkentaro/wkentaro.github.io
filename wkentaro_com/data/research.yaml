@@ -2,7 +2,7 @@ papers:
   - id: icra2019
     title: Joint Learning of Instance and Semantic Segmentation for Robotic Pick-and-Place with Heavy Occlusions in Clutter
     authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Automation (ICRA)
+    publisher: IEEE International Conference on Robotics and Automation (ICRA)
     year: 2019
     entries:
       - text: Paper
@@ -15,7 +15,7 @@ papers:
   - id: icra2019_hasegawa
     title: 'GraspFusion: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
     authors: [Shun Hasegawa*, Kentaro Wada*, Shingo Kitagawa, Yuto Uchimi, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Automation (ICRA)
+    publisher: IEEE International Conference on Robotics and Automation (ICRA)
     year: 2019
     extra:
       - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2019.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
@@ -30,7 +30,7 @@ papers:
   - id: iros2018
     title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
     authors: [Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
     extra:
       - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2018.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
@@ -47,7 +47,7 @@ papers:
   - id: iros2018_hasegawa
     title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
     authors: [Shun Hasegawa, Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
     entries:
       - text: Paper
@@ -58,7 +58,7 @@ papers:
   - id: iros2018_kitagawa
     title: Multi-stage Learning of Selective Dual-arm Grasping Based on Obtaining and Pruning Grasping Points Through the Robot Experience in the Real World
     authors: [Shingo Kitagawa, Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
     entries:
       - text: Paper
@@ -69,7 +69,7 @@ papers:
   - id: iros2018_krishneel
     title: Learning to Segment Generic Handheld Objects Using Class–Agnostic Deep Comparison and Segmentation Network
     authors: [Krishneel Chaudhary, Kentaro Wada, Xiangyu Chen, Kohei Kimura, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2018
     entries:
       - text: Paper
@@ -89,7 +89,7 @@ papers:
   - id: iros2017
     title: Probabilistic 3D Multilabel Real-time Mapping for Multi-object Manipulation
     authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2017
     entries:
       - text: Paper
@@ -104,7 +104,7 @@ papers:
   - id: iros2017_hasegawa
     title: A Three-Fingered Hand with a Suction Gripping System for Picking Various Objects in Cluttered Narrow Space
     authors: [Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Intelligent Systems (IROS)
+    publisher: IEEE/RSJ International Conference on Robotics and Intelligent Systems (IROS)
     year: 2017
     entries:
       - text: Paper
@@ -126,7 +126,7 @@ papers:
   - id: humanoids2016
     title: 3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map
     authors: [Kentaro Wada, Masaki Murooka, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Humanoid Robotics (Humanoids)
+    publisher: IEEE International Conference on Humanoid Robotics (Humanoids)
     year: 2016
     entries:
       - text: Paper
@@ -143,7 +143,7 @@ papers:
   - id: humanoids2016_furuta
     title: Transformable Semantic Map Based Navigation using Autonomous Deep Learning Object Segmentation
     authors: [Yuki Furuta, Kentaro Wada, Masaki Murooka, Shunichi Nozawa, Yohei Kakiuchi, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Humanoid Robotics (Humanoids)
+    publisher: IEEE International Conference on Humanoid Robotics (Humanoids)
     year: 2016
     entries:
       - text: Paper
