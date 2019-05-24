@@ -89,7 +89,7 @@ papers:
   - id: iros2017
     title: Probabilistic 3D Multilabel Real-time Mapping for Multi-object Manipulation
     authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Inteligent Systems (IROS)
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
     year: 2017
     entries:
       - text: Paper
@@ -104,7 +104,7 @@ papers:
   - id: iros2017_hasegawa
     title: A Three-Fingered Hand with a Suction Gripping System for Picking Various Objects in Cluttered Narrow Space
     authors: [Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
-    publisher: International Conference on Robotics and Inteligent Systems (IROS)
+    publisher: International Conference on Robotics and Intelligent Systems (IROS)
     year: 2017
     entries:
       - text: Paper
