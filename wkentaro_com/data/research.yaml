@@ -41,6 +41,8 @@ papers:
         url: https://www.youtube.com/watch?v=tNLtXb04i3w
       - text: Slides
         url: https://www.slideshare.net/KentaroWada/instance-segmentation-of-visible-and-occluded-regions-for-finding-and-picking-target-from-a-pile-of-objects/KentaroWada/instance-segmentation-of-visible-and-occluded-regions-for-finding-and-picking-target-from-a-pile-of-objects
+      - text: Poster
+        url: https://drive.google.com/open?id=16aUCT455dJxIB8GRHC3fxiXeW8yif0fl
     selected: true
   - id: iros2018_hasegawa
     title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
