@@ -97,7 +97,7 @@ papers:
       - text: Video
         url: https://www.youtube.com/watch?v=T-vtVQT9sgc&t=54s
       - text: Slides
-        url: https://drive.google.com/open?id=1c5W-nUooUo_9hMT0ei-34t3_lOhA3lZs
+        url: https://www.slideshare.net/KentaroWada/iros2017-probabilistic-3d-multilabel-realtime-mapping-for-multiobject-manipulation
       - text: Code
         url: https://github.com/wkentaro/label_octomap
     selected: true
