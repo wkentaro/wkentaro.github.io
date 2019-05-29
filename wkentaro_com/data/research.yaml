@@ -6,7 +6,7 @@ papers:
     year: 2019
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1ynlSG7ccmPWkV1mXvtMsY7EB9hIe_83-
+        url: https://drive.google.com/uc?id=1ynlSG7ccmPWkV1mXvtMsY7EB9hIe_83-
       - text: Video
         url: https://www.youtube.com/watch?v=bRTI0whWkq8
       - text: Poster
@@ -21,11 +21,11 @@ papers:
       - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2019.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=16FVgGONJbvuSdvevHbZ0Ac7Wa8w82UzC
+        url: https://drive.google.com/uc?id=16FVgGONJbvuSdvevHbZ0Ac7Wa8w82UzC
       - text: Video
-        url: https://drive.google.com/open?id=1J40NPD-WDmMKbZps-JYTmVQuptCLRA4C
+        url: https://drive.google.com/uc?id=1J40NPD-WDmMKbZps-JYTmVQuptCLRA4C
       - text: Poster
-        url: https://drive.google.com/open?id=1Vx4Oa-aNOjrK37CM5dbHdDITRVj_766z
+        url: https://drive.google.com/uc?id=1Vx4Oa-aNOjrK37CM5dbHdDITRVj_766z
     selected: true
   - id: iros2018
     title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
@@ -36,13 +36,13 @@ papers:
       - (Won <a href='https://www.ieee-jp.org/section/tokyo/chapter/RA-24/RASJPYoungAward_ICRA2018.html'>IEEE RAS JJC Young Award</a> as one of the 5 Japanese students.)
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR
+        url: https://drive.google.com/uc?id=1cUFCXTekorW8uCx54-QrGuOli5NM5udR
       - text: Video
         url: https://www.youtube.com/watch?v=tNLtXb04i3w
       - text: Slides
         url: https://www.slideshare.net/KentaroWada/instance-segmentation-of-visible-and-occluded-regions-for-finding-and-picking-target-from-a-pile-of-objects/KentaroWada/instance-segmentation-of-visible-and-occluded-regions-for-finding-and-picking-target-from-a-pile-of-objects
       - text: Poster
-        url: https://drive.google.com/open?id=16aUCT455dJxIB8GRHC3fxiXeW8yif0fl
+        url: https://drive.google.com/uc?id=16M2gwKRVdCEt4T5m3qZIFLc55N8L4PfE
     selected: true
   - id: iros2018_hasegawa
     title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
@@ -51,9 +51,9 @@ papers:
     year: 2018
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=197v2odJUntW5DuZXGejp9A3Xr44nMcI5
+        url: https://drive.google.com/uc?id=197v2odJUntW5DuZXGejp9A3Xr44nMcI5
       - text: Video
-        url: https://drive.google.com/open?id=198Frz6e92ek5n7yt1EqrR_aoMjf_gIpT
+        url: https://drive.google.com/uc?id=198Frz6e92ek5n7yt1EqrR_aoMjf_gIpT
     selected: false
   - id: iros2018_kitagawa
     title: Multi-stage Learning of Selective Dual-arm Grasping Based on Obtaining and Pruning Grasping Points Through the Robot Experience in the Real World
@@ -62,9 +62,9 @@ papers:
     year: 2018
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=19DpnDg6DjBXUzazwpWZ1ZpQ_zdxiKhO4
+        url: https://drive.google.com/uc?id=19DpnDg6DjBXUzazwpWZ1ZpQ_zdxiKhO4
       - text: Video
-        url: https://drive.google.com/open?id=19badNc9krmmVlmsmsfHI2M3eob2QHq_Q
+        url: https://drive.google.com/uc?id=19badNc9krmmVlmsmsfHI2M3eob2QHq_Q
     selected: false
   - id: iros2018_krishneel
     title: Learning to Segment Generic Handheld Objects Using Class–Agnostic Deep Comparison and Segmentation Network
@@ -84,7 +84,7 @@ papers:
     year: 2018
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1VNTYn9gXwI0LZzURvZVGYuubeuRkGfG0
+        url: https://drive.google.com/uc?id=1VNTYn9gXwI0LZzURvZVGYuubeuRkGfG0
     selected: false
   - id: iros2017
     title: Probabilistic 3D Multilabel Real-time Mapping for Multi-object Manipulation
@@ -93,7 +93,7 @@ papers:
     year: 2017
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1frqieyHiQBqpr1e9mWPrzfaX8FbpLcuX
+        url: https://drive.google.com/uc?id=1frqieyHiQBqpr1e9mWPrzfaX8FbpLcuX
       - text: Video
         url: https://www.youtube.com/watch?v=T-vtVQT9sgc&t=54s
       - text: Slides
@@ -108,9 +108,9 @@ papers:
     year: 2017
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1JK_o178iRMlQUQQgIlBLlltsj7cwMDeE
+        url: https://drive.google.com/uc?id=1JK_o178iRMlQUQQgIlBLlltsj7cwMDeE
       - text: Video
-        url: https://drive.google.com/open?id=1JPzAq4B47cjH35bhAjGRFMXyUN7voO4o
+        url: https://drive.google.com/uc?id=1JPzAq4B47cjH35bhAjGRFMXyUN7voO4o
     selected: false
   - id: advanced_robotics2016
     title: 'Pick-and-Verify: Verification-based Highly Reliable Picking System for Various Target Objects in Clutter'
@@ -119,7 +119,7 @@ papers:
     year: 2016
     entries:
       - text: Paper
-        url: https://www.tandfonline.com/doi/abs/10.1080/01691864.2016.1269672?journalCode=tadr20
+        url: https://www.tandfonline.com/doi/pdf/10.1080/01691864.2016.1269672?needAccess=true
       - text: Video
         url: https://www.youtube.com/watch?v=R3M8GCw38_M&t=3s
     selected: true
@@ -130,13 +130,13 @@ papers:
     year: 2016
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=0B9P1L--7Wd2vX2o0bkFSaUw1ODA
+        url: https://drive.google.com/uc?id=0B9P1L--7Wd2vX2o0bkFSaUw1ODA
       - text: Video
         url: https://www.youtube.com/watch?v=4zKFnVIGB_I&t=13s
       - text: Slides
-        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWDNEVm5hZF9CUDA
+        url: https://drive.google.com/uc?id=0B9P1L--7Wd2vWDNEVm5hZF9CUDA
       - text: Poster
-        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWDlzMDRNbVpfelE
+        url: https://drive.google.com/uc?id=0B9P1L--7Wd2vWDlzMDRNbVpfelE
       - text: Code
         url: https://github.com/wkentaro/hrp2_apc
     selected: false
@@ -147,9 +147,9 @@ papers:
     year: 2016
     entries:
       - text: Paper
-        url: https://drive.google.com/open?id=1Ne9mifgAvy53YH2D5oU4AMDp_rLtbP90
+        url: https://drive.google.com/uc?id=1Ne9mifgAvy53YH2D5oU4AMDp_rLtbP90
       - text: Video
-        url: https://drive.google.com/open?id=1ljJQ4SUjkNT1S1GWb4h7h__zbStz3oOo
+        url: https://drive.google.com/uc?id=1ljJQ4SUjkNT1S1GWb4h7h__zbStz3oOo
     selected: false
 
 other_projects:
@@ -172,7 +172,7 @@ other_projects:
       - (Got 5th place at pick task and 8th place at stow task among 16 teams)
     entries:
       - text: Slides
-        url: https://drive.google.com/open?id=0B9P1L--7Wd2vWkRaeE9lSzhUNlU
+        url: https://drive.google.com/uc?id=0B9P1L--7Wd2vWkRaeE9lSzhUNlU
       - text: Code
         url: https://github.com/start-jsk/jsk_apc
   - id: gsoc2016
