@@ -10,7 +10,7 @@ papers:
       - text: Video
         url: https://www.youtube.com/watch?v=bRTI0whWkq8
       - text: Poster
-        url: https://drive.google.com/open?id=1Vq_zMNzx7pJX9X4fTSg8I_TvTcuNnnVB
+        url: https://drive.google.com/uc?id=1Vq_zMNzx7pJX9X4fTSg8I_TvTcuNnnVB
     selected: true
   - id: icra2019_hasegawa
     title: 'GraspFusion: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
