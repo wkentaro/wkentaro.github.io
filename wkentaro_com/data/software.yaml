@@ -5,6 +5,7 @@ repositories:
       - 'wkentaro/imgviz'
       - 'wkentaro/label-fusion'
       - 'wkentaro/pascal3d'
+      - 'wkentaro/call-python-from-cpp'
       - 'mikedh/trimesh'
       - 'aleju/imgaug'
   - title: Deep Learning
@@ -35,7 +36,6 @@ repositories:
   - title: Utilities
     repos:
       - 'wkentaro/gdown'
-      - 'wkentaro/call-python-from-cpp'
       - 'wkentaro/gshell'
       - 'wkentaro/dotfiles'
       - 'wkentaro/pycd'
