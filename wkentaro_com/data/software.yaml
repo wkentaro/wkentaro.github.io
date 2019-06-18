@@ -35,6 +35,7 @@ repositories:
   - title: Utilities
     repos:
       - 'wkentaro/gdown'
+      - 'wkentaro/call-python-from-cpp'
       - 'wkentaro/gshell'
       - 'wkentaro/dotfiles'
       - 'wkentaro/pycd'
