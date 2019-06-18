@@ -128,6 +128,8 @@ papers:
         url: https://www.tandfonline.com/doi/pdf/10.1080/01691864.2016.1269672?needAccess=true
       - text: Video
         url: https://www.youtube.com/watch?v=R3M8GCw38_M&t=3s
+      - text: Code
+        url: https://github.com/start-jsk/jsk_apc/tree/master/jsk_2015_05_baxter_apc
     selected: true
   - id: humanoids2016
     title: 3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map
