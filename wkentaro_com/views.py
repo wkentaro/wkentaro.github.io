@@ -17,7 +17,7 @@ app = flask.Flask(__name__)
 def index():
     filename = osp.join(here, 'data/research.yaml')
     with open(filename) as f:
-        papers = yaml.load(f)['papers']
+        papers = yaml.safe_load(f)['papers']
         papers = [paper for paper in papers if paper['selected']]
 
     try:
@@ -40,7 +40,7 @@ def index():
 def research():
     filename = osp.join(here, 'data/research.yaml')
     with open(filename) as f:
-        data = yaml.load(f)
+        data = yaml.safe_load(f)
         papers = data['papers']
         other_projects = data['other_projects']
 
@@ -56,7 +56,7 @@ def research():
 def software():
     filename = osp.join(here, 'data/software.yaml')
     with open(filename) as f:
-        repos = yaml.load(f)['repositories']
+        repos = yaml.safe_load(f)['repositories']
 
     filename = osp.join(here, 'data/github-colors.json')
     with open(filename) as f:
