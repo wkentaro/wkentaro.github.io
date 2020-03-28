@@ -78,13 +78,3 @@ def projects(project_name):
         )
     except jinja2.exceptions.TemplateNotFound:
         return flask.redirect('/')
-
-
-# -----------------------------------------------------------------------------
-# Redirects
-# -----------------------------------------------------------------------------
-
-
-@app.route('/projects/gsoc-2016')
-def projects_gsoc_2016():
-    return flask.redirect('/projects/gsoc2016')
