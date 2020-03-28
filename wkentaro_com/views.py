@@ -36,7 +36,7 @@ def index():
     )
 
 
-@app.route('/research')
+@app.route('/research/')
 def research():
     filename = osp.join(here, 'data/research.yaml')
     with open(filename) as f:
@@ -52,7 +52,7 @@ def research():
     )
 
 
-@app.route('/software')
+@app.route('/software/')
 def software():
     filename = osp.join(here, 'data/software.yaml')
     with open(filename) as f:
@@ -70,7 +70,7 @@ def software():
     )
 
 
-@app.route('/projects/<project_name>')
+@app.route('/projects/<project_name>/')
 def projects(project_name):
     try:
         return flask.render_template(

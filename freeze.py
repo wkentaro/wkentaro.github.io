@@ -21,7 +21,7 @@ def main():
     def projects():
         yield {"project_name": "gsoc2016"}
 
-    freezer.run()
+    freezer.freeze()
 
 
 if __name__ == '__main__':
