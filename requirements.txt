@@ -1,3 +1,5 @@
 flask
 frozen-flask
+imgviz
+path.py
 pyyaml
