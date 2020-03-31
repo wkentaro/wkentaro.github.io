@@ -13,12 +13,12 @@ here = osp.dirname(osp.abspath(__file__))
 app = flask.Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    filename = osp.join(here, 'data/research.yaml')
+    filename = osp.join(here, "data/research.yaml")
     with open(filename) as f:
-        papers = yaml.safe_load(f)['papers']
-        papers = [paper for paper in papers if paper['selected']]
+        papers = yaml.safe_load(f)["papers"]
+        papers = [paper for paper in papers if paper["selected"]]
 
     try:
         timestamp = subprocess.check_output(
@@ -32,49 +32,46 @@ def index():
         updated_at = None
 
     return flask.render_template(
-        'index.html', name='index', updated_at=updated_at, papers=papers
+        "index.html", name="index", updated_at=updated_at, papers=papers
     )
 
 
-@app.route('/research/')
+@app.route("/research/")
 def research():
-    filename = osp.join(here, 'data/research.yaml')
+    filename = osp.join(here, "data/research.yaml")
     with open(filename) as f:
         data = yaml.safe_load(f)
-        papers = data['papers']
-        other_projects = data['other_projects']
+        papers = data["papers"]
+        other_projects = data["other_projects"]
 
     return flask.render_template(
-        'research.html',
-        name='research',
+        "research.html",
+        name="research",
         papers=papers,
         other_projects=other_projects,
     )
 
 
-@app.route('/software/')
+@app.route("/software/")
 def software():
-    filename = osp.join(here, 'data/software.yaml')
+    filename = osp.join(here, "data/software.yaml")
     with open(filename) as f:
-        repos = yaml.safe_load(f)['repositories']
+        repos = yaml.safe_load(f)["repositories"]
 
-    filename = osp.join(here, 'data/github-colors.json')
+    filename = osp.join(here, "data/github-colors.json")
     with open(filename) as f:
         colors = json.load(f)
 
     return flask.render_template(
-        'software.html',
-        name='software',
-        repositories=repos,
-        colors=colors,
+        "software.html", name="software", repositories=repos, colors=colors,
     )
 
 
-@app.route('/projects/<project_name>/')
+@app.route("/projects/<project_name>/")
 def projects(project_name):
     try:
         return flask.render_template(
-            osp.join('projects', project_name + '.html'),
+            osp.join("projects", project_name + ".html"),
         )
     except jinja2.exceptions.TemplateNotFound:
-        return flask.redirect('/')
+        return flask.redirect("/")
