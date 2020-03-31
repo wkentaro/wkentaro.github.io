@@ -8,10 +8,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -37,11 +37,9 @@ jobs:
       run: |
         git config --global user.email "www.kentaro.wada@gmail.com"
         git config --global user.name "Kentaro Wada"
-        if git diff wkentaro_com/build; then
-          git add wkentaro_com/build
-          git commit -m "Update wkentaro_com/build"
-          git push origin flask
-          git subtree split --prefix wkentaro_com/build -b master
-          git push -f origin master:master
-          git branch -D master
-        fi
+        git add wkentaro_com/build
+        git diff-index --cached --quiet HEAD || git commit -m "Update wkentaro_com/build"
+        git push origin flask
+        git subtree split --prefix wkentaro_com/build -b master
+        git push -f origin master:master
+        git branch -D master
