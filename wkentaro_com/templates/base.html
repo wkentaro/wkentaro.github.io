@@ -42,7 +42,7 @@
             <li class="list-inline-item">{% if request.path == '/' %}Home{% else %}<a href="{{ url_for('index') }}">Home</a>{% endif %}</li>
             <li class="list-inline-item">{% if request.path == '/research' %}Research{% else %}<a href="{{ url_for('research') }}">Research</a>{% endif %}</li>
             <li class="list-inline-item">{% if request.path == '/software' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
-            <li class="list-inline-item"><a href="{{ url_for('static', filename='CV/CV.pdf') }}">CV</a></li>
+            <li class="list-inline-item"><a href="{{ url_for('static', filename='pdf/CV.pdf') }}">CV</a></li>
           </ul>
         </div>
 
