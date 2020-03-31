@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - flask
+
+jobs:
+  build:
+
+    runs-on: ubuntu-16.04
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: true
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt
+    - name: Lint
+      run: |
+        pip install -U black hacking
+        black --check .
+        flake8 .
+    - name: Freeze flask
+      run: |
+        ./freeze.py
+    - name: Push static page
+      run: |
+        git config --global user.email "www.kentaro.wada@gmail.com"
+        git config --global user.name "Kentaro Wada"
+        if ! git add wkentaro_com/build; then
+          git commit -m "Update wkentaro_com/build"
+          git push origin flask
+          git subtree split --prefix wkentaro_com/build -b master
+          git push -f origin master:master
+          git branch -D master
+        fi
