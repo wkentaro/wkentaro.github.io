@@ -38,11 +38,11 @@ repositories:
   - title: Utilities
     repos:
       - 'wkentaro/gdown'
+      - 'wkentaro/video-cli'
       - 'wkentaro/gshell'
       - 'wkentaro/dotfiles'
       - 'wkentaro/pycd'
       # - 'wkentaro/wstool_cd'
       # - 'wkentaro/wkentaro.zsh-theme'
       - 'wkentaro/screenshot-manager'
-      - 'wkentaro/togif'
       # - 'wkentaro/gotenshita'
