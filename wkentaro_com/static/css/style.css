@@ -1,41 +1,36 @@
-/* Masthead */
 .masthead-title {
   color: #3E4349;
 }
 
-/* Text style */
 @font-face {
-  font-family: 'Garamond';
+  font-family: 'Product Sans';
   font-style: normal;
   font-weight: 400;
-  local('EB Garamond'), local('EBGaramond'), url(http://themes.googleusercontent.com/static/fonts/ebgaramond/v5/CDR0kuiFK7I1OZ2hSdR7G7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
-@font-face {
-  font-family: 'goudy old style';
-  src: url('../fonts/GOUDOS.TTF');
+
+h1, h2, h3, h4, h5 {
+  color: #555555;
 }
+
 body {
-  font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro';
-  font-size: 17px;
-  background-color: #fcfcfc;
-  color: #000;
+  font-family: "Product Sans", Helvetica, sans-serif;;
+  color: #787878;
+  /* background-color: #e5e6e1; */
 }
+
 a {
-  color: #004B6B;
-  text-decoration:none;
-  border-bottom:1px dotted #004B6B;
-}
-a:hover {
-  color: #6D4100;
-  text-decoration: underline;
-  border-bottom: none;
-}
-a.unstyled {
-  border-bottom: none;
-}
-a.unstyled:hover {
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  color: #49bf9d;
   text-decoration: none;
 }
-.text-small {
-  font-size: 15px !important;
+
+a:hover {
+  border-bottom-color: transparent;
+  color: #49bf9d !important;
+  text-decoration: none;
 }
