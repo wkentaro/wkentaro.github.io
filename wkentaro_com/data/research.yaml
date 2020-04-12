@@ -1,4 +1,17 @@
 papers:
+  - id: cvpr2020
+    title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
+    authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
+    publisher: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+    year: 2020
+    entries:
+      - text: Paper
+        url: https://arxiv.org/abs/2004.04336
+      - text: Video
+        url: https://www.youtube.com/watch?v=6oLUhuZL4ko
+      - text: Project Page
+        url: https://morefusion.wkentaro.com
+    selected: true
   - id: icra2019
     title: Joint Learning of Instance and Semantic Segmentation for Robotic Pick-and-Place with Heavy Occlusions in Clutter
     authors: [Kentaro Wada, Kei Okada, Masayuki Inaba]
@@ -130,7 +143,7 @@ papers:
         url: https://www.youtube.com/watch?v=R3M8GCw38_M&t=3s
       - text: Code
         url: https://github.com/start-jsk/jsk_apc/tree/master/jsk_2015_05_baxter_apc
-    selected: true
+    selected: false
   - id: humanoids2016
     title: 3D Object Segmentation for Shelf Bin Picking by Humanoid with Deep Learning and Occupancy Voxel Grid Map
     authors: [Kentaro Wada, Masaki Murooka, Kei Okada, Masayuki Inaba]
