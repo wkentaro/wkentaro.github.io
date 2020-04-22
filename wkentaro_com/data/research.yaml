@@ -1,4 +1,17 @@
 papers:
+  - id: arxiv2020_edgar
+    title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
+    authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
+    publisher: 'arXiv preprint arXiv:2004.04485'
+    year: 2020
+    entries:
+      - text: Paper
+        url: https://arxiv.org/abs/2004.04485
+      - text: Video
+        url: https://youtu.be/zPzMtXU-0JE
+      - text: Project Page
+        url: https://edgarsucar.github.io/NodeSLAM/
+    selected: true
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
