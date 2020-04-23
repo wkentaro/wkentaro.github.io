@@ -1,17 +1,4 @@
 papers:
-  - id: arxiv2020_edgar
-    title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
-    authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
-    publisher: 'arXiv preprint arXiv:2004.04485'
-    year: 2020
-    entries:
-      - text: Paper
-        url: https://arxiv.org/abs/2004.04485
-      - text: Video
-        url: https://youtu.be/zPzMtXU-0JE
-      - text: Project Page
-        url: https://edgarsucar.github.io/NodeSLAM/
-    selected: true
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
@@ -24,6 +11,19 @@ papers:
         url: https://www.youtube.com/watch?v=6oLUhuZL4ko
       - text: Project Page
         url: https://morefusion.wkentaro.com
+    selected: true
+  - id: arxiv2020_edgar
+    title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
+    authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
+    publisher: 'arXiv preprint arXiv:2004.04485'
+    year: 2020
+    entries:
+      - text: Paper
+        url: https://arxiv.org/abs/2004.04485
+      - text: Video
+        url: https://youtu.be/zPzMtXU-0JE
+      - text: Project Page
+        url: https://edgarsucar.github.io/NodeSLAM/
     selected: true
   - id: icra2019
     title: Joint Learning of Instance and Semantic Segmentation for Robotic Pick-and-Place with Heavy Occlusions in Clutter
