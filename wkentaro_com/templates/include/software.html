@@ -67,8 +67,8 @@
 <div class="row">
 {% for slug in group['repos'] %}
 {% set owner, repo = slug.split('/') %}
-<div class="col-md-4 card-deck mb-2">
-  <div class="card card-default" id="{{ owner + '-' + repo }}">
+<div class="col-md-4 mb-2">
+  <div class="card card-default h-100" id="{{ owner + '-' + repo }}">
     <div class="card-body pb-0">
       <a href="https://github.com/{{ slug }}" class="text-bold">
         {{ slug }}
