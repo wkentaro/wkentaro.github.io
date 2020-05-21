@@ -9,6 +9,8 @@ papers:
         url: https://arxiv.org/abs/2004.04336
       - text: Video
         url: https://www.youtube.com/watch?v=6oLUhuZL4ko
+      - text: Code
+        url: https://github.com/wkentaro/morefusion
       - text: Project Page
         url: https://morefusion.wkentaro.com
     selected: true
