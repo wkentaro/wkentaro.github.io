@@ -44,7 +44,7 @@
           elem.find('.description p:first').text(data.description);
         }
         elem.find('.card-footer .language span.name').text(data.language);
-        elem.find('.card-footer .language i:first').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
+        elem.find('.card-footer .language svg').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
         elem.find('.card-footer .stargazers span.number').text(data.stargazers_count);
         elem.find('.card-footer .forks span.number').text(data.forks);
       }
