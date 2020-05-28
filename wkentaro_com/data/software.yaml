@@ -3,11 +3,12 @@ repositories:
     repos:
       - 'wkentaro/labelme'
       - 'wkentaro/imgviz'
+      - 'wkentaro/morefusion'
       - 'wkentaro/label-fusion'
       # - 'wkentaro/pascal3d'
       - 'wkentaro/call-python-from-cpp'
       - 'mikedh/trimesh'
-      - 'aleju/imgaug'
+      # - 'aleju/imgaug'
   - title: Deep Learning
     repos:
       - 'wkentaro/pytorch-fcn'
