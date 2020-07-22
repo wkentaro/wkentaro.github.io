@@ -21,7 +21,7 @@
         <li>
           <ul class="list-inline mt-2">
             {% for entry in paper['entries'] %}
-            <li class="list-inline-item"><a href="{{ entry['url'] }}" target="_blank">{{ entry['text'] }}</a></li>
+            <li class="list-inline-item"><a href="{{ entry['url'] }}">{{ entry['text'] }}</a></li>
             {% endfor %}
           </ul>
         </li>
