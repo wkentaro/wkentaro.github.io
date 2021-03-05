@@ -63,7 +63,10 @@ def software():
         colors = json.load(f)
 
     return flask.render_template(
-        "software.html", name="software", repositories=repos, colors=colors,
+        "software.html",
+        name="software",
+        repositories=repos,
+        colors=colors,
     )
 
 
