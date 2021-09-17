@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - flask
+      - master
 
 jobs:
   build:
@@ -39,7 +39,7 @@ jobs:
         git config --global user.name "Kentaro Wada"
         git add wkentaro_com/build
         git diff-index --cached --quiet HEAD || git commit -m "Update wkentaro_com/build"
-        git push origin flask
-        git subtree split --prefix wkentaro_com/build -b master
-        git push -f origin master:master
-        git branch -D master
+        git push origin master
+        git subtree split --prefix wkentaro_com/build -b gh-pages
+        git push -f origin gh-pages:gh-pages
+        git branch -D gh-pages
