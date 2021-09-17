@@ -14,11 +14,11 @@ papers:
       - text: Project Page
         url: https://morefusion.wkentaro.com
     selected: true
-  - id: arxiv2020_edgar
+  - id: 3dv2021_edgar
     title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
     authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
-    publisher: 'arXiv preprint arXiv:2004.04485'
-    year: 2020
+    publisher: IEEE International Conference on 3D Vision (3DV)
+    year: 2021
     entries:
       - text: Paper
         url: https://arxiv.org/abs/2004.04485
