@@ -53,7 +53,8 @@
 <h2>Software</h2>
 <script>
   // read-only for public information
-  GITHUB_TOKEN = "e44b46ec9d212f54bb58fdc6ab70d4187edbc73b";
+  CLIENT_ID = 'f9a6e6d514263c01e822';
+  CLIENT_SECRET = '7a6b94dad2afe496718dbae2308436eb043a7888';
 
   function getLanguageColor(language) {
     var colors = {};
@@ -781,7 +782,7 @@
     $.ajax({
       url : url,
       beforeSend: function(xhr) {
-        xhr.setRequestHeader("Authorization", "token " + GITHUB_TOKEN);
+        xhr.setRequestHeader("Authorization", "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET));
       },
       type : 'GET',
       dataType : 'json',
@@ -801,7 +802,7 @@
     $.ajax({
       url : url,
       beforeSend: function(xhr) {
-        xhr.setRequestHeader("Authorization", "token " + GITHUB_TOKEN);
+        xhr.setRequestHeader("Authorization", "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET));
       },
       type : 'GET',
       dataType : 'json',
