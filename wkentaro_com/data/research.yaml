@@ -9,7 +9,7 @@ papers:
         url: https://arxiv.org/abs/2106.12534
       - text: Project page
         url: https://sites.google.com/view/c2f-q-attention
-    selected: false
+    selected: true
   - id: 3dv2020_edgar
     title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
     authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
@@ -22,7 +22,7 @@ papers:
         url: https://youtu.be/zPzMtXU-0JE
       - text: Project page
         url: https://edgarsucar.github.io/NodeSLAM/
-    selected: false
+    selected: true
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
@@ -52,7 +52,7 @@ papers:
         url: https://drive.google.com/uc?id=1Vq_zMNzx7pJX9X4fTSg8I_TvTcuNnnVB
       - text: Code
         url: https://github.com/start-jsk/jsk_apc/tree/master/demos/instance_occlsegm
-    selected: true
+    selected: false
   - id: icra2019_hasegawa
     title: 'GraspFusion: Realizing Complex Motion by Learning and Fusing Grasp Modalities with Instance Segmentation'
     authors: [Shun Hasegawa*, Kentaro Wada*, Shingo Kitagawa, Yuto Uchimi, Kei Okada, Masayuki Inaba]
@@ -69,7 +69,7 @@ papers:
         url: https://drive.google.com/uc?id=1Vx4Oa-aNOjrK37CM5dbHdDITRVj_766z
       - text: Code
         url: https://github.com/start-jsk/jsk_apc/tree/master/demos/grasp_fusion
-    selected: true
+    selected: false
   - id: iros2018
     title: Instance Segmentation of Visible and Occluded Regions for Finding and Picking Target from a Pile of Objects
     authors: [Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
