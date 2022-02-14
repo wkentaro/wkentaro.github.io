@@ -39,7 +39,7 @@ jobs:
         git config --global user.name "Kentaro Wada"
         git add wkentaro_com/build
         git diff-index --cached --quiet HEAD || git commit -m "Update wkentaro_com/build"
-        git push origin master
+        git push origin main
         git subtree split --prefix wkentaro_com/build -b gh-pages
         git push -f origin gh-pages:gh-pages
         git branch -D gh-pages
