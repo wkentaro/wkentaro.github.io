@@ -26,7 +26,7 @@ papers:
         url: https://sites.google.com/view/c2f-q-attention
     selected: true
   - id: 3dv2020_edgar
-    title: 'Neural Object Descriptors for Multi-View Shape Reconstruction'
+    title: 'NodeSLAM: Neural Object Descriptors for Multi-View Shape Reconstruction'
     authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
     publisher: IEEE International Conference on 3D Vision (3DV)
     year: 2020
