@@ -1,4 +1,19 @@
 papers:
+  - id: icra2022b
+    title: 'ReorientBot: Learning Object Reorientation for Specific-Posed Placement'
+    authors: [Kentaro Wada, Stephen James, Andrew J. Davison]
+    publisher: IEEE International Conference on Robotics and Automation (ICRA)
+    year: 2022
+    entries:
+      - text: Paper
+        url: https://arxiv.org/abs/2202.11092
+      - text: Video
+        url: https://youtu.be/ahWN84sWWJU
+      - text: Code
+        url: https://github.com/wkentaro/reorientbot
+      - text: Project page
+        url: https://reorientbot.wkentaro.com
+    selected: true
   - id: icra2022a
     title: 'SafePicking: Learning Safe Object Extraction via Object-Level Mapping'
     authors: [Kentaro Wada, Stephen James, Andrew J. Davison]
@@ -103,7 +118,7 @@ papers:
         url: https://drive.google.com/uc?id=16aUCT455dJxIB8GRHC3fxiXeW8yif0fl
       - text: Code
         url: https://github.com/start-jsk/jsk_apc/tree/master/demos/instance_occlsegm
-    selected: true
+    selected: false
   - id: iros2018_hasegawa
     title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
     authors: [Shun Hasegawa, Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
