@@ -39,7 +39,7 @@ papers:
         url: https://arxiv.org/abs/2106.12534
       - text: Project page
         url: https://sites.google.com/view/c2f-q-attention
-    selected: true
+    selected: false
   - id: 3dv2020_edgar
     title: 'NodeSLAM: Neural Object Descriptors for Multi-View Shape Reconstruction'
     authors: [Edgar Sucar, Kentaro Wada, Andrew J. Davison]
@@ -52,7 +52,7 @@ papers:
         url: https://youtu.be/zPzMtXU-0JE
       - text: Project page
         url: https://edgarsucar.github.io/NodeSLAM/
-    selected: true
+    selected: false
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
@@ -118,7 +118,7 @@ papers:
         url: https://drive.google.com/uc?id=16aUCT455dJxIB8GRHC3fxiXeW8yif0fl
       - text: Code
         url: https://github.com/start-jsk/jsk_apc/tree/master/demos/instance_occlsegm
-    selected: false
+    selected: true
   - id: iros2018_hasegawa
     title: Detecting and Picking of Folded Objects with a Multiple Sensor Integrated Robot Hand
     authors: [Shun Hasegawa, Kentaro Wada, Shingo Kitagawa, Kei Okada, Masayuki Inaba]
