@@ -24,6 +24,7 @@ repositories:
     repos:
       #  - 'wkentaro/label_octomap'
       #  - 'wkentaro/hrp2_apc'
+      - 'wkentaro/reorientbot'
       - 'wkentaro/safepicking'
       - 'iory/scikit-robot'
       - 'stepjam/PyRep'
@@ -31,7 +32,7 @@ repositories:
       # - 'jsk-ros-pkg/jsk_recognition'
       # - 'jsk-ros-pkg/jsk_visualization'
       # - 'jsk-ros-pkg/jsk_common'
-      - 'ros-perception/vision_opencv'
+      # - 'ros-perception/vision_opencv'
       - 'ros-perception/image_pipeline'
       # - 'ros-perception/perception_pcl'
       #  - 'PointCloudLibrary/pcl'
