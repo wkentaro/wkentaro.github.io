@@ -258,7 +258,7 @@ other_projects:
     publisher: Google Summer of Code (GSoC) 2016
     year: 2016
     entries:
-      - text: Detail
+      - text: Webpage
         url: /projects/gsoc2016
       - text: Code
         url: https://github.com/wkentaro/gsoc2016
