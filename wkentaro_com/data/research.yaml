@@ -11,7 +11,7 @@ papers:
         url: https://youtu.be/ahWN84sWWJU
       - text: Code
         url: https://github.com/wkentaro/reorientbot
-      - text: Project page
+      - text: Webpage
         url: https://reorientbot.wkentaro.com
     selected: true
   - id: icra2022a
@@ -26,7 +26,7 @@ papers:
         url: https://youtu.be/ejjqiBqRRKo
       - text: Code
         url: https://github.com/wkentaro/safepicking
-      - text: Project page
+      - text: Webpage
         url: https://safepicking.wkentaro.com
     selected: true
   - id: arxiv2021_stephen
@@ -37,7 +37,7 @@ papers:
     entries:
       - text: Paper
         url: https://arxiv.org/abs/2106.12534
-      - text: Project page
+      - text: Webpage
         url: https://sites.google.com/view/c2f-q-attention
     selected: false
   - id: 3dv2020_edgar
@@ -50,7 +50,7 @@ papers:
         url: https://arxiv.org/abs/2004.04485
       - text: Video
         url: https://youtu.be/zPzMtXU-0JE
-      - text: Project page
+      - text: Webpage
         url: https://edgarsucar.github.io/NodeSLAM/
     selected: false
   - id: cvpr2020
@@ -65,7 +65,7 @@ papers:
         url: https://www.youtube.com/watch?v=6oLUhuZL4ko
       - text: Code
         url: https://github.com/wkentaro/morefusion
-      - text: Project page
+      - text: Webpage
         url: https://morefusion.wkentaro.com
     selected: true
   - id: icra2019
