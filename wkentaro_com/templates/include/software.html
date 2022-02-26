@@ -3,13 +3,8 @@
   CLIENT_ID = 'f9a6e6d514263c01e822';
   CLIENT_SECRET = '7a6b94dad2afe496718dbae2308436eb043a7888';
 
-  function getLanguageColor(language) {
-    var colors = {};
-    {% for language, color in colors.items() %}
-    colors['{{ language }}'] = "{{ color['color'] }}";
-    {% endfor %}
-    return colors[language];
-  }
+  var languageColors = {{ colors|tojson|safe }};
+
   function getMyContributions(owner, repo) {
     var url = 'https://api.github.com/repos/' + owner + '/' + repo + '/stats/contributors';
     $.ajax({
@@ -45,22 +40,25 @@
           elem.find('.description p:first').text(data.description);
         }
         elem.find('.card-footer .language span.name').text(data.language);
-        elem.find('.card-footer .language svg').attr('style', 'color: ' + getLanguageColor(data.language) + ';');
+        elem.find('.card-footer .language svg').attr('style', 'color: ' + languageColors[data.language] + ';');
         elem.find('.card-footer .stargazers span.number').text(data.stargazers_count);
         elem.find('.card-footer .forks span.number').text(data.forks);
       }
     });
   }
   function getAllRepositoryData() {
-    {% for group in repositories %}
-    {% for slug in group['repos'] %}
-    {% set owner_repo = slug.split('/') %}
-    getRepositoryData('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
-    getMyContributions('{{ owner_repo[0] }}', '{{ owner_repo[1] }}');
-    {% endfor %}
-    {% endfor %}
+    var repositories = {{ repositories|tojson|safe }};
+    console.log(repositories);
+    for (var i=0; i<repositories.length; i++) {
+      var group = repositories[i];
+      for (var j=0; j<group['repos'].length; j++) {
+        slug = group['repos'][j].split('/');
+        getRepositoryData(slug[0], slug[1]);
+        getMyContributions(slug[0], slug[1]);
+      }
+    }
   }
-  getAllRepositoryData();
+  $(document).ready(function() { getAllRepositoryData(); });
 </script>
 
 {% for group in repositories %}

@@ -60,7 +60,9 @@ def software():
 
     filename = osp.join(here, "data/github-colors.json")
     with open(filename) as f:
-        colors = json.load(f)
+        colors = {}
+        for language, color in json.load(f).items():
+            colors[language] = color["color"]
 
     return flask.render_template(
         "software.html",
