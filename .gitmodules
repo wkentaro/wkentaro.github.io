@@ -1,3 +1,4 @@
 [submodule "wkentaro_com/data/CV"]
 	path = wkentaro_com/data/CV
 	url = https://github.com/wkentaro/CV.git
+	branch = main
