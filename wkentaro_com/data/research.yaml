@@ -52,7 +52,7 @@ papers:
         url: https://youtu.be/zPzMtXU-0JE
       - text: Webpage
         url: https://edgarsucar.github.io/NodeSLAM/
-    selected: false
+    selected: true
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
@@ -175,7 +175,7 @@ papers:
         url: https://drive.google.com/uc?id=16M2gwKRVdCEt4T5m3qZIFLc55N8L4PfE
       - text: Code
         url: https://github.com/wkentaro/label_octomap
-    selected: true
+    selected: false
   - id: iros2017_hasegawa
     title: A Three-Fingered Hand with a Suction Gripping System for Picking Various Objects in Cluttered Narrow Space
     authors: [Kentaro Wada, Shun Hasegawa, Kei Okada, Masayuki Inaba]
