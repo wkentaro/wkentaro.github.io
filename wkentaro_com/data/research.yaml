@@ -13,6 +13,8 @@ papers:
         url: https://github.com/wkentaro/reorientbot
       - text: Webpage
         url: https://reorientbot.wkentaro.com
+      - text: Presentation
+        url: https://youtu.be/2taD7kgyjfE
     selected: true
   - id: icra2022a
     title: 'SafePicking: Learning Safe Object Extraction via Object-Level Mapping'
@@ -28,6 +30,8 @@ papers:
         url: https://github.com/wkentaro/safepicking
       - text: Webpage
         url: https://safepicking.wkentaro.com
+      - text: Presentation
+        url: https://youtu.be/woYLOvHfVSY
     selected: true
   - id: arxiv2021_stephen
     title: 'Coarse-to-Fine Q-attention: Efficient Learning for Visual Robotic Manipulation via Discretisation'
