@@ -1,4 +1,13 @@
 papers:
+  - id: phd_thesis
+    title: 'Robotic Manipulation in Clutter with Object-Level Semantic Mapping'
+    authors: [Kentaro Wada]
+    publisher: PhD Thesis, Imperial College London, Department of Computing
+    year: 2022
+    entries:
+      - text: Thesis
+        url: https://drive.google.com/uc?id=1-PjAslrIiTv81UUv8Zc4u8-X_BErYO_B
+    selected: true
   - id: icra2022b
     title: 'ReorientBot: Learning Object Reorientation for Specific-Posed Placement'
     authors: [Kentaro Wada, Stephen James, Andrew J. Davison]
