@@ -6,7 +6,7 @@ papers:
     year: 2022
     entries:
       - text: Thesis
-        url: https://drive.google.com/uc?id=1-PjAslrIiTv81UUv8Zc4u8-X_BErYO_B
+        url: https://doi.org/10.25560/98113
     selected: true
   - id: icra2022b
     title: 'ReorientBot: Learning Object Reorientation for Specific-Posed Placement'
