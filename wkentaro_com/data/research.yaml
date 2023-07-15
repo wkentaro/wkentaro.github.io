@@ -1,4 +1,15 @@
 papers:
+  - id: promat2023
+    title: 'TruckBot Autonomous Truck Trailer and Shipping Container Unloader Debuts at ProMat 2023'
+    authors: [As a computer vision engineer at Mujin, Inc.]
+    publisher: ProMat
+    year: 2023
+    entries:
+      - text: Video
+        url: https://youtu.be/CUW1BFjB-lI
+      - text: Tweet
+        url: https://twitter.com/wkentaro_/status/1642457092689924097
+    selected: true
   - id: phd_thesis
     title: 'Robotic Manipulation in Clutter with Object-Level Semantic Mapping'
     authors: [Kentaro Wada]
@@ -65,7 +76,7 @@ papers:
         url: https://youtu.be/zPzMtXU-0JE
       - text: Webpage
         url: https://edgarsucar.github.io/NodeSLAM/
-    selected: true
+    selected: false
   - id: cvpr2020
     title: 'MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion'
     authors: [Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison]
