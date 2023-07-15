@@ -10,6 +10,16 @@ papers:
       - text: Tweet
         url: https://twitter.com/wkentaro_/status/1642457092689924097
     selected: true
+  - id: icra2023_hide
+    title: 'iMODE: Real-Time Incremental Monocular Dense Mapping Using Neural Field'
+    authors: [Hidenobu Matsuki, Edgar Sucar, Tristan Laidow, Kentaro Wada, Raluca Scona, Andrew J. Davison]
+    publisher: IEEE International Conference on Robotics and Automation (ICRA)
+    year: 2023
+    entries:
+      - text: Paper
+        url: https://ieeexplore.ieee.org/document/10161538
+    thumbnail: https://pxl-imperialacuk.terminalfour.net/fit-in/2880x1158/filters:upscale()/filters:format(webp)/prod01/channel_2/media/migration/research-groups/Hero-6--tojpeg_1435150935125_x4.jpg
+    selected: false
   - id: phd_thesis
     title: 'Robotic Manipulation in Clutter with Object-Level Semantic Mapping'
     authors: [Kentaro Wada]
