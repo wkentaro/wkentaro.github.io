@@ -40,7 +40,7 @@
           <p class="text-center">Thank you for visiting. This is my personal page.</p>
           <ul class="list-inline text-center">
             <li class="list-inline-item">{% if request.path == '/' %}Home{% else %}<a href="{{ url_for('index') }}">Home</a>{% endif %}</li>
-            <li class="list-inline-item">{% if request.path == '/research/' %}Research{% else %}<a href="{{ url_for('research') }}">Research</a>{% endif %}</li>
+            <li class="list-inline-item">{% if request.path == '/projects/' %}Projects{% else %}<a href="{{ url_for('projects') }}">Projects</a>{% endif %}</li>
             <li class="list-inline-item">{% if request.path == '/software/' %}Software{% else %}<a href="{{ url_for('software') }}">Software</a>{% endif %}</li>
             <li class="list-inline-item"><a href="{{ url_for('static', filename='pdf/CV.pdf') }}">CV</a></li>
           </ul>

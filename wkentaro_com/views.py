@@ -38,6 +38,11 @@ def index():
 
 @app.route("/research/")
 def research():
+    return flask.redirect(flask.url_for("projects"))
+
+
+@app.route("/projects/")
+def projects():
     filename = osp.join(here, "data/research.yaml")
     with open(filename) as f:
         data = yaml.safe_load(f)
@@ -46,7 +51,7 @@ def research():
 
     return flask.render_template(
         "research.html",
-        name="research",
+        name="projects",
         papers=papers,
         other_projects=other_projects,
     )
@@ -73,7 +78,7 @@ def software():
 
 
 @app.route("/projects/<project_name>/")
-def projects(project_name):
+def project(project_name):
     try:
         return flask.render_template(
             osp.join("projects", project_name + ".html"),
