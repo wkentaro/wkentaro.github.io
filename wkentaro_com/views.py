@@ -77,6 +77,24 @@ def software():
     )
 
 
+@app.route("/commerce-disclosure/")
+def commerce_disclosure():
+    return flask.render_template("commerce_disclosure.html")
+
+
+@app.route("/resources/")
+def resources():
+    filename = osp.join(here, "data/resources.yaml")
+    with open(filename) as f:
+        resources = yaml.safe_load(f)["resources"]
+
+    return flask.render_template(
+        "resources.html",
+        name="resources",
+        resources=resources,
+    )
+
+
 @app.route("/projects/<project_name>/")
 def project(project_name):
     try:
