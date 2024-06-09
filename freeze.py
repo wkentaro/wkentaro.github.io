@@ -9,7 +9,7 @@ def main():
     freezer = Freezer(app)
 
     @freezer.register_generator
-    def projects():
+    def project():
         yield {"project_name": "gsoc2016"}
 
     freezer.freeze()
