@@ -77,11 +77,6 @@ def software():
     )
 
 
-@app.route("/commerce-disclosure/")
-def commerce_disclosure():
-    return flask.render_template("commerce_disclosure.html")
-
-
 @app.route("/projects/<project_name>/")
 def project(project_name):
     try:
