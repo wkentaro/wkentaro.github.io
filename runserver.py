@@ -5,7 +5,7 @@ import argparse
 from wkentaro_com.views import app
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=5000)
     args = parser.parse_args()

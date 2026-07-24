@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import datetime
 import json
 import os.path as osp
@@ -7,14 +9,13 @@ import flask
 import jinja2
 import yaml
 
-
 here = osp.dirname(osp.abspath(__file__))
 
 app = flask.Flask(__name__)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     filename = osp.join(here, "data/research.yaml")
     with open(filename) as f:
         papers = yaml.safe_load(f)["papers"]
@@ -37,12 +38,12 @@ def index():
 
 
 @app.route("/research/")
-def research():
+def research() -> flask.Response:
     return flask.redirect(flask.url_for("projects"))
 
 
 @app.route("/projects/")
-def projects():
+def projects() -> str:
     filename = osp.join(here, "data/research.yaml")
     with open(filename) as f:
         data = yaml.safe_load(f)
@@ -58,7 +59,7 @@ def projects():
 
 
 @app.route("/software/")
-def software():
+def software() -> str:
     filename = osp.join(here, "data/software.yaml")
     with open(filename) as f:
         repos = yaml.safe_load(f)["repositories"]
@@ -78,7 +79,7 @@ def software():
 
 
 @app.route("/projects/<project_name>/")
-def project(project_name):
+def project(project_name: str) -> flask.Response | str:
     try:
         return flask.render_template(
             osp.join("projects", project_name + ".html"),

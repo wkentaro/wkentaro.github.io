@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 
+from __future__ import annotations
+
+from collections.abc import Iterator
+
 from flask_frozen import Freezer
 
 from wkentaro_com.views import app
 
 
-def main():
+def main() -> None:
     freezer = Freezer(app)
 
     @freezer.register_generator
-    def project():
+    def project() -> Iterator[dict[str, str]]:
         yield {"project_name": "gsoc2016"}
 
     freezer.freeze()
