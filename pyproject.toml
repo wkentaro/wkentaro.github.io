@@ -2,7 +2,7 @@
 name = "wkentaro-com"
 version = "0.1.0"
 description = "Personal website of Kentaro Wada (https://wkentaro.com)."
-requires-python = ">=3.9"
+requires-python = ">=3.14"
 dependencies = [
   "flask",
   "frozen-flask",
