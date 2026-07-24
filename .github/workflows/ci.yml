@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
   build:
@@ -24,6 +25,7 @@ jobs:
     - name: Freeze flask
       run: make freeze
     - name: Push static page
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: |
         git config --global user.email "www.kentaro.wada@gmail.com"
         git config --global user.name "Kentaro Wada"
