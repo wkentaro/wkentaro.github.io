@@ -1,9 +1,30 @@
-[tool.black]
+[project]
+name = "wkentaro-com"
+version = "0.1.0"
+description = "Personal website of Kentaro Wada (https://wkentaro.com)."
+requires-python = ">=3.9"
+dependencies = [
+  "flask",
+  "frozen-flask",
+  "pyyaml",
+]
+
+[dependency-groups]
+dev = [
+  "ruff",
+]
+
+[tool.ruff]
 line-length = 79
-exclude = '''
-(
-    ^/\..*
-  | ^/docs/
-  | ^/github2pypi/
-)
-'''
+
+[tool.ruff.lint]
+select = [
+  "ANN", # flake8-annotations
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "I",   # isort
+  "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
